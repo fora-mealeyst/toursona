@@ -106,4 +106,41 @@ router.patch('/:id', async (req: Request<{ id: string }>, res: Response): Promis
   }
 });
 
+// GET: Fetch all answers for a specific quiz
+router.get('/:id/answers', async (req: Request<{ id: string }>, res: Response): Promise<void> => {
+  try {
+    const answers = await QuizAnswer.find({ quizId: req.params.id }).sort({ submittedAt: -1 });
+    res.json(answers);
+  } catch (err) {
+    const error = err as Error;
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// GET: Fetch all quizzes
+router.get('/', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const quizzes = await Quiz.find().sort({ createdAt: -1 });
+    res.json(quizzes);
+  } catch (err) {
+    const error = err as Error;
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// PUT: Update a quiz by ID (full update)
+router.put('/:id', async (req: Request<{ id: string }>, res: Response): Promise<void> => {
+  try {
+    const quiz = await Quiz.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!quiz) {
+      res.status(404).json({ error: 'Quiz not found' });
+      return;
+    }
+    res.json(quiz);
+  } catch (err) {
+    const error = err as Error;
+    res.status(400).json({ error: error.message });
+  }
+});
+
 export default router;
