@@ -10,10 +10,6 @@ interface QuizStepProps {
 export const QuizStep = ({ step, form, onChange }: QuizStepProps) => {
   return (
     <div className="space-y-6">
-      <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-white text-center">
-        {step.title}
-      </h2>
-      <div className="space-y-4">
         {step.inputs.map((field) => (
           <Field
             key={field.name}
@@ -22,7 +18,6 @@ export const QuizStep = ({ step, form, onChange }: QuizStepProps) => {
             onChange={onChange}
           />
         ))}
-      </div>
     </div>
   );
 }

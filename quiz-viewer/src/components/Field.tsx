@@ -10,7 +10,7 @@ interface FieldProps {
 
 export const Field = ({ field, value, onChange }: FieldProps) => {
   switch (field.type) {
-    case 'radio':
+    case 'single_choice':
       return <RadioField field={field} value={value} onChange={onChange} />;
     case 'text':
     default:
