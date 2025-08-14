@@ -12,7 +12,7 @@ export const RadioField = ({ field, value, onChange }: RadioFieldProps) => {
   console.log('RadioField options:', field.options);
   
   return (
-    <div className="grid">
+    <div className="flex flex-col justify-between basis-full">
       <span className="blanco-text-italic block text-[32px] font-medium text-gray-700 dark:text-gray-300 text-left">
         {field.label}
       </span>

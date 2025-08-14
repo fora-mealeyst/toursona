@@ -26,20 +26,20 @@ export const QuizForm = ({
   const isLastStep = step === quiz.steps.length - 1;
 
   return (
-    <form className="h-full"onSubmit={onSubmit}>
+    <form className="flex flex-col h-full justify-end" onSubmit={onSubmit}>
       <QuizStep 
         step={currentStep} 
         form={form} 
         onChange={onChange} 
       />
-      <div className={`flex items-center mt-6 ${isFirstStep ? 'justify-end' : 'justify-between'}`}>
+      <div className={'flex items-center mt-[48px] justify-start'}>
         {!isFirstStep && (
           <button 
             type="button"
             onClick={onPrevious}
             className="px-6 py-3 mr-[8px] bg-gray-500 text-white font-medium hover:bg-gray-600 transition-colors duration-200"
           >
-            Previous
+            Back
           </button>
         )}
         <button 

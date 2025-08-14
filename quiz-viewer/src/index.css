@@ -98,16 +98,18 @@
 /* Background animation */
 @keyframes moveBackground {
   0% {
-    background-position: 0% 50%;
+    transform: translateX(0%);
   }
   100% {
-    background-position: 100% 50%;
+    transform: translateX(-20%);
   }
 }
 
 .splash-image {
   background-repeat: no-repeat;
-  background-size: 120% auto;
+  background-size: cover;
+  background-position: center;
+  width: 120%;
   animation: moveBackground 20s ease-in-out infinite alternate;
 }
 
