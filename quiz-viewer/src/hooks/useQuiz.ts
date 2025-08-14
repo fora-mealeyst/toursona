@@ -107,6 +107,5 @@ export function useQuiz() {
     handleChange,
     handleNext,
     handlePrevious,
-    handleStepClick,
   };
 }
