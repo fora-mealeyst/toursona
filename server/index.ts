@@ -78,21 +78,68 @@ app.get('/api/test-mongo', async (req, res) => {
   }
 });
 
+// Debug endpoint to check environment variables and connection status
+app.get('/api/debug', (req, res) => {
+  res.json({
+    environment: process.env.NODE_ENV || 'development',
+    hasMongoUri: !!process.env.MONGODB_URI,
+    mongoUriLength: process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0,
+    mongoUriPreview: process.env.MONGODB_URI ? 
+      process.env.MONGODB_URI.substring(0, 20) + '...' : 'not set',
+    mongooseReadyState: mongoose.connection.readyState,
+    mongooseReadyStateText: ['disconnected', 'connected', 'connecting', 'disconnecting'][mongoose.connection.readyState] || 'unknown',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.use('/api/quizzes', quizzesRouter);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/quizdb', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-} as mongoose.ConnectOptions);
+const connectToMongoDB = async () => {
+  try {
+    const mongoUri = process.env.MONGODB_URI;
+    
+    if (!mongoUri) {
+      console.error('MONGODB_URI environment variable is not set');
+      console.error('Please set MONGODB_URI in your Vercel environment variables');
+      process.exit(1);
+    }
+    
+    console.log('Attempting to connect to MongoDB...');
+    console.log('MongoDB URI:', mongoUri.replace(/\/\/[^:]+:[^@]+@/, '//***:***@')); // Log URI without credentials
+    
+    await mongoose.connect(mongoUri, {
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
+      socketTimeoutMS: 45000,
+    } as mongoose.ConnectOptions);
+    
+    console.log('Connected to MongoDB successfully');
+  } catch (error) {
+    console.error('Failed to connect to MongoDB:', error);
+    console.error('Please check:');
+    console.error('1. MONGODB_URI is set correctly in Vercel environment variables');
+    console.error('2. MongoDB Atlas IP whitelist allows Vercel IPs (or use 0.0.0.0/0)');
+    console.error('3. MongoDB Atlas username/password are correct');
+    process.exit(1);
+  }
+};
 
 mongoose.connection.on('connected', () => {
-  console.log('Connected to MongoDB');
+  console.log('Mongoose connected to MongoDB');
 });
 
 mongoose.connection.on('error', (err) => {
-  console.error('MongoDB connection error:', err);
+  console.error('Mongoose connection error:', err);
 });
+
+mongoose.connection.on('disconnected', () => {
+  console.log('Mongoose disconnected from MongoDB');
+});
+
+// Connect to MongoDB
+connectToMongoDB();
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
