@@ -23,12 +23,24 @@ Toursona is a quiz builder platform designed to help travel businesses understan
    ```sh
    git clone git@github.com:fora-mealeyst/toursona.git
    ```
-2. Install dependencies for the workspaces:
+2. Install `mongodb`:
+   ```sh
+   brew tap mongodb/brew
+   brew update
+   brew install mongodb-community@8.0
+   ```
+
+3. Start `mongodb`:
+   ```sh
+   brew services start mongodb/brew/mongodb-community
+   ```
+
+4. Install npm dependencies for the workspaces:
    ```sh
    npm install
    npm run dev
    ```
-3. Start the development servers as needed.
+5. Start the development servers as needed.
 
 ## Project Structure
 
