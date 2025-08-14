@@ -10,7 +10,7 @@ export interface QuizField {
   label: string;
   name: string;
   required?: boolean;
-  options?: QuizOption[];
+  options?: (string | QuizOption)[];
 }
 
 export interface QuizStep {
