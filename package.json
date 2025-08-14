@@ -9,7 +9,8 @@
   "scripts": {
     "start:server": "npm run dev -w server",
     "start:quiz-viewer": "npm run dev -w quiz-viewer",
-    "dev": "concurrently \"npm run start:quiz-viewer\" \"npm run start:server\""
+    "start:quiz-admin": "npm run dev -w quiz-admin",
+    "dev": "concurrently \"npm run start:quiz-viewer\" \"npm run start:server\" \"npm run start:quiz-admin\""
   },
   "dependencies": {
     "mongodb": "^6.18.0",
