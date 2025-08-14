@@ -28,10 +28,24 @@ app.get('/api/health', (req, res) => {
   res.status(statusCode).json(health);
 });
 
+app.get('/api/ip', (req, res) => {
+  const ip = req.headers['x-forwarded-for'] || 
+             req.socket?.remoteAddress || null;
+
+  res.json({
+    ip: ip,
+    headers: req.headers,
+    // Vercel-specific headers
+    vercelRegion: req.headers['x-vercel-deployment-url'],
+    forwardedFor: req.headers['x-forwarded-for'],
+    realIp: req.headers['x-real-ip']
+  });
+});
+
 app.use('/api/quizzes', quizzesRouter);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/quizdb', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://shawn:bNQhJ1wuUc5ldZ89@toursona.nacuyqw.mongodb.net/?retryWrites=true&w=majority&appName=toursona', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 } as mongoose.ConnectOptions);
