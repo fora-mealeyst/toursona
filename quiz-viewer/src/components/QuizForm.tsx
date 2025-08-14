@@ -9,6 +9,8 @@ interface QuizFormProps {
   form: Record<string, string>;
   onChange: (name: string, value: string) => void;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  onPrevious: () => void;
+  onStepClick?: (stepIndex: number) => void;
 }
 
 export const QuizForm = ({ 
@@ -17,22 +19,40 @@ export const QuizForm = ({
   step, 
   form, 
   onChange, 
-  onSubmit 
+  onSubmit,
+  onPrevious,
 }: QuizFormProps) => {
+  const isFirstStep = step === 0;
+  const isLastStep = step === quiz.steps.length - 1;
+
   return (
     <form onSubmit={onSubmit} className="flex flex-col gap-6">
-      <ProgressBar currentStep={step} totalSteps={quiz.steps.length} />
+      <ProgressBar 
+        currentStep={step} 
+        totalSteps={quiz.steps.length} 
+      />
       <QuizStep 
         step={currentStep} 
         form={form} 
         onChange={onChange} 
       />
-      <button 
-        type="submit"
-        className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 self-center mt-4"
-      >
-        {step < quiz.steps.length - 1 ? 'Next' : 'Submit'}
-      </button>
+      <div className={`flex items-center mt-6 ${isFirstStep ? 'justify-end' : 'justify-between'}`}>
+        {!isFirstStep && (
+          <button 
+            type="button"
+            onClick={onPrevious}
+            className="px-6 py-3 bg-gray-500 text-white font-medium rounded-lg hover:bg-gray-600 transition-colors duration-200"
+          >
+            Previous
+          </button>
+        )}
+        <button 
+          type="submit"
+          className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+        >
+          {isLastStep ? 'Submit' : 'Next'}
+        </button>
+      </div>
     </form>
   );
 }

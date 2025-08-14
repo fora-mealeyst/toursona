@@ -50,6 +50,12 @@ export function useQuiz() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handlePrevious = () => {
+    if (step > 0) {
+      setStep(step - 1);
+    }
+  };
+
   const handleNext = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
@@ -100,5 +106,7 @@ export function useQuiz() {
     loading,
     handleChange,
     handleNext,
+    handlePrevious,
+    handleStepClick,
   };
 }

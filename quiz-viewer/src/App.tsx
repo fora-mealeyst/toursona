@@ -1,4 +1,3 @@
-import './App.css';
 import { useQuiz } from './hooks';
 import { 
   LoadingSpinner, 
@@ -17,6 +16,7 @@ const App = () => {
     loading,
     handleChange,
     handleNext,
+    handlePrevious,
   } = useQuiz();
 
   if (loading) return <LoadingSpinner />;
@@ -40,6 +40,7 @@ const App = () => {
             form={form}
             onChange={handleChange}
             onSubmit={handleNext}
+            onPrevious={handlePrevious}
           />
         </div>
       </div>
