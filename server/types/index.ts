@@ -23,6 +23,12 @@ export interface IQuizAnswer extends Document {
   quizId: Types.ObjectId;
   answers: Record<string, any>;
   submittedAt: Date;
+  calculatedScores?: Map<string, number>;
+  sessionData?: {
+    ipAddress?: string;
+    userAgent?: string;
+    completionTime?: number;
+  };
 }
 
 export interface CreateQuizRequest {

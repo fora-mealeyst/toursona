@@ -23,6 +23,12 @@ export interface IQuizAnswer {
   quizId: string;
   answers: Record<string, any>;
   submittedAt: string;
+  calculatedScores?: Record<string, number>;
+  sessionData?: {
+    ipAddress?: string;
+    userAgent?: string;
+    completionTime?: number;
+  };
 }
 
 export interface QuizWithAnswers extends IQuiz {
