@@ -9,9 +9,10 @@
                     "type": "radio",
                     "options": [
                         "I'm packing a bag with my essentials and heading to the airport to see what last-minute flight deals I can find. Adventure awaits!",
-                        "I'm booking that cozy cabin in the woods I've had saved, complete with a fireplace and a good book.",
-                        "I'm texting my friends to see who's up for a spontaneous road trip to a nearby city for concerts and great food.",
-                        "I'm checking my meticulously curated list of saved destinations, comparing prices, and booking a perfectly planned short trip."
+                        "I'm booking that cozy cabin in the woods I've had saved, complete with a fireplace and a good book." ,
+                        "I'm texting my friends to see who's up for a spontaneous road trip to a nearby city for concerts and great food." ,
+                        "I'm checking my meticulously curated list of saved destinations, comparing prices, and booking a perfectly planned short trip." ,
+                        "I'm staying home and binge-watching my favorite TV show."
                     ],
                     "required": true,
                     "name": "surprise-weekend"
