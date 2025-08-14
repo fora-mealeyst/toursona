@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { IQuiz, IQuizAnswer } from './types';
+import { IQuiz, IQuizAnswer, CreateQuizRequest } from './types';
 
 const API_BASE_URL = '/api';
 
