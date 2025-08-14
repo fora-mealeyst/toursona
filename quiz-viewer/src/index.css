@@ -95,6 +95,22 @@
   font-style: normal;
 }
 
+/* Background animation */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.splash-image {
+  background-repeat: no-repeat;
+  background-size: 120% auto;
+  animation: moveBackground 20s ease-in-out infinite alternate;
+}
+
 @theme {
   --color-gray-50: #131313;
   --color-gray-100: #241E1B;

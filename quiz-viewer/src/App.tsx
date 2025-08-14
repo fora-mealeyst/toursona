@@ -6,6 +6,7 @@ import {
   QuizComplete, 
   QuizForm 
 } from './components';
+import { GlassElement } from './components/GlassElement/GlassElement';
 
 // Array of available images (excluding vite.svg)
 const backgroundImages = [
@@ -90,11 +91,22 @@ const App = () => {
   return (
     <div className="grid grid-flow-col grid-cols-12 min-h-screen bg-gray-95:bg-gray-900">
       <div 
-        className="col-span-6 h-full bg-cover bg-center bg-no-repeat"
+        className="col-span-6 h-full splash-image relative"
         style={{
           backgroundImage: currentImage ? `url(/${currentImage})` : undefined
         }}
-      ></div>
+      >
+        <GlassElement
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          width={400}
+          height={512}
+          radius={184}
+          depth={10}
+          blur={2}
+          chromaticAberration={5}
+          debug={false}
+        />
+      </div>
       <div className="col-span-6 p-[40px] h-full flex flex-col items-center">
         <h1 className="text-[16px] font-normal uppercase text-gray-100 dark:text-white mb-[24px] mt-0 text-center h-[40px] w-[480px] text-left">
           {quiz.title}
