@@ -23,11 +23,10 @@ Toursona is a quiz builder platform designed to help travel businesses understan
    ```sh
    git clone git@github.com:fora-mealeyst/toursona.git
    ```
-2. Install dependencies for each subproject (admin, viewer, server):
+2. Install dependencies for the workspaces:
    ```sh
-   cd quiz-admin && npm install
-   cd ../quiz-viewer && npm install
-   cd ../server && npm install
+   npm install
+   npm run dev
    ```
 3. Start the development servers as needed.
 
