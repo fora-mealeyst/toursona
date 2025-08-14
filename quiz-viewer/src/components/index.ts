@@ -5,7 +5,7 @@ export { QuizStep } from './QuizStep';
 export { QuizForm } from './QuizForm';
 export { LoadingSpinner } from './LoadingSpinner';
 export { ErrorMessage } from './ErrorMessage';
-export { QuizComplete } from './QuizComplete';
+export { QuizResults } from './QuizResults';
 export { ProgressBar } from './ProgressBar';
 export { StackRanking } from './StackRanking';
 export { StackRankingDemo } from './StackRankingDemo';

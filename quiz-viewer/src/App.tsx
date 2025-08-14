@@ -2,7 +2,7 @@ import { useQuiz } from './hooks';
 import { 
   LoadingSpinner, 
   ErrorMessage, 
-  QuizComplete, 
+  QuizResults, 
   QuizForm 
 } from './components';
 
@@ -14,15 +14,18 @@ const App = () => {
     submitted,
     error,
     loading,
+    scoringResult,
     handleChange,
     handleNext,
     handlePrevious,
+    handleRetake,
   } = useQuiz();
 
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorMessage message={error} />;
   if (!quiz) return <LoadingSpinner />;
-  if (submitted) return <QuizComplete />;
+  if (submitted && scoringResult) return <QuizResults result={scoringResult} onRetake={handleRetake} />;
+  if (submitted) return <div className="text-center py-12">Calculating your results...</div>;
 
   const currentStep = quiz.steps[step];
 

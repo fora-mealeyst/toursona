@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Quiz } from '../types';
 import { API_BASE_URL } from '../constants';
+import { calculateScores, ScoringResult } from '../services/scoringService';
 
 export function useQuiz() {
   const [quiz, setQuiz] = useState<Quiz | null>(null);
@@ -10,15 +11,11 @@ export function useQuiz() {
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-
-  // Get quiz ID from URL parameters
-  const getQuizId = (): string | null => {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('quiz_id');
-  };
+  const [scoringResult, setScoringResult] = useState<ScoringResult | null>(null);
 
   useEffect(() => {
-    const quizId = getQuizId();
+    const urlParams = new URLSearchParams(window.location.search);
+    const quizId = urlParams.get('quiz_id');
     
     if (!quizId) {
       setError('No quiz ID provided. Please add ?quiz_id=YOUR_QUIZ_ID to the URL.');
@@ -36,7 +33,10 @@ export function useQuiz() {
         return res.json();
       })
       .then((data: Quiz | Quiz[]) => {
-        setQuiz(Array.isArray(data) ? data[0] : data);
+        console.log('Quiz data received:', data);
+        const quizData = Array.isArray(data) ? data[0] : data;
+        console.log('Processed quiz data:', quizData);
+        setQuiz(quizData);
         setLoading(false);
       })
       .catch((err: Error) => {
@@ -44,7 +44,13 @@ export function useQuiz() {
         setError(`Failed to load quiz: ${err.message}`);
         setLoading(false);
       });
-  }, []);
+  }, [API_BASE_URL]);
+
+  // Get quiz ID from URL parameters
+  const getQuizId = (): string | null => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('quiz_id');
+  };
 
   const handleChange = (name: string, value: string) => {
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -93,8 +99,42 @@ export function useQuiz() {
     if (step < quiz.steps.length - 1) {
       setStep(step + 1);
     } else {
-      setSubmitted(true);
+      // Calculate scores when quiz is completed
+      try {
+        const result = calculateScores(quiz, { [step]: stepAnswers });
+        setScoringResult(result);
+        
+        // Send calculated scores to server
+        const requestBody = {
+          sessionId,
+          stepIndex: step,
+          stepAnswers,
+          calculatedScores: result.scores,
+        };
+        
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(requestBody),
+        });
+        
+        const data = await res.json();
+        if (data.sessionId) setSessionId(data.sessionId);
+        
+        setSubmitted(true);
+      } catch (err) {
+        console.error('Error calculating scores:', err);
+        setSubmitted(true); // Still mark as submitted even if scoring fails
+      }
     }
+  };
+
+  const handleRetake = () => {
+    setForm({});
+    setStep(0);
+    setSubmitted(false);
+    setScoringResult(null);
+    setSessionId(null);
   };
 
   return {
@@ -104,8 +144,10 @@ export function useQuiz() {
     submitted,
     error,
     loading,
+    scoringResult,
     handleChange,
     handleNext,
     handlePrevious,
+    handleRetake,
   };
 }

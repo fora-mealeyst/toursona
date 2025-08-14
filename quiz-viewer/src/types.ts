@@ -3,7 +3,7 @@ export interface QuizField {
   label: string;
   name: string;
   required?: boolean;
-  options?: string[];
+  options?: (string | { label: string; value: string; tags?: string[]; scores?: Record<string, number> })[];
 }
 
 export interface QuizStep {

@@ -15,7 +15,7 @@ router.post('/:id/answers', async (req: Request<{ id: string }, {}, SubmitAnswer
       return;
     }
 
-    const { sessionId, stepIndex, stepAnswers } = req.body;
+    const { sessionId, stepIndex, stepAnswers, calculatedScores } = req.body;
     console.log(stepAnswers);
 
     let answerDoc;
@@ -27,12 +27,16 @@ router.post('/:id/answers', async (req: Request<{ id: string }, {}, SubmitAnswer
         return;
       }
       answerDoc.answers[stepIndex] = stepAnswers;
+      if (calculatedScores) {
+        answerDoc.calculatedScores = calculatedScores;
+      }
       await answerDoc.save();
     } else {
       // Create new answer doc
       answerDoc = new QuizAnswer({
         quizId: req.params.id,
         answers: { [stepIndex]: stepAnswers },
+        calculatedScores: calculatedScores || {},
       });
       await answerDoc.save();
     }
