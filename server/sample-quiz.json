@@ -1,0 +1,124 @@
+{
+    "title": "What's your Travel Vibe?",
+    "steps": [
+        {
+            "title": "Surpise weekend!",
+            "inputs": [
+                {
+                    "label": "It's Friday afternoon and you just got a surprise three-day weekend. What's your move?",
+                    "type": "radio",
+                    "options": [
+                        "I'm packing a bag with my essentials and heading to the airport to see what last-minute flight deals I can find. Adventure awaits!",
+                        "I'm booking that cozy cabin in the woods I've had saved, complete with a fireplace and a good book.",
+                        "I'm texting my friends to see who's up for a spontaneous road trip to a nearby city for concerts and great food.",
+                        "I'm checking my meticulously curated list of saved destinations, comparing prices, and booking a perfectly planned short trip."
+                    ],
+                    "required": true,
+                    "name": "surprise-weekend"
+                }
+            ]
+        },
+        {
+            "title": "New locale!",
+            "inputs": [
+                {
+                    "label": "You've arrived in a new, bustling city. What's the first thing on your agenda?",
+                    "type": "radio",
+                    "options": [
+                        "Ditching the map and getting lost in the winding backstreets to find the most authentic local spots.",
+                        "Heading straight to a well-known museum or a famous historical landmark.",
+                        "Finding a rooftop bar with a great view for a cocktail to soak in the city's energy.",
+                        "Checking into my hotel, unpacking completely, and then heading out for a pre-booked walking tour."
+                    ],
+                    "required": true,
+                    "name": "new-locale"
+                }
+            ]
+        },
+        {
+            "title": "Yuck or yum?",
+            "inputs": [
+                {
+                    "label": "Which of these sounds like the perfect travel meal?",
+                    "type": "radio",
+                    "options": [
+                        "Trying a mystery dish from a street food vendor that has a long line of locals.",
+                        "A multi-course tasting menu at a Michelin-starred restaurant I booked three months ago.",
+                        "A lively, shared tapas-style meal with new friends at a popular, noisy restaurant.",
+                        "A simple, fresh picnic of bread, cheese, and fruit from a local market, enjoyed in a quiet park."
+                    ],
+                    "name": "food-choice",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "title": "Planner or go with the flow?",
+            "inputs": [
+                {
+                    "label": "How much of your itinerary is planned before you leave?",
+                    "type": "radio",
+                    "options": [
+                        "Itinerary? I have a one-way ticket and a general direction. The rest will figure itself out.",
+                        "It’s planned down to the hour, with reservations, tickets, and transportation all confirmed.",
+                        "I've booked my flights and first night's stay, and have a list of ideas, but I'll go with the flow.",
+                        "I have the major things booked (hotels, key tours) but leave my afternoons free for spontaneous discoveries."
+                    ],
+                    "name": "planning-style",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "title": "Why do you travel?",
+            "inputs": [
+                {
+                    "label": "What's the main goal of your vacation?",
+                    "type": "radio",
+                    "options": [
+                        "To challenge myself, step out of my comfort zone, and experience something completely new.",
+                        "To unplug, de-stress, and return home feeling completely rejuvenated and pampered.",
+                        "To meet new people, experience the culture, and have unforgettable stories to tell.",
+                        "To learn something new about history, art, or nature and enrich my understanding of the world."
+                    ],
+                    "name": "vacation-goal",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "title": "How do you remember your trip?",
+            "inputs": [
+                {
+                    "label": "Which travel souvenir are you most likely to bring home?",
+                    "type": "radio",
+                    "options": [
+                        "A handmade item purchased directly from the artisan who made it in a remote village.",
+                        "A high-end piece of art from a gallery or a designer item unique to the region.",
+                        "A collection of photos with new friends and a contact list for future visits.",
+                        "A book about the local history or a beautifully crafted map of the area I explored."
+                    ],
+                    "name": "vacation-souvenir",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "title": "Vacation soundtrack?",
+            "inputs": [
+                {
+                    "label": "Pick a travel soundtrack",
+                    "type": "radio",
+                    "options": [
+                        "A high-energy, world music playlist that makes you want to move.",
+                        "The gentle, ambient sounds of nature: waves crashing, birds chirping.",
+                        "A chart-topping pop or electronic playlist that's perfect for a party.",
+                        "An informative podcast or audiobook about the destination you're visiting."
+                    ],
+                    "name": "vacation-soundtrack",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

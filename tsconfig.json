@@ -1,0 +1,4 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": ["./quiz-admin/**/*", "./quiz-viewer/**/*", "./server/**/*", "server"]
+}
