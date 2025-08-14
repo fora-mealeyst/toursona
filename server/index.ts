@@ -1,13 +1,12 @@
-// server/index.js
+// server/index.ts
 // Entry point for the Express server
 
-
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const quizzesRouter = require('./routes/quizzes');
-
+import express from 'express';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import quizzesRouter from './routes/quizzes.js';
+import { HealthResponse } from './types/index.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -17,7 +16,7 @@ app.use(bodyParser.json());
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  const health = {
+  const health: HealthResponse = {
     status: 'OK',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
@@ -35,7 +34,7 @@ app.use('/api/quizzes', quizzesRouter);
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/quizdb', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+} as mongoose.ConnectOptions);
 
 mongoose.connection.on('connected', () => {
   console.log('Connected to MongoDB');
