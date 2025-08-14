@@ -1,9 +1,16 @@
+export interface QuizOption {
+  label: string;
+  value: string;
+  tags?: string[];
+  scores?: Record<string, number>;
+}
+
 export interface QuizField {
-  type: 'radio' | 'text';
+  type: 'single_choice' | 'text';
   label: string;
   name: string;
   required?: boolean;
-  options?: string[];
+  options?: QuizOption[];
 }
 
 export interface QuizStep {

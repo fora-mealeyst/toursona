@@ -26,11 +26,7 @@ export const QuizForm = ({
   const isLastStep = step === quiz.steps.length - 1;
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-6">
-      <ProgressBar 
-        currentStep={step} 
-        totalSteps={quiz.steps.length} 
-      />
+    <form className="h-full"onSubmit={onSubmit}>
       <QuizStep 
         step={currentStep} 
         form={form} 
@@ -41,17 +37,21 @@ export const QuizForm = ({
           <button 
             type="button"
             onClick={onPrevious}
-            className="px-6 py-3 bg-gray-500 text-white font-medium rounded-lg hover:bg-gray-600 transition-colors duration-200"
+            className="px-6 py-3 mr-[8px] bg-gray-500 text-white font-medium hover:bg-gray-600 transition-colors duration-200"
           >
             Previous
           </button>
         )}
         <button 
           type="submit"
-          className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+          className="px-6 py-3 bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors duration-200"
         >
           {isLastStep ? 'Submit' : 'Next'}
         </button>
+        <ProgressBar 
+        currentStep={step} 
+        totalSteps={quiz.steps.length} 
+      />
       </div>
     </form>
   );
