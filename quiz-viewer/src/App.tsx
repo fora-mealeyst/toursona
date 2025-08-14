@@ -1,17 +1,23 @@
-
 import { useEffect, useState } from 'react';
 import './App.css';
+import { Quiz, QuizField, QuizStep } from './types';
 
-const API_URL = 'http://localhost:4000/api/quizzes/689c0a1528d25d8e353228fd'; // Update with your actual API endpoint and quiz ID as needed
+const API_BASE_URL = 'http://localhost:4000/api/quizzes/'; // Base API endpoint
 
-function Field({ field, value, onChange }) {
+interface FieldProps {
+  field: QuizField;
+  value: string | undefined;
+  onChange: (name: string, value: string) => void;
+}
+
+function Field({ field, value, onChange }: FieldProps) {
   switch (field.type) {
     case 'radio':
       return (
         <div className="radio-question">
           <label>{field.label}</label>
           <div className="radio-options">
-            {field.options.map((option) => (
+            {field.options?.map((option) => (
               <label className="radio-input" key={option}>
                 <input
                   type="radio"
@@ -45,38 +51,69 @@ function Field({ field, value, onChange }) {
 }
 
 function App() {
-  const [quiz, setQuiz] = useState(null);
-  const [form, setForm] = useState({});
+  const [quiz, setQuiz] = useState<Quiz | null>(null);
+  const [form, setForm] = useState<Record<string, string>>({});
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
-  const [sessionId, setSessionId] = useState(null);
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  // Get quiz ID from URL parameters
+  const getQuizId = (): string | null => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('quiz_id');
+  };
 
   useEffect(() => {
+    const quizId = getQuizId();
+    
+    if (!quizId) {
+      setError('No quiz ID provided. Please add ?quiz_id=YOUR_QUIZ_ID to the URL.');
+      return;
+    }
+
+    const API_URL = `${API_BASE_URL}${quizId}`;
+    
     fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => setQuiz(Array.isArray(data) ? data[0] : data))
-      .catch((err) => console.error('Failed to fetch quiz:', err));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to fetch quiz: ${res.status} ${res.statusText}`);
+        }
+        return res.json();
+      })
+      .then((data: Quiz | Quiz[]) => setQuiz(Array.isArray(data) ? data[0] : data))
+      .catch((err: Error) => {
+        console.error('Failed to fetch quiz:', err);
+        setError(`Failed to load quiz: ${err.message}`);
+      });
   }, []);
 
+  if (error) return <div className="error">Error: {error}</div>;
   if (!quiz) return <div>Loading quiz...</div>;
 
-  const currentStep = quiz.steps[step];
+  const currentStep: QuizStep = quiz.steps[step];
 
-  const handleChange = (name, value) => {
+  const handleChange = (name: string, value: string) => {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleNext = async (e) => {
+  const handleNext = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Prepare answers for this step
-    const stepAnswers = {};
+    const stepAnswers: Record<string, string> = {};
     currentStep.inputs.forEach((field) => {
       console.log(field)
-      stepAnswers[field.name] = form[field.name];
+      stepAnswers[field.name] = form[field.name] || '';
     });
     console.log(stepAnswers)
+    
+    const quizId = getQuizId();
+    if (!quizId) return;
+    
+    const API_URL = `${API_BASE_URL}${quizId}/answers`;
+    
     try {
-      const res = await fetch(`${API_URL}/answers`, {
+      const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
