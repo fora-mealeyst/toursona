@@ -101,7 +101,7 @@ const App = () => {
         }}></div>
         <GlassElement
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          width={400}
+          width={380}
           height={512}
           radius={184}
           depth={5}

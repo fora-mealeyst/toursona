@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import Quiz from '../models/Quiz.js';
 import QuizAnswer from '../models/QuizAnswer.js';
-import { CreateQuizRequest, SubmitAnswerRequest } from '../types/index.js';
+import { CreateQuizRequest, SubmitAnswerRequest } from '../types';
 
 const router = express.Router();
 

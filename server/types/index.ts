@@ -40,6 +40,7 @@ export interface SubmitAnswerRequest {
   sessionId?: string;
   stepIndex: number;
   stepAnswers: Record<string, any>;
+  calculatedScores?: Map<string, number>;
 }
 
 export interface HealthResponse {
