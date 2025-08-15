@@ -145,27 +145,18 @@ export function calculateScores(
     typeScores[type.id] = 0;
   });
 
-  console.log('Starting score calculation with answers:', answers);
-  console.log('Quiz data steps:', quizData.steps?.length);
-  
   // Process each step and its answers
   Object.entries(answers).forEach(([stepIndex, stepAnswers]) => {
     const step = quizData.steps[parseInt(stepIndex)];
     if (!step) {
-      console.log(`Step ${stepIndex} not found in quiz data`);
       return;
     }
-
-    console.log(`Processing step ${stepIndex}:`, stepAnswers);
-    console.log(`Step has ${step.inputs.length} inputs`);
 
     step.inputs.forEach((input: any) => {
       totalQuestions++;
       const answer = stepAnswers[input.name];
-      console.log(`Input ${input.name}: answer = "${answer}"`);
       
       if (!answer) {
-        console.log(`No answer for ${input.name}`);
         return;
       }
 
@@ -179,19 +170,14 @@ export function calculateScores(
         return option.label === answer || option.value === answer;
       });
 
-      console.log(`Selected option for ${input.name}:`, selectedOption);
-
       if (selectedOption && typeof selectedOption === 'object' && selectedOption.scores) {
         // Add scores from the selected option
         Object.entries(selectedOption.scores).forEach(([scoreKey, score]) => {
           if (typeof score === 'number') {
             const typeId = mapScoreKeyToTypeId(scoreKey);
-            console.log(`Adding score: ${scoreKey} -> ${typeId} = ${score}`);
             typeScores[typeId] = (typeScores[typeId] || 0) + score;
           }
         });
-      } else {
-        console.log(`No scores found for selected option`);
       }
     });
   });

@@ -68,7 +68,6 @@ router.post('/', async (req: Request<{}, {}, CreateQuizRequest>, res: Response):
 router.get('/:id', async (req: Request<{ id: string }>, res: Response): Promise<void> => {
   try {
     const quiz = await Quiz.findById(req.params.id);
-    console.log(quiz);
     if (!quiz) {
       res.status(404).json({ error: 'Quiz not found' });
       return;

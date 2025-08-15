@@ -51,7 +51,6 @@ export const QuizResults = ({result, sessionId, quiz}: QuizResultsProps) => {
   }
 
   const { primaryType, breakdown } = calculatedResult;
-  console.log('QuizResults received:', { primaryType, breakdown, sessionId });
   return (
     <div className={styles.quizResults}>
       <h2 className={styles.tagline}>Meet your toursona</h2>

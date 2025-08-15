@@ -33,10 +33,7 @@ export function useQuiz() {
         return res.json();
       })
       .then((data: Quiz | Quiz[]) => {
-        console.log('Quiz data received:', data);
         const quizData = Array.isArray(data) ? data[0] : data;
-        console.log('Processed quiz data:', quizData);
-
         setQuiz(quizData);
         setLoading(false);
       })
@@ -112,12 +109,10 @@ export function useQuiz() {
         let allAnswers = {};
         if (currentSessionId) {
           try {
-            console.log('Fetching answers for session:', currentSessionId);
             const answersRes = await fetch(`${API_BASE_URL}${quizId}/answers/${currentSessionId}`);
             if (answersRes.ok) {
               const answerData = await answersRes.json();
               allAnswers = answerData.answers || {};
-              console.log('Fetched answers from server:', allAnswers);
             } else {
               console.error('Failed to fetch answers, status:', answersRes.status);
             }
@@ -128,8 +123,6 @@ export function useQuiz() {
         
         // Add current step answers to all answers
         allAnswers = { ...allAnswers, [step]: stepAnswers };
-        console.log('Final allAnswers before scoring:', allAnswers);
-        console.log('Number of steps with answers:', Object.keys(allAnswers).length);
         
         const result = calculateScores(quiz, allAnswers);
         setScoringResult(result);
