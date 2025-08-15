@@ -27,6 +27,9 @@ export const QuizForm = ({
 
   return (
     <form className="flex flex-col h-full justify-end" onSubmit={onSubmit}>
+      <h1 className="text-[16px] font-normal uppercase text-gray-100 dark:text-white mb-[24px] mt-0 text-center h-[40px] w-[480px] text-left">
+        {quiz.title}
+      </h1>
       <QuizStep 
         step={currentStep} 
         form={form} 

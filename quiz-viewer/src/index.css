@@ -40,7 +40,23 @@
 /* ChiswickSans Font Family */
 @font-face {
   font-family: 'ChiswickSans';
-  src: url('/fonts/ChiswickSansText-Regular.otf') format('opentype');
+  src: url('/fonts/ChiswickSans-Light-Web.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChiswickSans';
+  src: url('/fonts/ChiswickSans-LightItalic-Web.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChiswickSans';
+  src: url('/fonts/ChiswickSans-Regular-Web.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -48,9 +64,58 @@
 
 @font-face {
   font-family: 'ChiswickSans';
+  src: url('/fonts/ChiswickSans-RegularItalic-Web.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChiswickSans';
+  src: url('/fonts/ChiswickSans-Semibold-Web.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChiswickSans';
+  src: url('/fonts/ChiswickSans-SemiboldItalic-Web.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ChiswickSansText Font Family (Display variant) */
+@font-face {
+  font-family: 'ChiswickSansText';
+  src: url('/fonts/ChiswickSansText-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChiswickSansText';
+  src: url('/fonts/ChiswickSansText-RegularItalic-Web.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChiswickSansText';
   src: url('/fonts/ChiswickSansText-Semibold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChiswickSansText';
+  src: url('/fonts/ChiswickSansText-SemiboldItalic-Web.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -83,16 +148,66 @@
   font-style: italic;
 }
 
+/* ChiswickSans Utility Classes */
+.chiswick-text-light {
+  font-family: 'ChiswickSans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.chiswick-text-light-italic {
+  font-family: 'ChiswickSans', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
 .chiswick-text {
   font-family: 'ChiswickSans', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+.chiswick-text-italic {
+  font-family: 'ChiswickSans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .chiswick-text-semibold {
   font-family: 'ChiswickSans', sans-serif;
   font-weight: 600;
   font-style: normal;
+}
+
+.chiswick-text-semibold-italic {
+  font-family: 'ChiswickSans', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* ChiswickSansText Utility Classes (Display variant) */
+.chiswick-text-display {
+  font-family: 'ChiswickSansText', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chiswick-text-display-italic {
+  font-family: 'ChiswickSansText', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.chiswick-text-display-semibold {
+  font-family: 'ChiswickSansText', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.chiswick-text-display-semibold-italic {
+  font-family: 'ChiswickSansText', sans-serif;
+  font-weight: 600;
+  font-style: italic;
 }
 
 /* Background animation */

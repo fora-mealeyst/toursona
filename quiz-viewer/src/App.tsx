@@ -4,7 +4,8 @@ import {
   LoadingSpinner, 
   ErrorMessage, 
   QuizResults, 
-  QuizForm 
+  QuizForm,
+  Introduction
 } from './components';
 import { GlassElement } from './components/GlassElement/GlassElement';
 
@@ -77,11 +78,16 @@ const App = () => {
   } = useQuiz();
 
   const [currentImage, setCurrentImage] = useState<string>('');
+  const [showIntroduction, setShowIntroduction] = useState<boolean>(true);
 
   // Update image only when step changes
   useEffect(() => {
     setCurrentImage(getRandomImage());
   }, [step]);
+
+  const handleStartQuiz = () => {
+    setShowIntroduction(false);
+  };
 
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorMessage message={error} />;
@@ -111,18 +117,22 @@ const App = () => {
         />
       </div>
       <div className="col-span-6 p-[40px] h-[calc(100%-80px)] flex flex-col items-center">
-        <h1 className="text-[16px] font-normal uppercase text-gray-100 dark:text-white mb-[24px] mt-0 text-center h-[40px] w-[480px] text-left">
-          {quiz.title}
-        </h1>
-        <QuizForm
-          quiz={quiz}
-          currentStep={currentStep}
-          step={step}
-          form={form}
-          onChange={handleChange}
-          onSubmit={handleNext}
-          onPrevious={handlePrevious}
-        />
+        {showIntroduction ? (
+          <Introduction 
+            quiz={quiz} 
+            onStart={handleStartQuiz} 
+          />
+        ) : (
+          <QuizForm
+            quiz={quiz}
+            currentStep={currentStep}
+            step={step}
+            form={form}
+            onChange={handleChange}
+            onSubmit={handleNext}
+            onPrevious={handlePrevious}
+          />
+        )}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ export { RadioField } from './RadioField';
 export { TextField } from './TextField';
 export { QuizStep } from './QuizStep';
 export { QuizForm } from './QuizForm';
+export { Introduction } from './Introduction';
 export { LoadingSpinner } from './LoadingSpinner';
 export { ErrorMessage } from './ErrorMessage';
 export { QuizResults } from './QuizResults';
