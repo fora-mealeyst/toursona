@@ -5,7 +5,8 @@ import {
   ErrorMessage, 
   QuizResults, 
   QuizForm,
-  Introduction
+  Introduction,
+  MobileComingSoon
 } from './components';
 import { GlassElement } from './components/GlassElement/GlassElement';
 
@@ -79,6 +80,7 @@ const App = () => {
 
   const [currentImage, setCurrentImage] = useState<string>('');
   const [showIntroduction, setShowIntroduction] = useState<boolean>(true);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
 
 
@@ -86,6 +88,18 @@ const App = () => {
   useEffect(() => {
     setCurrentImage(getRandomImage());
   }, [step]);
+
+  // Check screen size for mobile detection
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const handleStartQuiz = () => {
     setShowIntroduction(false);
@@ -104,43 +118,51 @@ const App = () => {
   const currentStep = quiz.steps[step];
 
   return (
-    <div className="grid grid-flow-col grid-cols-12 min-h-screen bg-gray-95:bg-gray-900">
-      <div 
-        className="col-span-6 h-full overflow-hidden relative"
-      >
-        <div className="splash-image h-full" style={{
-          backgroundImage: currentImage ? `url(/${currentImage})` : undefined
-        }}></div>
-        <GlassElement
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          width={380}
-          height={512}
-          radius={184}
-          depth={5}
-          blur={2}
-          chromaticAberration={3}
-          debug={false}
-        />
-      </div>
-      <div className="col-span-6 p-[40px] h-[calc(100%-80px)] flex flex-col items-center">
-        {showIntroduction ? (
-          <Introduction 
-            quiz={quiz} 
-            onStart={handleStartQuiz} 
-          />
-        ) : (
-          <QuizForm
-            quiz={quiz}
-            currentStep={currentStep}
-            step={step}
-            form={form}
-            onChange={handleChange}
-            onSubmit={handleNext}
-            onPrevious={handlePrevious}
-          />
-        )}
-      </div>
-    </div>
+    <>
+      {/* Mobile Coming Soon Screen */}
+      {isMobile && <MobileComingSoon />}
+
+      {/* Desktop Layout */}
+      {!isMobile && (
+        <div className="grid grid-flow-col grid-cols-12 min-h-screen bg-gray-95:bg-gray-900">
+          <div 
+            className="col-span-6 h-full overflow-hidden relative"
+          >
+            <div className="splash-image h-full" style={{
+              backgroundImage: currentImage ? `url(/${currentImage})` : undefined
+            }}></div>
+            <GlassElement
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              width={380}
+              height={512}
+              radius={184}
+              depth={5}
+              blur={2}
+              chromaticAberration={3}
+              debug={false}
+            />
+          </div>
+          <div className="col-span-6 p-[40px] h-[calc(100%-80px)] flex flex-col items-center">
+            {showIntroduction ? (
+              <Introduction 
+                quiz={quiz} 
+                onStart={handleStartQuiz} 
+              />
+            ) : (
+              <QuizForm
+                quiz={quiz}
+                currentStep={currentStep}
+                step={step}
+                form={form}
+                onChange={handleChange}
+                onSubmit={handleNext}
+                onPrevious={handlePrevious}
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

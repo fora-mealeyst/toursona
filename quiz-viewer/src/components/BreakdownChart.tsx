@@ -75,7 +75,7 @@ export const BreakdownChart = ({ result }: BreakdownChartProps) => {
       .attr('text-anchor', 'middle')
       .attr('fill', '#241E1B')
       .attr('font-family', 'ChiswickSans, sans-serif')
-      .attr('font-size', isMobile ? '12px' : isLargeScreen ? '18px' : '14px')
+      .attr('font-size', '18px')
       .attr('font-weight', '600')
       .text(d => `${d.percentage}%`);
 
@@ -87,7 +87,7 @@ export const BreakdownChart = ({ result }: BreakdownChartProps) => {
       .attr('transform', isMobile ? 'rotate(-90)' : 'rotate(-45)')
       .attr('text-anchor', isMobile ? 'end' : 'end')
       .attr('font-family', 'ChiswickSans, sans-serif')
-      .attr('font-size', isMobile ? '10px' : isLargeScreen ? '16px' : '12px')
+      .attr('font-size', '16px')
       .attr('fill', '#241E1B')
       .text((d: any) => {
         const type = PERSONALITY_TYPES.find(t => t.id === d);
@@ -99,7 +99,7 @@ export const BreakdownChart = ({ result }: BreakdownChartProps) => {
       .call(d3.axisLeft(y).ticks(isMobile ? 4 : isLargeScreen ? 8 : 5).tickFormat(d => `${d}%`))
       .selectAll('text')
       .attr('font-family', 'ChiswickSans, sans-serif')
-      .attr('font-size', isMobile ? '10px' : isLargeScreen ? '16px' : '12px')
+      .attr('font-size', '16px')
       .attr('fill', '#241E1B');
 
     // Add y-axis label (only on desktop)
@@ -111,7 +111,7 @@ export const BreakdownChart = ({ result }: BreakdownChartProps) => {
         .attr('dy', '1em')
         .attr('text-anchor', 'middle')
         .attr('font-family', 'ChiswickSans, sans-serif')
-        .attr('font-size', isLargeScreen ? '18px' : '14px')
+        .attr('font-size', '18px')
         .attr('fill', '#241E1B')
         .text('Percentage Score');
     }

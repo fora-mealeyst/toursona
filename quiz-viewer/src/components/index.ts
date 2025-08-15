@@ -10,3 +10,4 @@ export { QuizResults } from './QuizResults';
 export { ProgressBar } from './ProgressBar';
 export { StackRanking } from './StackRanking';
 export { StackRankingDemo } from './StackRankingDemo';
+export { MobileComingSoon } from './MobileComingSoon';
