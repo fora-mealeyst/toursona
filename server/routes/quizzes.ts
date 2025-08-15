@@ -120,6 +120,21 @@ router.get('/:id/answers', async (req: Request<{ id: string }>, res: Response): 
   }
 });
 
+// GET: Fetch answers by session ID
+router.get('/:id/answers/:sessionId', async (req: Request<{ id: string; sessionId: string }>, res: Response): Promise<void> => {
+  try {
+    const answerDoc = await QuizAnswer.findById(req.params.sessionId);
+    if (!answerDoc) {
+      res.status(404).json({ error: 'Session not found' });
+      return;
+    }
+    res.json(answerDoc);
+  } catch (err) {
+    const error = err as Error;
+    res.status(400).json({ error: error.message });
+  }
+});
+
 // GET: Fetch all quizzes
 router.get('/', async (req: Request, res: Response): Promise<void> => {
   try {

@@ -7,9 +7,6 @@ interface RadioFieldProps {
 }
 
 export const RadioField = ({ field, value, onChange }: RadioFieldProps) => {
-  // Debug logging to see what we're getting
-  console.log('RadioField field:', field);
-  console.log('RadioField options:', field.options);
   
   return (
     <div className="flex flex-col justify-between basis-full">

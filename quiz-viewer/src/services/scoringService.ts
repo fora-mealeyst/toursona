@@ -36,7 +36,7 @@ export interface ScoringResult {
 export const PERSONALITY_TYPES: PersonalityType[] = [
   {
     id: 'adventurer',
-    name: 'The Adventurer',
+    name: 'Adventurer',
     description: 'You chase adrenaline and venture where maps get fuzzy. Your passport is a collection of summits, safaris, and once-in-a-lifetime feats, answering calls to trek Patagonia or dive the Great Barrier Reef.',
     traits: ['Adrenaline-seeking', 'Explorer', 'Risk-taker', 'Thrill-chaser'],
     travelStyle: 'Summits, safaris, and once-in-a-lifetime feats',
@@ -47,7 +47,7 @@ export const PERSONALITY_TYPES: PersonalityType[] = [
   },
   {
     id: 'luxe-seeker',
-    name: 'The Luxe Seeker',
+    name: 'Luxe Seeker',
     description: 'You love exclusivity, premium service, and travel that feels as effortless as it looks. Your style is all about splendor without compromise: suites with skyline views, first-class flights, and private transfers.',
     traits: ['Luxury-focused', 'Premium', 'Exclusive', 'Sophisticated'],
     travelStyle: 'Suites with skyline views, first-class flights, and private transfers',
@@ -58,7 +58,7 @@ export const PERSONALITY_TYPES: PersonalityType[] = [
   },
   {
     id: 'immersive-local',
-    name: 'The Immersive Local',
+    name: 'Immersive Local',
     description: 'On your travels, you strive to connect deeply and live like you\'ve always belonged. Your best moments are found in neighborhood cafés, local festivals, and conversations that last hours.',
     traits: ['Authentic', 'Community-focused', 'Cultural', 'Connector'],
     travelStyle: 'Neighborhood cafés, local festivals, and deep conversations',
@@ -69,7 +69,7 @@ export const PERSONALITY_TYPES: PersonalityType[] = [
   },
   {
     id: 'scholar',
-    name: 'The Scholar',
+    name: 'Scholar',
     description: 'You love the story behind every stone, artifact, and landmark. You travel to walk the paths of history, explore museums, and see the art and architecture that shaped the world.',
     traits: ['Intellectual', 'History-focused', 'Art-loving', 'Knowledge-seeker'],
     travelStyle: 'Museums, historical sites, and architectural wonders',
@@ -80,7 +80,7 @@ export const PERSONALITY_TYPES: PersonalityType[] = [
   },
   {
     id: 'nomad',
-    name: 'The Nomad',
+    name: 'Nomad',
     description: 'You love freedom, flexibility, and finding value in every mile. Your adventures are long, layered, and driven by curiosity. You\'re often found hopping trains or chasing budget flights to the next adventure.',
     traits: ['Free-spirited', 'Flexible', 'Value-conscious', 'Curious'],
     travelStyle: 'Long, layered adventures driven by curiosity',
@@ -91,7 +91,7 @@ export const PERSONALITY_TYPES: PersonalityType[] = [
   },
   {
     id: 'gastronome',
-    name: 'The Gastronome',
+    name: 'Gastronome',
     description: 'From street food to Michelin stars, your memories live on in flavor: a seafood market at sunrise, an incomparable afternoon sweet, and a dinner that forever changes how you think about a single ingredient.',
     traits: ['Food-obsessed', 'Flavor-seeker', 'Culinary-adventurer', 'Taste-explorer'],
     travelStyle: 'Street food to Michelin stars, markets to fine dining',
@@ -102,7 +102,7 @@ export const PERSONALITY_TYPES: PersonalityType[] = [
   },
   {
     id: 'wellness-seeker',
-    name: 'The Wellness Seeker',
+    name: 'Wellness Seeker',
     description: 'You love slowing down, recharging, and being present at your destination. Whether it\'s a sunrise yoga class, an afternoon in a mountain hot spring, or an uninterrupted nap in a beach hammock, you travel to restore as much as to explore.',
     traits: ['Mindful', 'Rejuvenating', 'Present', 'Balanced'],
     travelStyle: 'Sunrise yoga, mountain hot springs, and beach hammocks',
@@ -112,6 +112,22 @@ export const PERSONALITY_TYPES: PersonalityType[] = [
     advisorDescription: 'Find an advisor who knows the most transformative retreats and serene escapes.'
   }
 ];
+
+/**
+ * Map quiz score keys to personality type IDs
+ */
+function mapScoreKeyToTypeId(scoreKey: string): string {
+  const mapping: Record<string, string> = {
+    'Adventurer': 'adventurer',
+    'Luxe Seeker': 'luxe-seeker',
+    'Immersive Local': 'immersive-local',
+    'Scholar': 'scholar',
+    'Nomad': 'nomad',
+    'Gastronome': 'gastronome',
+    'Wellness Seeker': 'wellness-seeker'
+  };
+  return mapping[scoreKey] || scoreKey;
+}
 
 /**
  * Calculate personality scores based on quiz answers
@@ -129,15 +145,29 @@ export function calculateScores(
     typeScores[type.id] = 0;
   });
 
+  console.log('Starting score calculation with answers:', answers);
+  console.log('Quiz data steps:', quizData.steps?.length);
+  
   // Process each step and its answers
   Object.entries(answers).forEach(([stepIndex, stepAnswers]) => {
     const step = quizData.steps[parseInt(stepIndex)];
-    if (!step) return;
+    if (!step) {
+      console.log(`Step ${stepIndex} not found in quiz data`);
+      return;
+    }
+
+    console.log(`Processing step ${stepIndex}:`, stepAnswers);
+    console.log(`Step has ${step.inputs.length} inputs`);
 
     step.inputs.forEach((input: any) => {
       totalQuestions++;
       const answer = stepAnswers[input.name];
-      if (!answer) return;
+      console.log(`Input ${input.name}: answer = "${answer}"`);
+      
+      if (!answer) {
+        console.log(`No answer for ${input.name}`);
+        return;
+      }
 
       answeredQuestions++;
 
@@ -149,13 +179,19 @@ export function calculateScores(
         return option.label === answer || option.value === answer;
       });
 
+      console.log(`Selected option for ${input.name}:`, selectedOption);
+
       if (selectedOption && typeof selectedOption === 'object' && selectedOption.scores) {
         // Add scores from the selected option
-        Object.entries(selectedOption.scores).forEach(([typeId, score]) => {
+        Object.entries(selectedOption.scores).forEach(([scoreKey, score]) => {
           if (typeof score === 'number') {
+            const typeId = mapScoreKeyToTypeId(scoreKey);
+            console.log(`Adding score: ${scoreKey} -> ${typeId} = ${score}`);
             typeScores[typeId] = (typeScores[typeId] || 0) + score;
           }
         });
+      } else {
+        console.log(`No scores found for selected option`);
       }
     });
   });

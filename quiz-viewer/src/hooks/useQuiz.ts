@@ -36,6 +36,7 @@ export function useQuiz() {
         console.log('Quiz data received:', data);
         const quizData = Array.isArray(data) ? data[0] : data;
         console.log('Processed quiz data:', quizData);
+
         setQuiz(quizData);
         setLoading(false);
       })
@@ -91,7 +92,10 @@ export function useQuiz() {
         }),
       });
       const data = await res.json();
-      if (data.sessionId) setSessionId(data.sessionId);
+      if (data.sessionId) {
+        setSessionId(data.sessionId);
+        // Don't set session_id in URL until quiz is completed
+      }
     } catch (err) {
       console.error('Failed to submit step answers:', err);
     }
@@ -101,12 +105,36 @@ export function useQuiz() {
     } else {
       // Calculate scores when quiz is completed
       try {
-        const result = calculateScores(quiz, { [step]: stepAnswers });
+        // Get the current session ID (might have been updated in the previous API call)
+        const currentSessionId = sessionId || data?.sessionId;
+        
+        // Fetch all answers for this session to calculate proper scores
+        let allAnswers = {};
+        if (currentSessionId) {
+          try {
+            const answersRes = await fetch(`${API_BASE_URL}${quizId}/answers/${currentSessionId}`);
+            if (answersRes.ok) {
+              const answerData = await answersRes.json();
+              allAnswers = answerData.answers || {};
+            } else {
+              console.error('Failed to fetch answers, status:', answersRes.status);
+            }
+          } catch (err) {
+            console.error('Failed to fetch session answers:', err);
+          }
+        }
+        
+        // Add current step answers to all answers
+        allAnswers = { ...allAnswers, [step]: stepAnswers };
+        console.log('All answers before scoring:', allAnswers);
+        console.log('Number of steps with answers:', Object.keys(allAnswers).length);
+        
+        const result = calculateScores(quiz, allAnswers);
         setScoringResult(result);
         
         // Send calculated scores to server
         const requestBody = {
-          sessionId,
+          sessionId: currentSessionId,
           stepIndex: step,
           stepAnswers,
           calculatedScores: result.scores,
@@ -119,7 +147,13 @@ export function useQuiz() {
         });
         
         const data = await res.json();
-        if (data.sessionId) setSessionId(data.sessionId);
+        if (data.sessionId) {
+          setSessionId(data.sessionId);
+          // Update URL with session ID for sharing
+          const url = new URL(window.location.href);
+          url.searchParams.set('session_id', data.sessionId);
+          window.history.replaceState({}, '', url.toString());
+        }
         
         setSubmitted(true);
       } catch (err) {
@@ -137,6 +171,30 @@ export function useQuiz() {
     setSessionId(null);
   };
 
+  // Function to fetch and recalculate results from session
+  const fetchAndCalculateResults = async (sessionId: string) => {
+    if (!quiz) return;
+    
+    const quizId = getQuizId();
+    if (!quizId) return;
+    
+    try {
+      const answersRes = await fetch(`${API_BASE_URL}${quizId}/answers/${sessionId}`);
+      if (answersRes.ok) {
+        const answerData = await answersRes.json();
+        const allAnswers = answerData.answers || {};
+        
+        const result = calculateScores(quiz, allAnswers);
+        setScoringResult(result);
+        setSubmitted(true);
+      } else {
+        console.error('Failed to fetch answers for recalculation, status:', answersRes.status);
+      }
+    } catch (err) {
+      console.error('Failed to fetch and calculate results:', err);
+    }
+  };
+
   return {
     quiz,
     form,
@@ -149,5 +207,6 @@ export function useQuiz() {
     handleNext,
     handlePrevious,
     handleRetake,
+    fetchAndCalculateResults,
   };
 }
