@@ -112,10 +112,12 @@ export function useQuiz() {
         let allAnswers = {};
         if (currentSessionId) {
           try {
+            console.log('Fetching answers for session:', currentSessionId);
             const answersRes = await fetch(`${API_BASE_URL}${quizId}/answers/${currentSessionId}`);
             if (answersRes.ok) {
               const answerData = await answersRes.json();
               allAnswers = answerData.answers || {};
+              console.log('Fetched answers from server:', allAnswers);
             } else {
               console.error('Failed to fetch answers, status:', answersRes.status);
             }
@@ -126,7 +128,7 @@ export function useQuiz() {
         
         // Add current step answers to all answers
         allAnswers = { ...allAnswers, [step]: stepAnswers };
-        console.log('All answers before scoring:', allAnswers);
+        console.log('Final allAnswers before scoring:', allAnswers);
         console.log('Number of steps with answers:', Object.keys(allAnswers).length);
         
         const result = calculateScores(quiz, allAnswers);
@@ -171,30 +173,6 @@ export function useQuiz() {
     setSessionId(null);
   };
 
-  // Function to fetch and recalculate results from session
-  const fetchAndCalculateResults = async (sessionId: string) => {
-    if (!quiz) return;
-    
-    const quizId = getQuizId();
-    if (!quizId) return;
-    
-    try {
-      const answersRes = await fetch(`${API_BASE_URL}${quizId}/answers/${sessionId}`);
-      if (answersRes.ok) {
-        const answerData = await answersRes.json();
-        const allAnswers = answerData.answers || {};
-        
-        const result = calculateScores(quiz, allAnswers);
-        setScoringResult(result);
-        setSubmitted(true);
-      } else {
-        console.error('Failed to fetch answers for recalculation, status:', answersRes.status);
-      }
-    } catch (err) {
-      console.error('Failed to fetch and calculate results:', err);
-    }
-  };
-
   return {
     quiz,
     form,
@@ -207,6 +185,5 @@ export function useQuiz() {
     handleNext,
     handlePrevious,
     handleRetake,
-    fetchAndCalculateResults,
   };
 }

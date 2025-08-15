@@ -1,15 +1,56 @@
+import { useState, useEffect } from 'react';
 import styles from './QuizResults.module.css';
-import { ScoringResult } from '../services/scoringService';
+import { ScoringResult, calculateScores } from '../services/scoringService';
 import { GlassElement } from './GlassElement/GlassElement';
+import { API_BASE_URL } from '../constants';
 
 interface QuizResultsProps {
-  result: ScoringResult;
+  result?: ScoringResult;
   onRetake?: () => void;
   sessionId?: string;
+  quiz?: any;
 }
 
-export const QuizResults = ({result, sessionId}: QuizResultsProps) => {
-  const { primaryType, breakdown } = result;
+export const QuizResults = ({result, sessionId, quiz}: QuizResultsProps) => {
+  const [calculatedResult, setCalculatedResult] = useState<ScoringResult | null>(result || null);
+  const [loading, setLoading] = useState(!result);
+
+  // Fetch and calculate results if we have a session ID but no result
+  useEffect(() => {
+    const fetchAndCalculateResults = async () => {
+      if (!sessionId || !quiz || result) return;
+      
+      try {
+        const quizId = new URLSearchParams(window.location.search).get('quiz_id');
+        if (!quizId) return;
+        
+        const answersRes = await fetch(`${API_BASE_URL}${quizId}/answers/${sessionId}`);
+        if (answersRes.ok) {
+          const answerData = await answersRes.json();
+          const allAnswers = answerData.answers || {};
+          
+          const calculatedResult = calculateScores(quiz, allAnswers);
+          setCalculatedResult(calculatedResult);
+        }
+      } catch (err) {
+        console.error('Failed to fetch and calculate results:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAndCalculateResults();
+  }, [sessionId, quiz, result]);
+
+  if (loading) {
+    return <div className="text-center py-12">Loading your results...</div>;
+  }
+
+  if (!calculatedResult) {
+    return <div className="text-center py-12">No results available</div>;
+  }
+
+  const { primaryType, breakdown } = calculatedResult;
   console.log('QuizResults received:', { primaryType, breakdown, sessionId });
   return (
     <div className={styles.quizResults}>

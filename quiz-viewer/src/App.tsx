@@ -75,23 +75,12 @@ const App = () => {
     handleNext,
     handlePrevious,
     handleRetake,
-    fetchAndCalculateResults,
   } = useQuiz();
 
   const [currentImage, setCurrentImage] = useState<string>('');
   const [showIntroduction, setShowIntroduction] = useState<boolean>(true);
 
-  // Check for session ID in URL and fetch results if needed
-  // Only fetch results if we're not currently taking the quiz
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const sessionId = urlParams.get('session_id');
-    
-    // Only fetch results if we have a session ID, quiz is loaded, and we're not in the middle of taking the quiz
-    if (sessionId && quiz && !submitted && !loading && step === 0) {
-      fetchAndCalculateResults(sessionId);
-    }
-  }, [quiz, submitted, loading, fetchAndCalculateResults, step]);
+
 
   // Update image only when step changes
   useEffect(() => {
@@ -108,7 +97,7 @@ const App = () => {
   if (submitted && scoringResult) {
     const urlParams = new URLSearchParams(window.location.search);
     const sessionId = urlParams.get('session_id');
-    return <QuizResults result={scoringResult} onRetake={handleRetake} sessionId={sessionId || undefined} />;
+    return <QuizResults result={scoringResult} onRetake={handleRetake} sessionId={sessionId || undefined} quiz={quiz} />;
   }
   if (submitted) return <div className="text-center py-12">Calculating your results...</div>;
 
