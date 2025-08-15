@@ -1,0 +1,74 @@
+.panel {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  margin: 60px 0 16px 0;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.panelHeader {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  color: #241E1B;
+  font-family: 'ChiswickSans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.panelHeader:hover {
+  background: rgba(36, 30, 27, 0.05);
+}
+
+.panelHeader.expanded {
+  background: rgba(36, 30, 27, 0.08);
+}
+
+.panelTitle {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+  color: #241E1B;
+}
+
+.chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.panelContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s ease-in-out, 
+              transform 0.3s ease-in-out;
+}
+
+.panelContent.expanded {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .panelHeader {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+}
