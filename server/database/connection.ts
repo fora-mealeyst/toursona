@@ -29,7 +29,8 @@ async function connectToDatabase(): Promise<typeof mongoose> {
       socketTimeoutMS: 45000,
       maxPoolSize: 10,
       bufferCommands: false,
-      bufferMaxEntries: 0,
+      // Modern MongoDB connection options
+      retryWrites: true,
     };
 
     const mongoUri = process.env.MONGODB_URI;

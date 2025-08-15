@@ -15,7 +15,21 @@ import { HealthResponse } from './types/index.js';
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors());
+// CORS configuration
+const corsOptions = {
+  origin: [
+    'https://toursona-quiz-viewer.vercel.app',
+    'https://toursona-quiz-admin.vercel.app',
+    'http://localhost:5173', // For local development
+    'http://localhost:3000', // For local development
+    'http://localhost:4000'  // For local development
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Health check endpoint

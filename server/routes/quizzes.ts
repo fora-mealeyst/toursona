@@ -16,7 +16,6 @@ router.post('/:id/answers', async (req: Request<{ id: string }, {}, SubmitAnswer
     }
 
     const { sessionId, stepIndex, stepAnswers, calculatedScores } = req.body;
-    console.log(stepAnswers);
 
     let answerDoc;
     if (sessionId) {

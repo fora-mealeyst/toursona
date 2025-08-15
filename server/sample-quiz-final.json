@@ -1,0 +1,625 @@
+{
+  "title": "Discover your travelsona",
+  "steps": [
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "1. It's more meaningful to me when…",
+          "type": "single_choice",
+          "name": "q1",
+          "required": true,
+          "options": [
+            {
+              "label": "I summit a challenging hike or outdoor trek",
+              "value": "q1_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "I check into a breathtaking luxury suite",
+              "value": "q1_b",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            },
+            {
+              "label": "I share a home-cooked meal with locals",
+              "value": "q1_c",
+              "tags": ["Immersive Local"],
+              "scores": {"Immersive Local": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "2. I get the most energy from…",
+          "type": "single_choice",
+          "name": "q2",
+          "required": true,
+          "options": [
+            {
+              "label": "Attending a captivating historical lecture or talk",
+              "value": "q2_a",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            },
+            {
+              "label": "Booking a spontaneous rail trip across borders",
+              "value": "q2_b",
+              "tags": ["Nomad"],
+              "scores": {"Nomad": 1}
+            },
+            {
+              "label": "Eating the best version of a dish I've only read about",
+              "value": "q2_c",
+              "tags": ["Gastronome"],
+              "scores": {"Gastronome": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "3. I feel most alive when…",
+          "type": "single_choice",
+          "name": "q3",
+          "required": true,
+          "options": [
+            {
+              "label": "I'm exploring abandoned sites",
+              "value": "q3_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "I'm starting the day with sunrise yoga in a scenic location",
+              "value": "q3_b",
+              "tags": ["Wellness Seeker"],
+              "scores": {"Wellness Seeker": 1}
+            },
+            {
+              "label": "I'm chatting with strangers who become fast friends",
+              "value": "q3_c",
+              "tags": ["Immersive Local"],
+              "scores": {"Immersive Local": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "4. I'd rather spend an afternoon…",
+          "type": "single_choice",
+          "name": "q4",
+          "required": true,
+          "options": [
+            {
+              "label": "Learning to cook local specialties",
+              "value": "q4_a",
+              "tags": ["Gastronome"],
+              "scores": {"Gastronome": 1}
+            },
+            {
+              "label": "Touring ancient ruins with a knowledgeable guide",
+              "value": "q4_b",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            },
+            {
+              "label": "Floating in a natural hot spring",
+              "value": "q4_c",
+              "tags": ["Wellness Seeker"],
+              "scores": {"Wellness Seeker": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "5. I'm most proud when…",
+          "type": "single_choice",
+          "name": "q5",
+          "required": true,
+          "options": [
+            {
+              "label": "I try an activity I've never done before",
+              "value": "q5_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "I finally buy the must-have item I've been hunting for",
+              "value": "q5_b",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            },
+            {
+              "label": "I discover a destination no one in my circle has visited",
+              "value": "q5_c",
+              "tags": ["Nomad"],
+              "scores": {"Nomad": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "6. I'd rather plan…",
+          "type": "single_choice",
+          "name": "q6",
+          "required": true,
+          "options": [
+            {
+              "label": "A wildlife expedition",
+              "value": "q6_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "A private island escape",
+              "value": "q6_b",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            },
+            {
+              "label": "A cross-continental road trip",
+              "value": "q6_c",
+              "tags": ["Nomad"],
+              "scores": {"Nomad": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "7. My favorite kind of trip is…",
+          "type": "single_choice",
+          "name": "q7",
+          "required": true,
+          "options": [
+            {
+              "label": "Food-focused",
+              "value": "q7_a",
+              "tags": ["Gastronome"],
+              "scores": {"Gastronome": 1}
+            },
+            {
+              "label": "Culturally immersive",
+              "value": "q7_b",
+              "tags": ["Immersive Local"],
+              "scores": {"Immersive Local": 1}
+            },
+            {
+              "label": "Luxuriously indulgent",
+              "value": "q7_c",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "8. I'd be happiest spending a month…",
+          "type": "single_choice",
+          "name": "q8",
+          "required": true,
+          "options": [
+            {
+              "label": "Exploring uncharted caves and hidden beaches",
+              "value": "q8_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "Rotating between boutique hotels",
+              "value": "q8_b",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            },
+            {
+              "label": "Staying in co-living spaces in multiple countries",
+              "value": "q8_c",
+              "tags": ["Nomad"],
+              "scores": {"Nomad": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "9. My travel photos are mostly of…",
+          "type": "single_choice",
+          "name": "q9",
+          "required": true,
+          "options": [
+            {
+              "label": "Exploring and trying new things",
+              "value": "q9_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "Cultural landmarks",
+              "value": "q9_b",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            },
+            {
+              "label": "Food and beverages",
+              "value": "q9_c",
+              "tags": ["Gastronome"],
+              "scores": {"Gastronome": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "10. My dream upgrade would be…",
+          "type": "single_choice",
+          "name": "q10",
+          "required": true,
+          "options": [
+            {
+              "label": "A spa retreat with personalized treatments",
+              "value": "q10_a",
+              "tags": ["Wellness Seeker"],
+              "scores": {"Wellness Seeker": 1}
+            },
+            {
+              "label": "A luxury suite or villa",
+              "value": "q10_b",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            },
+            {
+              "label": "Exclusive kitchen tour with a top chef",
+              "value": "q10_c",
+              "tags": ["Gastronome"],
+              "scores": {"Gastronome": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "11. I'm most likely to splurge on…",
+          "type": "single_choice",
+          "name": "q11",
+          "required": true,
+          "options": [
+            {
+              "label": "A guided meditation session with a renowned teacher",
+              "value": "q11_a",
+              "tags": ["Wellness Seeker"],
+              "scores": {"Wellness Seeker": 1}
+            },
+            {
+              "label": "A hidden gems walking tour",
+              "value": "q11_b",
+              "tags": ["Immersive Local"],
+              "scores": {"Immersive Local": 1}
+            },
+            {
+              "label": "An intimate Q&A session with an expert in their field",
+              "value": "q11_c",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "12. I feel most satisfied when…",
+          "type": "single_choice",
+          "name": "q12",
+          "required": true,
+          "options": [
+            {
+              "label": "I master a local recipe or food technique",
+              "value": "q12_a",
+              "tags": ["Gastronome"],
+              "scores": {"Gastronome": 1}
+            },
+            {
+              "label": "I've uncovered fascinating historical context at an everyday location",
+              "value": "q12_b",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            },
+            {
+              "label": "I come back feeling physically and mentally renewed",
+              "value": "q12_c",
+              "tags": ["Wellness Seeker"],
+              "scores": {"Wellness Seeker": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "13. I'm most likely to say yes to…",
+          "type": "single_choice",
+          "name": "q13",
+          "required": true,
+          "options": [
+            {
+              "label": "Sailing through unpredictable waters",
+              "value": "q13_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "Roaming a local neighborhood",
+              "value": "q13_b",
+              "tags": ["Immersive Local"],
+              "scores": {"Immersive Local": 1}
+            },
+            {
+              "label": "Accepting a travel invite from someone I just met",
+              "value": "q13_c",
+              "tags": ["Nomad"],
+              "scores": {"Nomad": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "14. I'm happiest in…",
+          "type": "single_choice",
+          "name": "q14",
+          "required": true,
+          "options": [
+            {
+              "label": "A remote eco-lodge deep in nature",
+              "value": "q14_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "A rooftop infinity pool overlooking the city skyline",
+              "value": "q14_b",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            },
+            {
+              "label": "A traditional ryokan with onsen baths",
+              "value": "q14_c",
+              "tags": ["Wellness Seeker"],
+              "scores": {"Wellness Seeker": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "15. I feel most accomplished when…",
+          "type": "single_choice",
+          "name": "q15",
+          "required": true,
+          "options": [
+            {
+              "label": "I've navigated foreign cities with nothing but a backpack",
+              "value": "q15_a",
+              "tags": ["Nomad"],
+              "scores": {"Nomad": 1}
+            },
+            {
+              "label": "I've connected deeply with someone from another culture",
+              "value": "q15_b",
+              "tags": ["Immersive Local"],
+              "scores": {"Immersive Local": 1}
+            },
+            {
+              "label": "I've learned a new fact that I can share with others",
+              "value": "q15_c",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "16. I'm most drawn to trips where…",
+          "type": "single_choice",
+          "name": "q16",
+          "required": true,
+          "options": [
+            {
+              "label": "I test my limits through unique challenges",
+              "value": "q16_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "Every detail is five-star quality",
+              "value": "q16_b",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            },
+            {
+              "label": "I can reconnect with myself",
+              "value": "q16_c",
+              "tags": ["Wellness Seeker"],
+              "scores": {"Wellness Seeker": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "17. I'd rather explore…",
+          "type": "single_choice",
+          "name": "q17",
+          "required": true,
+          "options": [
+            {
+              "label": "A desert by camel caravan",
+              "value": "q17_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "A centuries-old library filled with rare books",
+              "value": "q17_b",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            },
+            {
+              "label": "A bustling market",
+              "value": "q17_c",
+              "tags": ["Immersive Local"],
+              "scores": {"Immersive Local": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "18. I feel my trip was a success when…",
+          "type": "single_choice",
+          "name": "q18",
+          "required": true,
+          "options": [
+            {
+              "label": "I've eaten something I'll dream about for years",
+              "value": "q18_a",
+              "tags": ["Gastronome"],
+              "scores": {"Gastronome": 1}
+            },
+            {
+              "label": "I've traded stories from fellow travelers",
+              "value": "q18_b",
+              "tags": ["Nomad"],
+              "scores": {"Nomad": 1}
+            },
+            {
+              "label": "I've visited a site I've only seen pictures of",
+              "value": "q18_c",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "19. I'm most likely to regret…",
+          "type": "single_choice",
+          "name": "q19",
+          "required": true,
+          "options": [
+            {
+              "label": "Missing a chance to try something exhilarating and rare",
+              "value": "q19_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "Missing a local festival",
+              "value": "q19_b",
+              "tags": ["Immersive Local"],
+              "scores": {"Immersive Local": 1}
+            },
+            {
+              "label": "Missing out on the wellness experience I wanted",
+              "value": "q19_c",
+              "tags": ["Wellness Seeker"],
+              "scores": {"Wellness Seeker": 1}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Personality Assessment",
+      "inputs": [
+        {
+          "label": "20. I'd rather invest in…",
+          "type": "single_choice",
+          "name": "q20",
+          "required": true,
+          "options": [
+            {
+              "label": "Professional gear for my next big adventure",
+              "value": "q20_a",
+              "tags": ["Adventurer"],
+              "scores": {"Adventurer": 1}
+            },
+            {
+              "label": "A luxury hotel membership",
+              "value": "q20_b",
+              "tags": ["Luxe Seeker"],
+              "scores": {"Luxe Seeker": 1}
+            },
+            {
+              "label": "An annual pass to historical and cultural sites",
+              "value": "q20_c",
+              "tags": ["Scholar"],
+              "scores": {"Scholar": 1}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
