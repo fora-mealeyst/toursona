@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import styles from './QuizResults.module.css';
 import { ScoringResult, calculateScores } from '../services/scoringService';
 import { GlassElement } from './GlassElement/GlassElement';
-import { CollapsiblePanel } from './CollapsiblePanel';
-import { BreakdownChart } from './BreakdownChart';
 import { API_BASE_URL } from '../constants';
 
 interface QuizResultsProps {
@@ -91,9 +89,6 @@ export const QuizResults = ({result, sessionId, quiz}: QuizResultsProps) => {
         </div>
         <div className={styles.window}></div>
       </div>
-      <CollapsiblePanel title="View Your Complete Personality Breakdown" defaultExpanded={false}>
-        <BreakdownChart result={calculatedResult} />
-      </CollapsiblePanel>
       <p className={styles.shareResultsDescription}>Share your results</p>
       <div className={styles.socialLinks}>
         <a className={styles.shareInstagram} href={`https://www.instagram.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer"></a>

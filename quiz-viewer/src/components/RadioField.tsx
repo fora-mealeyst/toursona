@@ -10,7 +10,7 @@ export const RadioField = ({ field, value, onChange }: RadioFieldProps) => {
   
   return (
     <div className="flex flex-col justify-between basis-full">
-      <span className="blanco-text-italic block text-[32px] font-medium text-gray-700 dark:text-gray-300 text-left">
+      <span className="blanco-text-italic block text-[32px] font-medium text-gray-700 text-left">
         {field.label}
       </span>
       <div className="grid justify-center">
