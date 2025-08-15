@@ -25,7 +25,8 @@ router.post('/:id/answers', async (req: Request<{ id: string }, {}, SubmitAnswer
         res.status(404).json({ error: 'Session not found' });
         return;
       }
-      answerDoc.answers[stepIndex] = stepAnswers;
+      // Merge the new step answers with existing answers
+      answerDoc.answers = { ...answerDoc.answers, [stepIndex]: stepAnswers };
       if (calculatedScores) {
         answerDoc.calculatedScores = calculatedScores;
       }
