@@ -60,9 +60,8 @@ export function useQuiz() {
     }
   };
 
-  const handleNext = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
+  const handleNext = async () => {
+    console.log(quiz)
     if (!quiz) return;
     
     const currentStep = quiz.steps[step];
@@ -103,7 +102,7 @@ export function useQuiz() {
       // Calculate scores when quiz is completed
       try {
         // Get the current session ID (might have been updated in the previous API call)
-        const currentSessionId = sessionId || data?.sessionId;
+        const currentSessionId: string | null = sessionId;
         
         // Fetch all answers for this session to calculate proper scores
         let allAnswers = {};

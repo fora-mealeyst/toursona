@@ -10,7 +10,7 @@ export const RadioField = ({ field, value, onChange }: RadioFieldProps) => {
   
   return (
     <div className="flex flex-col justify-between basis-full">
-      <span className="blanco-text-italic block text-[32px] font-medium text-gray-700 dark:text-gray-300 text-left">
+      <span className="blanco-text-italic block text-[32px] font-medium text-gray-700 dark:text-gray-300 text-left mb-[40px]">
         {field.label}
       </span>
       <div className="grid justify-center">
@@ -22,14 +22,14 @@ export const RadioField = ({ field, value, onChange }: RadioFieldProps) => {
           const optionValue = typeof option === 'string' ? option : option.value || option.label;
           const isSelected = value === optionValue;
           
-          const baseClasses = "p-4 text-center border-2 transition-all duration-200 h-full w-full flex items-center justify-center";
+          const baseClasses = "py-[15px] px-[24px] text-center border-2 transition-all duration-200 h-full w-full flex items-center justify-center";
           const selectedClasses = "bg-gray-700 border-gray-100 text-gray-100";
           const unselectedClasses = "bg-gray-800 border-transparent";
           
           return (
             <label 
               key={typeof option === 'string' ? option : `option-${index}`}
-              className="relative cursor-pointer min-w-[480px] h-[56px] mb-[8px]"
+              className="relative cursor-pointer min-w-full lg:min-w-[480px] min-h-[56px] mb-[8px]"
             >
               <input
                 type="radio"

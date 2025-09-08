@@ -123,6 +123,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 /* Font utility classes */
 .blanco-text {
   font-family: 'Blanco', serif;
@@ -224,8 +228,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 120%;
-  animation: moveBackground 20s ease-in-out infinite alternate;
+  width: 200%;
+  animation: moveBackground 30s linear infinite alternate;
 }
 
 @theme {

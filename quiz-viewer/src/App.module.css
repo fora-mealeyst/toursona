@@ -1,0 +1,60 @@
+.app {
+    display: grid;
+    grid-template-areas:
+      "image"
+      "quiz"
+      "footer";
+    grid-template-rows: 144px 1fr 108px;
+    height: 100dvh;
+    width: 100%;
+}
+
+.viewport {
+    grid-area: image;
+    overflow: hidden;
+    width: 100%;
+}
+
+.quiz {
+  grid-area: quiz;
+  display: flex;
+  overflow-y: scroll;
+  padding-bottom: 40px;
+}
+
+.footer {
+    grid-area: footer;
+    box-shadow: 0 -4px 20px 0 rgba(36, 30, 27, 0.10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glassElement {
+  width: 180px;
+  height: 240px;
+  border-radius: 184px;
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  transform: translatex(-50%);
+  border: 1px solid #FEFAF5;
+}
+
+@media (min-width: 1024px) {
+    .app {
+      grid-template-areas:
+        "image quiz"
+        "image footer";
+      grid-template-columns: 7fr 6fr;
+      grid-template-rows: 1fr 108px;
+      height: 100dvh;
+    }
+    .glassElement {
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 512px;
+      border-radius: 184px;
+    }
+}

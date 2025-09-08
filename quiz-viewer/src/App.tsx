@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import styles from './App.module.css';
 import { useQuiz } from './hooks';
 import { 
   LoadingSpinner, 
@@ -6,9 +7,9 @@ import {
   QuizResults, 
   QuizForm,
   Introduction,
-  MobileComingSoon
 } from './components';
 import { GlassElement } from './components/GlassElement/GlassElement';
+import { QuizFooter } from './components/QuizFooter';
 
 // Array of available images (excluding vite.svg)
 const backgroundImages = [
@@ -57,10 +58,17 @@ const backgroundImages = [
   'images/zally-orsi-DF3LkQN6qgo-unsplash.jpg'
 ];
 
-// Function to get a random image
-const getRandomImage = () => {
-  const randomIndex = Math.floor(Math.random() * backgroundImages.length);
-  return backgroundImages[randomIndex];
+// Function to get a random image (ensuring it's different from current)
+const getRandomImage = (currentImage?: string) => {
+  let randomIndex;
+  let newImage;
+  
+  do {
+    randomIndex = Math.floor(Math.random() * backgroundImages.length);
+    newImage = backgroundImages[randomIndex];
+  } while (newImage === currentImage && backgroundImages.length > 1);
+  
+  return newImage;
 };
 
 const App = () => {
@@ -78,15 +86,14 @@ const App = () => {
     handleRetake,
   } = useQuiz();
 
-  const [currentImage, setCurrentImage] = useState<string>('');
+  const [currentImage, setCurrentImage] = useState<string>(getRandomImage());
   const [showIntroduction, setShowIntroduction] = useState<boolean>(true);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
-
-
   // Update image only when step changes
   useEffect(() => {
-    setCurrentImage(getRandomImage());
+    const newImage = getRandomImage(currentImage);
+    setCurrentImage(newImage);
   }, [step]);
 
   // Check screen size for mobile detection
@@ -117,24 +124,23 @@ const App = () => {
 
   const currentStep = quiz.steps[step];
 
-  return (
-    <>
-      {/* Mobile Coming Soon Screen */}
-      {isMobile && <MobileComingSoon />}
 
-      {/* Desktop Layout */}
-      {!isMobile && (
-        <div className="grid grid-flow-col grid-cols-12 min-h-screen bg-gray-95:bg-gray-900">
+  return (
+        <div className={`${styles.app} min-h-screen bg-gray-95:bg-gray-900`}>
           <div 
-            className="col-span-6 h-full overflow-hidden relative"
+            className={`${styles.viewport} overflow-hidden relative`}
           >
-            <div className="splash-image h-full" style={{
-              backgroundImage: currentImage ? `url(/${currentImage})` : undefined
-            }}></div>
+            <div 
+              key={`step-${step}`}
+              className="splash-image h-full w-full" 
+              style={{
+                backgroundImage: currentImage ? `url(/${currentImage})` : undefined
+              }}>
+            </div>
             <GlassElement
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-              width={380}
-              height={512}
+              className={`${styles.glassElement}  border border-[#FEFAF5]`}
+              width={isMobile ? 180 : 400}
+              height={isMobile ? 240 : 540}
               radius={184}
               depth={5}
               blur={2}
@@ -142,12 +148,9 @@ const App = () => {
               debug={false}
             />
           </div>
-          <div className="col-span-6 p-[40px] h-[calc(100%-80px)] flex flex-col items-center">
+          <div className={`${styles.quiz}  p-[24px] lg:p-[40px] flex flex-col items-center`}>
             {showIntroduction ? (
-              <Introduction 
-                quiz={quiz} 
-                onStart={handleStartQuiz} 
-              />
+              <Introduction />
             ) : (
               <QuizForm
                 quiz={quiz}
@@ -156,13 +159,17 @@ const App = () => {
                 form={form}
                 onChange={handleChange}
                 onSubmit={handleNext}
-                onPrevious={handlePrevious}
               />
             )}
           </div>
+          <QuizFooter
+            quiz={quiz}
+            step={step}
+            onPrevious={handlePrevious}
+            onNext={handleNext}
+            onStartQuiz={handleStartQuiz}
+          />
         </div>
-      )}
-    </>
   );
 }
 
