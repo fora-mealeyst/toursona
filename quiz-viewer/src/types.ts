@@ -13,10 +13,24 @@ export interface QuizField {
   options?: (string | QuizOption)[];
 }
 
-export interface QuizStep {
+export interface TextBlock {
+  type: string;
+  content: string;
+}
+
+export interface QuestionStep {
   title: string;
+  type: 'question';
   inputs: QuizField[];
 }
+
+export interface InfoStep {
+  title: string;
+  type: 'info';
+  description: TextBlock[];
+}
+
+export type QuizStep = QuestionStep | InfoStep;
 
 export interface Quiz {
   id: string;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './QuizResults.module.css';
-import { ScoringResult, calculateScores } from '../services/scoringService';
+import { ScoringResult } from '../services/scoringService';
 import { GlassElement } from './GlassElement/GlassElement';
 import { CollapsiblePanel } from './CollapsiblePanel';
 import { BreakdownChart } from './BreakdownChart';
@@ -11,28 +11,35 @@ interface QuizResultsProps {
   onRetake?: () => void;
   sessionId?: string;
   quiz?: any;
+  isMobile?: boolean;
 }
 
-export const QuizResults = ({result, sessionId, quiz}: QuizResultsProps) => {
+// Server now returns data in ScoringResult format directly - no transformation needed!
+
+export const QuizResults = ({result, sessionId, quiz, isMobile}: QuizResultsProps) => {
   const [calculatedResult, setCalculatedResult] = useState<ScoringResult | null>(result || null);
   const [loading, setLoading] = useState(!result);
 
   // Fetch and calculate results if we have a session ID but no result
   useEffect(() => {
     const fetchAndCalculateResults = async () => {
-      if (!sessionId || !quiz || result) return;
-      
+      console.log(sessionId, quiz, result);
+      if (!sessionId || !quiz) return;
       try {
         const quizId = new URLSearchParams(window.location.search).get('quiz_id');
         if (!quizId) return;
         
-        const answersRes = await fetch(`${API_BASE_URL}${quizId}/answers/${sessionId}`);
-        if (answersRes.ok) {
-          const answerData = await answersRes.json();
-          const allAnswers = answerData.answers || {};
+        const calculateRes = await fetch(`${API_BASE_URL}${quizId}/calculate/${sessionId}`);
+        console.log(calculateRes);
+        
+        if (calculateRes.ok) {
+          const serverCalculationData = await calculateRes.json();
+          console.log('Server calculation data:', serverCalculationData);
           
-          const calculatedResult = calculateScores(quiz, allAnswers);
-          setCalculatedResult(calculatedResult);
+          // Server now returns data in the exact format we need - no transformation required!
+          setCalculatedResult(serverCalculationData);
+        } else {
+          console.error('Failed to fetch calculation from server:', calculateRes.status);
         }
       } catch (err) {
         console.error('Failed to fetch and calculate results:', err);
@@ -57,7 +64,7 @@ export const QuizResults = ({result, sessionId, quiz}: QuizResultsProps) => {
     <div className={styles.quizResults}>
       <h2 className={styles.tagline}>Meet your toursona</h2>
       <h1 className={styles.toursonaName}>The {primaryType.name}</h1>
-      <p className={styles.toursonaDescription}>You're {breakdown.find(item => item.type === primaryType.id)?.percentage}% {primaryType.name} who loves {primaryType.travelStyle}</p>
+      <p className={styles.toursonaDescription}>You're {breakdown.find(item => item.type.id === primaryType.id)?.percentage}% {primaryType.name} who loves {primaryType.travelStyle}</p>
       <p className={styles.advisorDescription}>{primaryType.advisorDescription}</p>
       <a className={styles.matchAdvisorButton} href="https://www.foratravel.com/book-with-us" target="_blank" rel="noopener noreferrer">Match an advisor</a>
       <div className={styles.windowsContainer}>
@@ -77,8 +84,8 @@ export const QuizResults = ({result, sessionId, quiz}: QuizResultsProps) => {
           </div>
           <GlassElement
             className={styles.videoOverlay}
-            width={336}
-            height={448}
+            width={isMobile ? 198 : 336}
+            height={isMobile ? 265 : 448}
             radius={184}
             depth={5}
             blur={0}

@@ -7,7 +7,7 @@ export const ProgressBar = ({ currentStep, totalSteps }: ProgressBarProps) => {
   return (
     <div className="mx-[24px] my-[12px]">
       <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
-        <span>{currentStep} / {totalSteps}</span>
+        <span>{currentStep + 1} / {totalSteps}</span>
       </div>
     </div>
   );

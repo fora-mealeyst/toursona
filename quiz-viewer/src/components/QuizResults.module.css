@@ -9,6 +9,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow: hidden;
 }
 
 .tagline {
@@ -84,8 +85,8 @@
 }
 
 .videoContainer {
-    width: 336px;
-    height: 448px;
+    width: 243px;
+    height: 319px;
     border-radius: 184px;
     overflow: hidden;
     position: relative;
@@ -161,4 +162,11 @@
 
 .shareTikTok {
     background-image: url('/icons/TiktokLogo.svg');
+}
+
+@media (min-width: 1024px) {
+    .videoContainer {
+        width: 336px;
+        height: 448px;
+    }
 }

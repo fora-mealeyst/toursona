@@ -1,5 +1,6 @@
-import { QuizStep as QuizStepType } from '../types';
-import { Field } from './Field';
+import { QuizStep as QuizStepType, QuestionStep as QuestionStepType, InfoStep as InfoStepType } from '../types';
+import { QuestionStep } from './QuestionStep';
+import { InfoStep } from './InfoStep';
 
 interface QuizStepProps {
   step: QuizStepType;
@@ -8,16 +9,14 @@ interface QuizStepProps {
 }
 
 export const QuizStep = ({ step, form, onChange }: QuizStepProps) => {
-  return (
-        <>
-        {step.inputs.map((field) => (
-          <Field
-            key={field.name}
-            field={field}
-            value={form[field.name]}
-            onChange={onChange}
-          />
-        ))}
-    </>
-  );
-}
+  // Route to the appropriate step component based on step type
+  switch (step.type) {
+    case 'question':
+      return <QuestionStep step={step as QuestionStepType} form={form} onChange={onChange} />;
+    case 'info':
+      return <InfoStep step={step as InfoStepType} />;
+    default:
+      // Fallback to QuestionStep for backward compatibility
+      return <QuestionStep step={step as QuestionStepType} form={form} onChange={onChange} />;
+  }
+};

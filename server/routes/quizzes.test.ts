@@ -72,4 +72,99 @@ describe('Quiz Routes', () => {
     // Should either succeed (201) or fail with validation error (400)
     expect([201, 400]).toContain(response.status);
   });
+
+  test('GET /api/quizzes/:id/calculate/:sessionId should calculate persona results', async () => {
+    const mockQuizData = {
+      _id: '507f1f77bcf86cd799439011',
+      title: 'Test Quiz',
+      steps: [
+        {
+          type: 'question',
+          title: 'Question 1',
+          inputs: [
+            {
+              name: 'q1',
+              options: [
+                {
+                  value: 'q1_a',
+                  scores: new Map([['Adventurer', 1]])
+                },
+                {
+                  value: 'q1_b',
+                  scores: new Map([['Luxe Seeker', 1]])
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+    const mockAnswerDoc = {
+      _id: '507f1f77bcf86cd799439012',
+      quizId: '507f1f77bcf86cd799439011',
+      answers: {
+        '0': { q1: 'q1_a' }
+      },
+      calculatedScores: new Map(),
+      save: jest.fn().mockResolvedValue(true)
+    };
+
+    mockQuiz.findById.mockResolvedValue(mockQuizData);
+    mockQuizAnswer.findById.mockResolvedValue(mockAnswerDoc);
+
+    const response = await request(app)
+      .get('/api/quizzes/507f1f77bcf86cd799439011/calculate/507f1f77bcf86cd799439012');
+
+    expect(response.status).toBe(200);
+    expect(response.body.primaryPersona).toBe('Adventurer');
+    expect(response.body.scores).toHaveProperty('Adventurer');
+    expect(response.body.scores.Adventurer.average).toBe(1);
+    expect(mockAnswerDoc.save).toHaveBeenCalled();
+  });
+
+  test('GET /api/quizzes/:id/calculate/:sessionId should handle tied personas', async () => {
+    const mockQuizData = {
+      _id: '507f1f77bcf86cd799439011',
+      title: 'Test Quiz',
+      steps: [
+        {
+          type: 'question',
+          title: 'Question 1',
+          inputs: [
+            {
+              name: 'q1',
+              options: [
+                {
+                  value: 'q1_a',
+                  scores: new Map([['Adventurer', 1], ['Luxe Seeker', 1]])
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+    const mockAnswerDoc = {
+      _id: '507f1f77bcf86cd799439012',
+      quizId: '507f1f77bcf86cd799439011',
+      answers: {
+        '0': { q1: 'q1_a' }
+      },
+      calculatedScores: new Map(),
+      save: jest.fn().mockResolvedValue(true)
+    };
+
+    mockQuiz.findById.mockResolvedValue(mockQuizData);
+    mockQuizAnswer.findById.mockResolvedValue(mockAnswerDoc);
+
+    const response = await request(app)
+      .get('/api/quizzes/507f1f77bcf86cd799439011/calculate/507f1f77bcf86cd799439012');
+
+    expect(response.status).toBe(200);
+    expect(response.body.combinedPersona).toBe('Adventurer + Luxe Seeker');
+    expect(response.body.topPersonas).toEqual(['Adventurer', 'Luxe Seeker']);
+    expect(mockAnswerDoc.save).toHaveBeenCalled();
+  });
 });

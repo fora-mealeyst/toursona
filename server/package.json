@@ -10,7 +10,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx watch index.ts",
-    "test": "jest"
+    "test": "jest",
+    "seed": "tsx seedResults.ts"
   },
   "dependencies": {
     "body-parser": "^1.20.2",

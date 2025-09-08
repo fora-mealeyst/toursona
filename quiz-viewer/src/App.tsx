@@ -6,7 +6,6 @@ import {
   ErrorMessage, 
   QuizResults, 
   QuizForm,
-  Introduction,
 } from './components';
 import { GlassElement } from './components/GlassElement/GlassElement';
 import { QuizFooter } from './components/QuizFooter';
@@ -79,7 +78,7 @@ const App = () => {
     submitted,
     error,
     loading,
-    scoringResult,
+    sessionId,
     handleChange,
     handleNext,
     handlePrevious,
@@ -87,7 +86,6 @@ const App = () => {
   } = useQuiz();
 
   const [currentImage, setCurrentImage] = useState<string>(getRandomImage());
-  const [showIntroduction, setShowIntroduction] = useState<boolean>(true);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   // Update image only when step changes
@@ -108,17 +106,11 @@ const App = () => {
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
-  const handleStartQuiz = () => {
-    setShowIntroduction(false);
-  };
-
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorMessage message={error} />;
   if (!quiz) return <LoadingSpinner />;
-  if (submitted && scoringResult) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const sessionId = urlParams.get('session_id');
-    return <QuizResults result={scoringResult} onRetake={handleRetake} sessionId={sessionId || undefined} quiz={quiz} />;
+  if (submitted && sessionId) {
+    return <QuizResults onRetake={handleRetake} sessionId={sessionId} quiz={quiz} isMobile={isMobile} />;
   }
   if (submitted) return <div className="text-center py-12">Calculating your results...</div>;
 
@@ -149,25 +141,20 @@ const App = () => {
             />
           </div>
           <div className={`${styles.quiz}  p-[24px] lg:p-[40px] flex flex-col items-center`}>
-            {showIntroduction ? (
-              <Introduction />
-            ) : (
-              <QuizForm
-                quiz={quiz}
-                currentStep={currentStep}
-                step={step}
-                form={form}
-                onChange={handleChange}
-                onSubmit={handleNext}
-              />
-            )}
+            <QuizForm
+              quiz={quiz}
+              currentStep={currentStep}
+              step={step}
+              form={form}
+              onChange={handleChange}
+              onSubmit={handleNext}
+            />
           </div>
           <QuizFooter
             quiz={quiz}
             step={step}
             onPrevious={handlePrevious}
             onNext={handleNext}
-            onStartQuiz={handleStartQuiz}
           />
         </div>
   );

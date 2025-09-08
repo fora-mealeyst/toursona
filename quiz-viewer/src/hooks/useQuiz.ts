@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Quiz } from '../types';
 import { API_BASE_URL } from '../constants';
-import { calculateScores, ScoringResult } from '../services/scoringService';
 
 export function useQuiz() {
   const [quiz, setQuiz] = useState<Quiz | null>(null);
@@ -11,7 +10,6 @@ export function useQuiz() {
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [scoringResult, setScoringResult] = useState<ScoringResult | null>(null);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -61,16 +59,17 @@ export function useQuiz() {
   };
 
   const handleNext = async () => {
-    console.log(quiz)
     if (!quiz) return;
     
     const currentStep = quiz.steps[step];
     
     // Prepare answers for this step
     const stepAnswers: Record<string, string> = {};
-    currentStep.inputs.forEach((field) => {
-      stepAnswers[field.name] = form[field.name] || '';
-    });
+    if (currentStep.type === 'question') {
+      currentStep.inputs.forEach((field) => {
+        stepAnswers[field.name] = form[field.name] || '';
+      });
+    }
     
     const quizId = getQuizId();
     if (!quizId) return;
@@ -99,39 +98,13 @@ export function useQuiz() {
     if (step < quiz.steps.length - 1) {
       setStep(step + 1);
     } else {
-      // Calculate scores when quiz is completed
+      // Quiz completed - just submit final answers and mark as submitted
+      // The scoring will be handled by the QuizResults component via the backend API
       try {
-        // Get the current session ID (might have been updated in the previous API call)
-        const currentSessionId: string | null = sessionId;
-        
-        // Fetch all answers for this session to calculate proper scores
-        let allAnswers = {};
-        if (currentSessionId) {
-          try {
-            const answersRes = await fetch(`${API_BASE_URL}${quizId}/answers/${currentSessionId}`);
-            if (answersRes.ok) {
-              const answerData = await answersRes.json();
-              allAnswers = answerData.answers || {};
-            } else {
-              console.error('Failed to fetch answers, status:', answersRes.status);
-            }
-          } catch (err) {
-            console.error('Failed to fetch session answers:', err);
-          }
-        }
-        
-        // Add current step answers to all answers
-        allAnswers = { ...allAnswers, [step]: stepAnswers };
-        
-        const result = calculateScores(quiz, allAnswers);
-        setScoringResult(result);
-        
-        // Send calculated scores to server
         const requestBody = {
-          sessionId: currentSessionId,
+          sessionId,
           stepIndex: step,
           stepAnswers,
-          calculatedScores: result.scores,
         };
         
         const res = await fetch(API_URL, {
@@ -151,8 +124,8 @@ export function useQuiz() {
         
         setSubmitted(true);
       } catch (err) {
-        console.error('Error calculating scores:', err);
-        setSubmitted(true); // Still mark as submitted even if scoring fails
+        console.error('Error submitting final answers:', err);
+        setSubmitted(true); // Still mark as submitted even if submission fails
       }
     }
   };
@@ -161,7 +134,6 @@ export function useQuiz() {
     setForm({});
     setStep(0);
     setSubmitted(false);
-    setScoringResult(null);
     setSessionId(null);
   };
 
@@ -172,7 +144,7 @@ export function useQuiz() {
     submitted,
     error,
     loading,
-    scoringResult,
+    sessionId,
     handleChange,
     handleNext,
     handlePrevious,

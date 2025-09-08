@@ -13,13 +13,11 @@ type QuizFormProps = {
 
 export const QuizForm = ({ 
   quiz, 
-  currentStep, 
-  step, 
+  currentStep,
   form, 
   onChange, 
   onSubmit,
 }: QuizFormProps) => {
-
   return (
     <form className="flex flex-col justify-end" onSubmit={onSubmit}>
       <h1 className="text-[16px] font-normal uppercase text-gray-100 dark:text-white mb-[24px] mt-0 text-center h-[40px] w-full lg:w-[480px] text-left">

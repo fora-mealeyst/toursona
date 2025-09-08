@@ -6,17 +6,14 @@ type QuizFooterProps = {
     quiz: Quiz;
     onPrevious: () => void;
     onNext: () => void;
-    onStartQuiz: () => void;
-    step: number
+    step: number;
 }
 export const QuizFooter = ({
     quiz,
     onPrevious,
     onNext,
-    onStartQuiz,
     step
 }: QuizFooterProps) => {
-    const isFirstQuizStep = step === 0;
     const isAfterFirstQuizStep = step > 0;
     const isLastStep = step === quiz.steps.length - 1;
     const footerElements = {
@@ -29,12 +26,12 @@ export const QuizFooter = ({
                 Back
             </button>
         ) : null,
-        nextButton: isFirstQuizStep ? (
+        nextButton: step === 0 ? (
             <button 
-                onClick={onStartQuiz}
+                onClick={onNext}
                 className="px-6 py-3 bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors duration-200"
             >
-            Start your journey
+                Start your journey
             </button>
         ) : isLastStep ? (
             <button 
