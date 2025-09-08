@@ -60,6 +60,11 @@ const StepSchema = new Schema<IStep>({
     type: String, 
     required: true 
   },
+  type: {
+    type: String,
+    enum: ['info', 'question', 'result'],
+    default: 'question' // The default value if not provided
+  },
   inputs: [InputSchema]
 });
 

@@ -10,6 +10,7 @@ export interface IInput {
 
 export interface IStep {
   title: string;
+  type: string;
   inputs: IInput[];
 }
 
