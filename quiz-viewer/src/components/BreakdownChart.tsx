@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
-import { ScoringResult, PERSONALITY_TYPES } from '../services/scoringService';
+import { ScoringResult } from '../services/scoringService';
 import styles from './BreakdownChart.module.css';
 
 interface BreakdownChartProps {
@@ -34,12 +34,14 @@ export const BreakdownChart = ({ result }: BreakdownChartProps) => {
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    // Sort data by percentage descending
-    const data = result.breakdown.sort((a, b) => b.percentage - a.percentage);
+    // Filter out Chameleon type and sort data by percentage descending
+    const data = result.breakdown
+      .filter(item => item.type.id !== 'chameleon')
+      .sort((a, b) => b.percentage - a.percentage);
 
     // Create scales
     const x = d3.scaleBand()
-      .domain(data.map(d => d.type))
+      .domain(data.map(d => d.type.id))
       .range([0, width])
       .padding(isLargeScreen ? 0.3 : 0.2);
 
@@ -53,14 +55,11 @@ export const BreakdownChart = ({ result }: BreakdownChartProps) => {
       .enter()
       .append('rect')
       .attr('class', 'bar')
-      .attr('x', d => x(d.type) || 0)
+      .attr('x', d => x(d.type.id) || 0)
       .attr('y', d => y(d.percentage))
       .attr('width', x.bandwidth())
       .attr('height', d => height - y(d.percentage))
-      .attr('fill', d => {
-        const type = PERSONALITY_TYPES.find(t => t.id === d.type);
-        return type?.color || '#ccc';
-      })
+      .attr('fill', d => d.type.color)
       .attr('rx', 4)
       .attr('ry', 4);
 
@@ -70,7 +69,7 @@ export const BreakdownChart = ({ result }: BreakdownChartProps) => {
       .enter()
       .append('text')
       .attr('class', 'bar-label')
-      .attr('x', d => (x(d.type) || 0) + x.bandwidth() / 2)
+      .attr('x', d => (x(d.type.id) || 0) + x.bandwidth() / 2)
       .attr('y', d => y(d.percentage) - 10)
       .attr('text-anchor', 'middle')
       .attr('fill', '#241E1B')
@@ -90,8 +89,8 @@ export const BreakdownChart = ({ result }: BreakdownChartProps) => {
       .attr('font-size', '16px')
       .attr('fill', '#241E1B')
       .text((d: any) => {
-        const type = PERSONALITY_TYPES.find(t => t.id === d);
-        return type?.name || d;
+        const type = data.find(item => item.type.id === d);
+        return type?.type.name || d;
       });
 
     // Add y-axis
