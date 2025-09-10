@@ -23,13 +23,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: quiz-viewer/package-lock.json
+          
+      - name: Show versions
+        run: |
+          node --version
+          npm --version
           
       - name: Install dependencies
         run: |
           cd quiz-viewer
-          npm ci
+          npm install
           
       - name: Run type checking
         run: |

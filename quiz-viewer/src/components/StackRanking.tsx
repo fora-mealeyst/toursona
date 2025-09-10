@@ -46,7 +46,9 @@ const DraggableItem: React.FC<DraggableItemProps> = ({ item, index, moveItem }) 
 
   return (
     <div
-      ref={(node) => drag(drop(node))}
+      ref={(node) => {
+        drag(drop(node));
+      }}
       className={`
         flex items-center p-4 mb-3 bg-white border-2 border-gray-200 rounded-lg cursor-move
         transition-all duration-200 hover:border-blue-300 hover:shadow-md

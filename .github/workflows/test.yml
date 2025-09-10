@@ -29,13 +29,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: quiz-viewer/package-lock.json
+          
+      - name: Show versions
+        run: |
+          node --version
+          npm --version
           
       - name: Install dependencies
         run: |
           cd quiz-viewer
-          npm ci
+          npm install
           
       - name: Run type checking
         run: |
@@ -72,13 +75,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: server/package-lock.json
           
       - name: Install dependencies
         run: |
           cd server
-          npm ci
+          npm install
           
       - name: Run type checking
         run: |
@@ -102,13 +103,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: quiz-admin/package-lock.json
           
       - name: Install dependencies
         run: |
           cd quiz-admin
-          npm ci
+          npm install
           
       - name: Run type checking
         run: |
