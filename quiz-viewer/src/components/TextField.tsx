@@ -9,10 +9,11 @@ interface TextFieldProps {
 export const TextField = ({ field, value, onChange }: TextFieldProps) => {
   return (
     <div className="space-y-2">
-      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+      <label htmlFor={field.name} className="block text-sm font-medium text-gray-700 dark:text-gray-300">
         {field.label}
       </label>
       <input
+        id={field.name}
         type="text"
         name={field.name}
         value={value || ''}
