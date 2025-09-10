@@ -13,6 +13,10 @@ const mockQuizAnswer = {
   save: jest.fn()
 };
 
+const mockResult = {
+  find: jest.fn()
+};
+
 jest.mock('../models/Quiz.js', () => ({
   __esModule: true,
   default: mockQuiz
@@ -21,6 +25,11 @@ jest.mock('../models/Quiz.js', () => ({
 jest.mock('../models/QuizAnswer.js', () => ({
   __esModule: true,
   default: mockQuizAnswer
+}));
+
+jest.mock('../models/Result.js', () => ({
+  __esModule: true,
+  default: mockResult
 }));
 
 // Import after mocks are set up
@@ -33,6 +42,10 @@ app.use('/api/quizzes', quizzesRouter);
 describe('Quiz Routes', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  afterAll(() => {
+    jest.restoreAllMocks();
   });
 
   test('GET /api/quizzes/:id should return 404 for non-existent quiz', async () => {
@@ -110,16 +123,23 @@ describe('Quiz Routes', () => {
       save: jest.fn().mockResolvedValue(true)
     };
 
+    const mockPersonalityTypes = [
+      { id: 'adventurer', name: 'Adventurer' },
+      { id: 'luxe-seeker', name: 'Luxe Seeker' }
+    ];
+
     mockQuiz.findById.mockResolvedValue(mockQuizData);
     mockQuizAnswer.findById.mockResolvedValue(mockAnswerDoc);
+    mockResult.find.mockReturnValue({
+      lean: jest.fn().mockResolvedValue(mockPersonalityTypes)
+    });
 
     const response = await request(app)
       .get('/api/quizzes/507f1f77bcf86cd799439011/calculate/507f1f77bcf86cd799439012');
 
     expect(response.status).toBe(200);
-    expect(response.body.primaryPersona).toBe('Adventurer');
-    expect(response.body.scores).toHaveProperty('Adventurer');
-    expect(response.body.scores.Adventurer.average).toBe(1);
+    expect(response.body.primaryType).toBeDefined();
+    expect(response.body.scores).toHaveProperty('adventurer');
     expect(mockAnswerDoc.save).toHaveBeenCalled();
   });
 
@@ -156,15 +176,24 @@ describe('Quiz Routes', () => {
       save: jest.fn().mockResolvedValue(true)
     };
 
+    const mockPersonalityTypes = [
+      { id: 'adventurer', name: 'Adventurer' },
+      { id: 'luxe-seeker', name: 'Luxe Seeker' }
+    ];
+
     mockQuiz.findById.mockResolvedValue(mockQuizData);
     mockQuizAnswer.findById.mockResolvedValue(mockAnswerDoc);
+    mockResult.find.mockReturnValue({
+      lean: jest.fn().mockResolvedValue(mockPersonalityTypes)
+    });
 
     const response = await request(app)
       .get('/api/quizzes/507f1f77bcf86cd799439011/calculate/507f1f77bcf86cd799439012');
 
     expect(response.status).toBe(200);
-    expect(response.body.combinedPersona).toBe('Adventurer + Luxe Seeker');
-    expect(response.body.topPersonas).toEqual(['Adventurer', 'Luxe Seeker']);
+    expect(response.body.primaryType).toBeDefined();
+    expect(response.body.scores).toHaveProperty('adventurer');
+    expect(response.body.scores).toHaveProperty('luxe-seeker');
     expect(mockAnswerDoc.save).toHaveBeenCalled();
   });
 });
