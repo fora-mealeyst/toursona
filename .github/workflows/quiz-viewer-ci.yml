@@ -52,5 +52,51 @@ jobs:
       - name: Run tests with coverage
         run: |
           cd quiz-viewer
-          npm run test:coverage
-        continue-on-error: true
+          npm run test:coverage:ci
+          
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          file: ./quiz-viewer/coverage/lcov.info
+          flags: quiz-viewer
+          name: quiz-viewer-coverage
+          fail_ci_if_error: false
+          
+      - name: Comment coverage on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            try {
+              // Read coverage summary
+              const coveragePath = path.join('quiz-viewer', 'coverage', 'coverage-summary.json');
+              if (fs.existsSync(coveragePath)) {
+                const coverage = JSON.parse(fs.readFileSync(coveragePath, 'utf8'));
+                const summary = coverage.total;
+                
+                const comment = `## 📊 Test Coverage Report
+                
+                | Metric | Coverage |
+                |--------|----------|
+                | **Statements** | ${summary.statements.pct}% |
+                | **Branches** | ${summary.branches.pct}% |
+                | **Functions** | ${summary.functions.pct}% |
+                | **Lines** | ${summary.lines.pct}% |
+                
+                **Overall Coverage: ${summary.lines.pct}%**
+                
+                ${summary.lines.pct >= 80 ? '✅' : '⚠️'} ${summary.lines.pct >= 80 ? 'Coverage target met!' : 'Coverage below 80% target'}`;
+                
+                github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: comment
+                });
+              }
+            } catch (error) {
+              console.log('Could not generate coverage comment:', error.message);
+            }
