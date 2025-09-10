@@ -1,0 +1,56 @@
+name: Quiz Viewer CI
+
+on:
+  push:
+    paths:
+      - 'quiz-viewer/**'
+      - '.github/workflows/quiz-viewer-ci.yml'
+  pull_request:
+    paths:
+      - 'quiz-viewer/**'
+      - '.github/workflows/quiz-viewer-ci.yml'
+
+jobs:
+  test:
+    name: Test Quiz Viewer
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Show versions
+        run: |
+          node --version
+          npm --version
+          
+      - name: Install dependencies
+        run: |
+          cd quiz-viewer
+          npm install
+          
+      - name: Run type checking
+        run: |
+          cd quiz-viewer
+          npm run type-check
+          
+      - name: Run linting
+        run: |
+          cd quiz-viewer
+          npm run lint
+          
+      - name: Run tests
+        run: |
+          cd quiz-viewer
+          npm test -- --run
+          
+      - name: Run tests with coverage
+        run: |
+          cd quiz-viewer
+          npm run test:coverage
+        continue-on-error: true

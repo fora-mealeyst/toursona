@@ -17,9 +17,7 @@
     "react": "^19.1.1"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.6",
-    "concurrently": "^8.2.2",
-    "typescript": "^5.9.2"
+    "concurrently": "^8.2.2"
   },
   "workspaces": [
     "quiz-admin",

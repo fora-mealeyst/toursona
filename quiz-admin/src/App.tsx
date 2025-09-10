@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { quizApi } from './api';
 import { IQuiz, IQuizAnswer, CreateQuizRequest } from './types';
 import QuizList from './components/QuizList';

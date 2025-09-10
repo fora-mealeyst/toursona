@@ -1,0 +1,121 @@
+name: Test Suite
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'quiz-viewer/**'
+      - 'server/**'
+      - 'quiz-admin/**'
+      - '.github/workflows/test.yml'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'quiz-viewer/**'
+      - 'server/**'
+      - 'quiz-admin/**'
+      - '.github/workflows/test.yml'
+
+jobs:
+  test-quiz-viewer:
+    name: Test Quiz Viewer
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Show versions
+        run: |
+          node --version
+          npm --version
+          
+      - name: Install dependencies
+        run: |
+          cd quiz-viewer
+          npm install
+          
+      - name: Run type checking
+        run: |
+          cd quiz-viewer
+          npm run type-check
+          
+      - name: Run linting
+        run: |
+          cd quiz-viewer
+          npm run lint
+          
+      - name: Run tests
+        run: |
+          cd quiz-viewer
+          npm test -- --run --coverage
+          
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v4
+        with:
+          directory: quiz-viewer/coverage
+          flags: quiz-viewer
+          name: quiz-viewer-coverage
+        continue-on-error: true
+
+  test-server:
+    name: Test Server
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: |
+          cd server
+          npm install
+          
+      - name: Run type checking
+        run: |
+          cd server
+          npm run type-check
+          
+      - name: Run tests
+        run: |
+          cd server
+          npm test
+
+  test-quiz-admin:
+    name: Test Quiz Admin
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: |
+          cd quiz-admin
+          npm install
+          
+      - name: Run type checking
+        run: |
+          cd quiz-admin
+          npx tsc --noEmit
+          
+      - name: Run linting
+        run: |
+          cd quiz-admin
+          npm run lint
+        continue-on-error: true

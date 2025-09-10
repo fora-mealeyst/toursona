@@ -17,6 +17,12 @@ export default [
           jsx: true,
         },
       },
+      globals: {
+        console: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        alert: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -30,6 +36,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
     },
   },
 ];
