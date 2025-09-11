@@ -46,6 +46,14 @@ export function useQuiz() {
       });
   }, [API_BASE_URL]);
 
+  // Check localStorage for existing sessionId on component mount
+  useEffect(() => {
+    const storedSessionId = localStorage.getItem("quiz_session_id");
+    if (storedSessionId) {
+      setSessionId(storedSessionId);
+    }
+  }, []);
+
   // Get quiz ID from URL parameters
   const getQuizId = (): string | null => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -120,10 +128,12 @@ export function useQuiz() {
         const data = await res.json();
         if (data.sessionId) {
           setSessionId(data.sessionId);
-          // Update URL with session ID for sharing
-          const url = new URL(window.location.href);
-          url.searchParams.set("session_id", data.sessionId);
-          window.history.replaceState({}, "", url.toString());
+          // Store session ID and quiz ID in localStorage for persistence
+          localStorage.setItem("quiz_session_id", data.sessionId);
+          const quizId = getQuizId();
+          if (quizId) {
+            localStorage.setItem("quiz_id", quizId);
+          }
         }
 
         setSubmitted(true);
@@ -139,6 +149,9 @@ export function useQuiz() {
     setStep(0);
     setSubmitted(false);
     setSessionId(null);
+    // Clear sessionId and quizId from localStorage when retaking
+    localStorage.removeItem("quiz_session_id");
+    localStorage.removeItem("quiz_id");
   };
 
   // Check if current step has all required fields filled

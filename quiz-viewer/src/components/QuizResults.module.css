@@ -1,5 +1,5 @@
 .quizResults {
-  background-color: #F3EBE2;
+  background-color: #f3ebe2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,165 +8,191 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 56px 40px;
   overflow: hidden;
 }
 
 .tagline {
-    font-family: 'Blanco', sans-serif;
-    text-align: center;
-    color: #131313;
-    font-size: 24px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 110%;
-    text-transform: uppercase;
+  font-family: "Blanco", sans-serif;
+  color: #241e1b;
+  text-align: center;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.72px;
+  margin-bottom: 16px;
 }
 
 .toursonaName {
-    color: #241E1B;
-    text-align: center;
-    font-family: 'ChiswickSans', sans-serif;
-    font-size: 72px;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 72px;
-    letter-spacing: -1.44px;
+  color: #241e1b;
+  text-align: center;
+  font-family: "ChiswickSans", sans-serif;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: -0.96px;
+  margin-bottom: 32px;
 }
 
-.toursonaDescription, .advisorDescription {
-    color: #212121;
-    text-align: center;
-    font-family: 'Public Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+.toursonaDescription,
+.advisorDescription {
+  color: #212121;
+  text-align: center;
+  font-family: "Public Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 .matchAdvisorButton {
-    background: #241E1B;
-    display: flex;
-    padding: 12px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    width: 192px;
-    color: #FEFAF5;
-    font-family: 'ChiswickSans', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    margin: 32px auto;
+  background: #241e1b;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 192px;
+  color: #fefaf5;
+  font-family: "ChiswickSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  margin: 32px auto;
 }
 
 .windowsContainer {
-    display: flex;
-    justify-content: center;
-    gap: 72px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 72px;
+  width: 100%;
 }
 
-.window, .windowCenter {
-    display: flex;
-    width: 412px;
-    height: 540px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    background-color: #E5DBD0;
-    border-radius: 184px;
-    border: 1px solid #FEFAF5;
+.window,
+.windowCenter {
+  display: flex;
+  width: 244px;
+  height: 320px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  background-color: #e5dbd0;
+  border-radius: 184px;
+  border: 1px solid #fefaf5;
 }
 
 .videoContainer {
-    width: 243px;
-    height: 319px;
-    border-radius: 184px;
-    overflow: hidden;
-    position: relative;
+  width: 198px;
+  height: 265px;
+  border-radius: 184px;
+  overflow: hidden;
+  position: relative;
 }
 
 .videoOverlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
 }
 
 .video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 184px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 184px;
 }
 
 .arrow {
-    position: absolute;
-    bottom: 54px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .windowCenter {
-    position: relative;
+  position: relative;
 }
 
 .shareResultsDescription {
-    color: #212121;
-    text-align: center;
-    font-family: "Public Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    text-transform: uppercase;
-    align-self: stretch;
+  color: #212121;
+  text-align: center;
+  font-family: "Public Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  align-self: stretch;
 }
 
 .socialLinks {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
-.shareInstagram, .shareX, .shareTikTok {
-    display: flex;
-    width: 48px;
-    height: 48px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 100%;
-    background-color: #E5DBDD;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20px;
+.shareInstagram,
+.shareX,
+.shareTikTok {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100%;
+  background-color: #e5dbdd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
 }
 
 .shareInstagram {
-    background-image: url('/icons/InstagramLogo.svg');
+  background-image: url("/icons/InstagramLogo.svg");
 }
 
 .shareX {
-    background-image: url('/icons/XLogo.svg');
+  background-image: url("/icons/XLogo.svg");
 }
 
 .shareTikTok {
-    background-image: url('/icons/TiktokLogo.svg');
+  background-image: url("/icons/TiktokLogo.svg");
 }
 
 @media (min-width: 1024px) {
-    .videoContainer {
-        width: 336px;
-        height: 448px;
-    }
+  .toursonaName {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.96px;
+    margin-bottom: 32px;
+  }
+
+  .videoContainer {
+    width: 336px;
+    height: 448px;
+  }
+
+  .window,
+  .windowCenter {
+    width: 412px;
+    height: 540px;
+  }
+
+  .toursonaName {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -1.44px;
+  }
 }

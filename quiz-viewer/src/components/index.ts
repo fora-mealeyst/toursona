@@ -5,6 +5,7 @@ export { QuizStep } from "./QuizStep";
 export { QuestionStep } from "./QuestionStep";
 export { InfoStep } from "./InfoStep";
 export { QuizForm } from "./QuizForm";
+export { QuizViewer } from "./QuizViewer";
 export { LoadingSpinner } from "./LoadingSpinner";
 export { ErrorMessage } from "./ErrorMessage";
 export { QuizResults } from "./QuizResults";
