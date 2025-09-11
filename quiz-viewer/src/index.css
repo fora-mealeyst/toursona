@@ -1,37 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Blanco Font Family */
 @font-face {
-  font-family: 'Blanco';
-  src: url('/fonts/Blanco-Regular.woff2') format('woff2'),
-       url('/fonts/Blanco-Regular.woff') format('woff');
+  font-family: "Blanco";
+  src: url("/fonts/Blanco-Regular.woff2") format("woff2"),
+    url("/fonts/Blanco-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Blanco';
-  src: url('/fonts/Blanco-Italic.woff2') format('woff2'),
-       url('/fonts/Blanco-Italic.woff') format('woff');
+  font-family: "Blanco";
+  src: url("/fonts/Blanco-Italic.woff2") format("woff2"),
+    url("/fonts/Blanco-Italic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Blanco';
-  src: url('/fonts/Blanco-Bold.woff2') format('woff2'),
-       url('/fonts/Blanco-Bold.woff') format('woff');
+  font-family: "Blanco";
+  src: url("/fonts/Blanco-Bold.woff2") format("woff2"),
+    url("/fonts/Blanco-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Blanco';
-  src: url('/fonts/Blanco-BoldItalic.woff2') format('woff2'),
-       url('/fonts/Blanco-BoldItalic.woff') format('woff');
+  font-family: "Blanco";
+  src: url("/fonts/Blanco-BoldItalic.woff2") format("woff2"),
+    url("/fonts/Blanco-BoldItalic.woff") format("woff");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -39,48 +40,48 @@
 
 /* ChiswickSans Font Family */
 @font-face {
-  font-family: 'ChiswickSans';
-  src: url('/fonts/ChiswickSans-Light-Web.woff2') format('woff2');
+  font-family: "ChiswickSans";
+  src: url("/fonts/ChiswickSans-Light-Web.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ChiswickSans';
-  src: url('/fonts/ChiswickSans-LightItalic-Web.woff2') format('woff2');
+  font-family: "ChiswickSans";
+  src: url("/fonts/ChiswickSans-LightItalic-Web.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ChiswickSans';
-  src: url('/fonts/ChiswickSans-Regular-Web.woff2') format('woff2');
+  font-family: "ChiswickSans";
+  src: url("/fonts/ChiswickSans-Regular-Web.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ChiswickSans';
-  src: url('/fonts/ChiswickSans-RegularItalic-Web.woff2') format('woff2');
+  font-family: "ChiswickSans";
+  src: url("/fonts/ChiswickSans-RegularItalic-Web.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ChiswickSans';
-  src: url('/fonts/ChiswickSans-Semibold-Web.woff2') format('woff2');
+  font-family: "ChiswickSans";
+  src: url("/fonts/ChiswickSans-Semibold-Web.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ChiswickSans';
-  src: url('/fonts/ChiswickSans-SemiboldItalic-Web.woff2') format('woff2');
+  font-family: "ChiswickSans";
+  src: url("/fonts/ChiswickSans-SemiboldItalic-Web.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -88,32 +89,32 @@
 
 /* ChiswickSansText Font Family (Display variant) */
 @font-face {
-  font-family: 'ChiswickSansText';
-  src: url('/fonts/ChiswickSansText-Regular.otf') format('opentype');
+  font-family: "ChiswickSansText";
+  src: url("/fonts/ChiswickSansText-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ChiswickSansText';
-  src: url('/fonts/ChiswickSansText-RegularItalic-Web.woff2') format('woff2');
+  font-family: "ChiswickSansText";
+  src: url("/fonts/ChiswickSansText-RegularItalic-Web.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ChiswickSansText';
-  src: url('/fonts/ChiswickSansText-Semibold.otf') format('opentype');
+  font-family: "ChiswickSansText";
+  src: url("/fonts/ChiswickSansText-Semibold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ChiswickSansText';
-  src: url('/fonts/ChiswickSansText-SemiboldItalic-Web.woff2') format('woff2');
+  font-family: "ChiswickSansText";
+  src: url("/fonts/ChiswickSansText-SemiboldItalic-Web.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -129,87 +130,87 @@
 
 /* Font utility classes */
 .blanco-text {
-  font-family: 'Blanco', serif;
+  font-family: "Blanco", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .blanco-text-bold {
-  font-family: 'Blanco', serif;
+  font-family: "Blanco", serif;
   font-weight: 700;
   font-style: normal;
 }
 
 .blanco-text-italic {
-  font-family: 'Blanco', serif;
+  font-family: "Blanco", serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .blanco-text-bold-italic {
-  font-family: 'Blanco', serif;
+  font-family: "Blanco", serif;
   font-weight: 700;
   font-style: italic;
 }
 
 /* ChiswickSans Utility Classes */
 .chiswick-text-light {
-  font-family: 'ChiswickSans', sans-serif;
+  font-family: "ChiswickSans", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .chiswick-text-light-italic {
-  font-family: 'ChiswickSans', sans-serif;
+  font-family: "ChiswickSans", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
 .chiswick-text {
-  font-family: 'ChiswickSans', sans-serif;
+  font-family: "ChiswickSans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .chiswick-text-italic {
-  font-family: 'ChiswickSans', sans-serif;
+  font-family: "ChiswickSans", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .chiswick-text-semibold {
-  font-family: 'ChiswickSans', sans-serif;
+  font-family: "ChiswickSans", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
 .chiswick-text-semibold-italic {
-  font-family: 'ChiswickSans', sans-serif;
+  font-family: "ChiswickSans", sans-serif;
   font-weight: 600;
   font-style: italic;
 }
 
 /* ChiswickSansText Utility Classes (Display variant) */
 .chiswick-text-display {
-  font-family: 'ChiswickSansText', sans-serif;
+  font-family: "ChiswickSansText", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .chiswick-text-display-italic {
-  font-family: 'ChiswickSansText', sans-serif;
+  font-family: "ChiswickSansText", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .chiswick-text-display-semibold {
-  font-family: 'ChiswickSansText', sans-serif;
+  font-family: "ChiswickSansText", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
 .chiswick-text-display-semibold-italic {
-  font-family: 'ChiswickSansText', sans-serif;
+  font-family: "ChiswickSansText", sans-serif;
   font-weight: 600;
   font-style: italic;
 }
@@ -234,20 +235,31 @@
 
 @theme {
   --color-gray-50: #131313;
-  --color-gray-100: #241E1B;
-  --color-gray-200: #352D27;
-  --color-gray-300: #463D34;
-  --color-gray-400: #63574A;
+  --color-gray-100: #241e1b;
+  --color-gray-200: #352d27;
+  --color-gray-300: #463d34;
+  --color-gray-400: #63574a;
   --color-gray-500: #827363;
-  --color-gray-600: #BDB1A4;
-  --color-gray-700: #D6CBC0;
-  --color-gray-800: #E5DBD0;
-  --color-gray-900: #F9F3EC;
-  --color-gray-950: #FEFAF5;
+  --color-gray-600: #bdb1a4;
+  --color-gray-700: #d6cbc0;
+  --color-gray-800: #e5dbd0;
+  --color-gray-900: #f9f3ec;
+
+  /* Custom spacing values - only define what's actually used */
+  --spacing-2.5: 0.625rem; /* 10px - custom value not in default Tailwind */
+  --spacing-11: 2.75rem; /* 44px - custom value not in default Tailwind */
+
+  /* Font families */
+  --font-blanco: "Blanco", serif;
+  --font-chiswick: "ChiswickSans", sans-serif;
+  --font-chiswick-text: "ChiswickSansText", sans-serif;
+  --font-sans: "Public Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
 }
 
 :root {
-  font-family: 'Public Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Public Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -257,8 +269,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F9F3EC;
-  color: #241E1B;
+  background-color: #f9f3ec;
+  color: #241e1b;
 }
 
 a {
@@ -275,12 +287,7 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+/* button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -296,14 +303,18 @@ button {
 button.secondary {
   background-color: #D6CBC0;
   color: #241E1B;
+} */
+
+/* Custom button styles to override browser defaults */
+button {
+  outline: none !important;
+  border-radius: 0 !important;
 }
 
-button:hover {
-  border-color: #646cff;
-}
 button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:focus-visible,
+button:hover {
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
-
-
