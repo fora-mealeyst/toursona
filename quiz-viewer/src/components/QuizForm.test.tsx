@@ -1,26 +1,26 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { QuizForm } from './QuizForm';
-import { Quiz, QuestionStep } from '../types';
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { render, screen, fireEvent } from "@testing-library/react";
+import { QuizForm } from "./QuizForm";
+import { Quiz, QuestionStep } from "../types";
 
 // Simple mock for QuizStep - just verify it's rendered
-vi.mock('./QuizStep', () => ({
+vi.mock("./QuizStep", () => ({
   QuizStep: () => <div data-testid="quiz-step" />,
 }));
 
-describe('QuizForm', () => {
+describe("QuizForm", () => {
   const mockOnChange = vi.fn();
   const mockOnSubmit = vi.fn();
 
   const mockStep: QuestionStep = {
-    title: 'Test Question',
-    type: 'question',
+    title: "Test Question",
+    type: "question",
     inputs: [],
   };
 
   const mockQuiz: Quiz = {
-    id: 'test-quiz',
-    title: 'Test Quiz Title',
+    id: "test-quiz",
+    title: "Test Quiz Title",
     steps: [mockStep],
   };
 
@@ -30,7 +30,7 @@ describe('QuizForm', () => {
     vi.clearAllMocks();
   });
 
-  it('should render quiz title', () => {
+  it("should render quiz title", () => {
     render(
       <QuizForm
         quiz={mockQuiz}
@@ -42,10 +42,10 @@ describe('QuizForm', () => {
       />
     );
 
-    expect(screen.getByText('Test Quiz Title')).toBeInTheDocument();
+    expect(screen.getByText("Test Quiz Title")).toBeInTheDocument();
   });
 
-  it('should render QuizStep component', () => {
+  it("should render QuizStep component", () => {
     render(
       <QuizForm
         quiz={mockQuiz}
@@ -57,10 +57,10 @@ describe('QuizForm', () => {
       />
     );
 
-    expect(screen.getByTestId('quiz-step')).toBeInTheDocument();
+    expect(screen.getByTestId("quiz-step")).toBeInTheDocument();
   });
 
-  it('should call onSubmit when form is submitted', () => {
+  it("should call onSubmit when form is submitted", () => {
     const { container } = render(
       <QuizForm
         quiz={mockQuiz}
@@ -72,13 +72,13 @@ describe('QuizForm', () => {
       />
     );
 
-    const form = container.querySelector('form');
+    const form = container.querySelector("form");
     fireEvent.submit(form!);
 
     expect(mockOnSubmit).toHaveBeenCalledTimes(1);
   });
 
-  it('should pass form event to onSubmit handler', () => {
+  it("should pass form event to onSubmit handler", () => {
     const { container } = render(
       <QuizForm
         quiz={mockQuiz}
@@ -90,18 +90,18 @@ describe('QuizForm', () => {
       />
     );
 
-    const form = container.querySelector('form');
+    const form = container.querySelector("form");
     fireEvent.submit(form!);
 
     expect(mockOnSubmit).toHaveBeenCalledWith(
       expect.objectContaining({
-        type: 'submit',
+        type: "submit",
         target: form,
       })
     );
   });
 
-  it('should apply correct CSS classes', () => {
+  it("should apply correct CSS classes", () => {
     const { container } = render(
       <QuizForm
         quiz={mockQuiz}
@@ -113,16 +113,21 @@ describe('QuizForm', () => {
       />
     );
 
-    const form = container.querySelector('form');
-    const title = screen.getByText('Test Quiz Title');
+    const form = container.querySelector("form");
+    const title = screen.getByText("Test Quiz Title");
 
-    expect(form).toHaveClass('flex', 'flex-col', 'justify-end');
-    expect(title).toHaveClass('text-[16px]', 'font-normal', 'uppercase');
+    expect(form).toHaveClass("flex", "flex-col", "justify-end");
+    expect(title).toHaveClass(
+      "text-base",
+      "font-normal",
+      "font-sans",
+      "uppercase"
+    );
   });
 
-  it('should handle optional onStepClick prop', () => {
+  it("should handle optional onStepClick prop", () => {
     const mockOnStepClick = vi.fn();
-    
+
     expect(() => {
       render(
         <QuizForm
