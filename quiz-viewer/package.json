@@ -11,8 +11,9 @@
     "type-check": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest --watch",
-    "test:coverage": "vitest --coverage",
-    "test:coverage:ci": "vitest --coverage --reporter=verbose --coverage.reporter=text --coverage.reporter=lcov",
+    "test:coverage": "vitest run --coverage",
+    "test:coverage:watch": "vitest --coverage",
+    "test:coverage:ci": "vitest run --coverage --reporter=verbose --coverage.reporter=text --coverage.reporter=lcov",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
