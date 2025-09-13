@@ -1,0 +1,68 @@
+[
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/chameleon/ca56bdf8df05b5889fbb2b94b2305e9af9973095.png",
+      "alt": "Forestis"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "The Dolomites, Italy",
+          "description": "Jagged peaks, alpine meadows, and crisp mountain air make the Dolomites a dream for couples who want it all. Here, adventure blends seamlessly with relaxation, offering breathtaking hikes by day and spa indulgence by night."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Forestis",
+          "description": "A serene hideaway high in the mountains, with holistic wellness and uninterrupted views."
+        }
+      ]
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Hawaii (Big Island)",
+          "description": "Volcanic landscapes, lush rainforests, and black-sand beaches make the Big Island endlessly diverse. A honeymoon here offers adventure, wellness, and romance all at once — from snorkeling with manta rays to stargazing atop Mauna Kea."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Mauna Lani, Auberge Resorts Collection",
+          "description": "A beachfront resort rooted in Hawaiian culture, with a focus on wellness and connection to nature."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/chameleon/033f707d8bb58c8b5841bc9523a14c0b1dade477.png",
+      "alt": "Mauna Lani, Auberge Resorts Collection"
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/chameleon/8eeb382d312b7c2c5d542841724eb483b5e39266.png",
+      "alt": "Palacio Duhau – Park Hyatt Buenos Aires"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Buenos Aires, Argentina",
+          "description": "A city alive with passion, Buenos Aires is perfect for couples who love variety. Days can be spent exploring European-style boulevards, indulging in world-class cuisine, and sipping Malbec, while nights are filled with tango and lively energy."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Palacio Duhau – Park Hyatt Buenos Aires",
+          "description": "A Belle Époque palace with modern touches, offering an elegant base in the heart of the city."
+        }
+      ]
+    }
+  }
+]

@@ -11,9 +11,10 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<QuizViewer />} />
-        <Route path="/results" element={<QuizResults />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/" element={<Navigate to="/honeymoon-match" replace />} />
+        <Route path="/:quizSlug" element={<QuizViewer />} />
+        <Route path="/:quizSlug/results" element={<QuizResults />} />
+        <Route path="*" element={<Navigate to="/honeymoon-match" replace />} />
       </Routes>
     </Router>
   );

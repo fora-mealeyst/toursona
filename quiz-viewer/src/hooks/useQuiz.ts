@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Quiz } from "../types";
 import { API_BASE_URL } from "../constants";
 
 export function useQuiz() {
+  const { quizSlug } = useParams<{ quizSlug: string }>();
   const [quiz, setQuiz] = useState<Quiz | null>(null);
   const [form, setForm] = useState<Record<string, string>>({});
   const [step, setStep] = useState(0);
@@ -12,18 +14,13 @@ export function useQuiz() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const quizId = urlParams.get("quiz_id");
-
-    if (!quizId) {
-      setError(
-        "No quiz ID provided. Please add ?quiz_id=YOUR_QUIZ_ID to the URL."
-      );
+    if (!quizSlug) {
+      setError("No quiz slug provided in URL");
       setLoading(false);
       return;
     }
 
-    const API_URL = `${API_BASE_URL}${quizId}`;
+    const API_URL = `${API_BASE_URL}slug/${quizSlug}`;
 
     fetch(API_URL)
       .then((res) => {
@@ -34,9 +31,8 @@ export function useQuiz() {
         }
         return res.json();
       })
-      .then((data: Quiz | Quiz[]) => {
-        const quizData = Array.isArray(data) ? data[0] : data;
-        setQuiz(quizData);
+      .then((data: Quiz) => {
+        setQuiz(data);
         setLoading(false);
       })
       .catch((err: Error) => {
@@ -46,18 +42,16 @@ export function useQuiz() {
       });
   }, [API_BASE_URL]);
 
-  // Check localStorage for existing sessionId on component mount
+  // Clear any existing session when component mounts to ensure fresh start
   useEffect(() => {
-    const storedSessionId = localStorage.getItem("quiz_session_id");
-    if (storedSessionId) {
-      setSessionId(storedSessionId);
-    }
-  }, []);
+    localStorage.removeItem("quiz_session_id");
+    localStorage.removeItem("quiz_slug");
+    setSessionId(null);
+  }, []); // Only run once on mount
 
-  // Get quiz ID from URL parameters
-  const getQuizId = (): string | null => {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("quiz_id");
+  // Get quiz slug from URL parameters
+  const getQuizSlug = (): string => {
+    return quizSlug || "honeymoon-match";
   };
 
   const handleChange = (name: string, value: string) => {
@@ -70,7 +64,10 @@ export function useQuiz() {
     }
   };
 
-  const handleNext = async () => {
+  const handleNext = async (e?: React.FormEvent<HTMLFormElement>) => {
+    if (e) {
+      e.preventDefault();
+    }
     if (!quiz) return;
 
     const currentStep = quiz.steps[step];
@@ -83,10 +80,8 @@ export function useQuiz() {
       });
     }
 
-    const quizId = getQuizId();
-    if (!quizId) return;
-
-    const API_URL = `${API_BASE_URL}${quizId}/answers`;
+    const quizSlug = getQuizSlug();
+    const API_URL = `${API_BASE_URL}slug/${quizSlug}/answers`;
 
     try {
       const res = await fetch(API_URL, {
@@ -128,12 +123,10 @@ export function useQuiz() {
         const data = await res.json();
         if (data.sessionId) {
           setSessionId(data.sessionId);
-          // Store session ID and quiz ID in localStorage for persistence
+          // Store session ID and quiz slug in localStorage for persistence
           localStorage.setItem("quiz_session_id", data.sessionId);
-          const quizId = getQuizId();
-          if (quizId) {
-            localStorage.setItem("quiz_id", quizId);
-          }
+          const currentQuizSlug = getQuizSlug();
+          localStorage.setItem("quiz_slug", currentQuizSlug);
         }
 
         setSubmitted(true);
@@ -149,9 +142,19 @@ export function useQuiz() {
     setStep(0);
     setSubmitted(false);
     setSessionId(null);
-    // Clear sessionId and quizId from localStorage when retaking
+    // Clear sessionId and quizSlug from localStorage when retaking
     localStorage.removeItem("quiz_session_id");
-    localStorage.removeItem("quiz_id");
+    localStorage.removeItem("quiz_slug");
+  };
+
+  const startFreshQuiz = () => {
+    setForm({});
+    setStep(0);
+    setSubmitted(false);
+    setSessionId(null);
+    // Clear sessionId and quizSlug from localStorage when starting fresh
+    localStorage.removeItem("quiz_session_id");
+    localStorage.removeItem("quiz_slug");
   };
 
   // Check if current step has all required fields filled
@@ -193,6 +196,7 @@ export function useQuiz() {
     handleNext,
     handlePrevious,
     handleRetake,
+    startFreshQuiz,
     isCurrentStepValid,
   };
 }

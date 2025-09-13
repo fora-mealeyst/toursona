@@ -40,7 +40,12 @@ export const QuizFooter = ({
         </Button>
       ),
     progressBar: isAfterFirstQuizStep ? (
-      <ProgressBar currentStep={step} totalSteps={quiz.steps.length} />
+      <ProgressBar
+        currentStep={step - 1}
+        totalSteps={
+          quiz.steps.filter((step) => step.type === "question").length
+        }
+      />
     ) : null,
   };
 

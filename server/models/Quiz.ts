@@ -1,118 +1,53 @@
-import mongoose, { Schema } from 'mongoose';
-import { IQuiz, IInput, IInfoStep, IQuestionStep, IOption } from '../types/index.js';
-
-const TextBlockSchema = new Schema({
-  type: {
-    type: String,
-    enum: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'],
-    default: 'p'
-  },
-  content: {
-    type: String,
-    required: true
-  },
-});
+import mongoose, { Schema } from "mongoose";
+import { IQuiz } from "../types/index.js";
 
 /**
- * Schema for quiz options with scoring and tagging capabilities
+ * Main Quiz schema - now simplified to reference steps and result types
  */
-const OptionSchema = new Schema<IOption>({
-  label: { 
-    type: String, 
-    required: true 
-  }, // UI text for the option
-  value: { 
-    type: String, 
-    required: true 
-  }, // Stable identifier (e.g., "q1_a")
-  tags: [{ 
-    type: String, 
-    default: [] 
-  }], // Array of behavior/interest tags
-  scores: { 
-    type: Map, 
-    of: Number, 
-    default: {} 
-  }, // Toursona score weights, e.g. { Adventurer: 1 }
-}, { 
-  _id: false 
-});
-
-/**
- * Schema for quiz input fields
- */
-const InputSchema = new Schema<IInput>({
-  label: { 
-    type: String,
-    required: true 
-  }, // The question prompt
-  type: { 
-    type: String, 
-    required: true 
-  }, // Input type (e.g., "single_choice", "text")
-  name: { 
-    type: String, 
-    required: true 
-  }, // Field identifier (e.g., "q1")
-  required: { 
-    type: Boolean, 
-    required: true 
+const QuizSchema = new Schema<IQuiz>(
+  {
+    title: {
+      type: String,
+      required: true,
+    },
+    slug: {
+      type: String,
+      required: true,
+      unique: true,
+    }, // URL-friendly identifier (e.g., "honeymoon-match")
+    description: {
+      type: String,
+      default: "",
+    }, // Optional description of the quiz
+    steps: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Step",
+      },
+    ], // Reference to steps for this quiz
+    resultTypes: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Result",
+      },
+    ], // References to Result model for result types
+    isActive: {
+      type: Boolean,
+      default: true,
+    }, // Whether the quiz is active and can be taken
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
   },
-  options: { 
-    type: [OptionSchema], 
-    default: [] 
-  } // Options for choice-based inputs (with tags + scores)
-});
-
-/**
- * Base schema for quiz steps with discriminator
- */
-const StepSchema = new Schema({
-  title: { 
-    type: String, 
-    required: true 
-  },
-  type: { 
-    type: String, 
-    enum: ['question', 'info'],
-    required: true 
+  {
+    timestamps: true, // Automatically manage createdAt and updatedAt
   }
-}, {
-  discriminatorKey: 'type'
-});
+);
 
-/**
- * Discriminator schemas for different step types
- */
-const QuestionStepSchema = new Schema<IQuestionStep>({
-  inputs: [InputSchema]
-});
+// Add index for slug field for better performance
+QuizSchema.index({ slug: 1 });
 
-const InfoStepSchema = new Schema<IInfoStep>({
-  description: [TextBlockSchema]
-});
-
-/**
- * Main Quiz schema
- */
-const QuizSchema = new Schema<IQuiz>({
-  title: { 
-    type: String, 
-    required: true 
-  },
-  steps: [StepSchema],
-  createdAt: { 
-    type: Date, 
-    default: Date.now 
-  }
-}, {
-  timestamps: true // Automatically manage createdAt and updatedAt
-});
-
-// Set up discriminators for the steps array
-const Quiz = mongoose.model<IQuiz>('Quiz', QuizSchema);
-const stepsPath = QuizSchema.path('steps') as any;
-stepsPath.discriminator('question', QuestionStepSchema);
-stepsPath.discriminator('info', InfoStepSchema);
+const Quiz = mongoose.model<IQuiz>("Quiz", QuizSchema);
 
 export default Quiz;

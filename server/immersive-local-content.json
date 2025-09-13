@@ -1,0 +1,68 @@
+[
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/immersive-local/a2e9efc3d6a318be3dd1a9c50c6fcc079b2092e1.png",
+      "alt": "HOTEL THE MITSUI KYOTO"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Kyoto, Japan",
+          "description": "Kyoto’s lantern-lit alleys, serene temples, and quiet tea ceremonies invite couples to slow down and savor each moment. Here, your honeymoon becomes a journey into Japanese tradition, with every meal, shrine visit, and garden walk layered in history and beauty."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "HOTEL THE MITSUI KYOTO",
+          "description": "A refined property built around an original 300-year-old gate, offering onsen baths and an atmosphere of timeless elegance."
+        }
+      ]
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Marrakech, Morocco ",
+          "description": "Vibrant souks, hidden riads, and the hum of daily life fill Marrakech with color and energy. For honeymooners, the city is intoxicating — a blend of romance, culture, and sensory adventure. By day, wander spice-scented markets; by night, retreat to serene courtyards."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Royal Mansour",
+          "description": "A palatial property built by Moroccan artisans, with private riads and world-class service that redefines luxury."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/immersive-local/2f2e5d8b580c7db2ee93cd5ba112cd99737b7cb6.png",
+      "alt": "Royal Mansour"
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/adventurer/1238da4d3da375537174c19e3525f326ff4c6188.png",
+      "alt": "Cheval Blanc St-Barth"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Cusco & Sacred Valley, Peru",
+          "description": "A honeymoon here means wandering cobblestone streets, exploring vibrant markets, and standing in awe of ancient Incan sites. The Sacred Valley invites couples to connect with Andean traditions while surrounded by breathtaking mountain landscapes."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Monasterio, A Belmond Hotel",
+          "description": "A former 16th-century monastery transformed into a romantic retreat filled with history, art, and charm."
+        }
+      ]
+    }
+  }
+]
