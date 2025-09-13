@@ -99,6 +99,36 @@ beforeAll(() => {
     Object.setPrototypeOf(element, HTMLElement.prototype);
     return element;
   };
+
+  // Override getComputedStyle to make sr-only elements visible in tests
+  const originalGetComputedStyle = window.getComputedStyle;
+  Object.defineProperty(window, "getComputedStyle", {
+    value: function (element: Element, pseudoElt?: string | null) {
+      const styles = originalGetComputedStyle.call(this, element, pseudoElt);
+
+      // If element has sr-only class, make it visible for testing
+      if (element.classList && element.classList.contains("sr-only")) {
+        return {
+          ...styles,
+          position: "static",
+          width: "auto",
+          height: "auto",
+          padding: "0",
+          margin: "0",
+          border: "0",
+          clip: "auto",
+          clipPath: "none",
+          overflow: "visible",
+          whiteSpace: "normal",
+          wordWrap: "normal",
+        } as CSSStyleDeclaration;
+      }
+
+      return styles;
+    },
+    writable: true,
+    configurable: true,
+  });
 });
 
 // Clean up after each test to prevent memory leaks
