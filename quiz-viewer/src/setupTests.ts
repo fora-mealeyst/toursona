@@ -20,7 +20,13 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
   disconnect() {}
-};
+  takeRecords() {
+    return [];
+  }
+  root = null;
+  rootMargin = "";
+  thresholds = [];
+} as any;
 
 // Mock matchMedia to prevent errors in tests
 Object.defineProperty(window, "matchMedia", {
@@ -49,7 +55,7 @@ global.cancelAnimationFrame = (id: number) => {
 beforeAll(() => {
   // Ensure HTMLElement is properly defined
   if (typeof HTMLElement === "undefined") {
-    global.HTMLElement = class HTMLElement {};
+    global.HTMLElement = class HTMLElement {} as any;
   }
 
   // Mock HTMLInputElement to implement value property
@@ -58,7 +64,7 @@ beforeAll(() => {
       value: string = "";
       checked: boolean = false;
       type: string = "text";
-    };
+    } as any;
   }
 
   // Mock document.createElement to return proper elements
