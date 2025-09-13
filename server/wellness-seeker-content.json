@@ -1,0 +1,68 @@
+[
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/wellness-seeker/7a369bb68bce83af4f9c3da666d5b55e0246e27c.png",
+      "alt": "Akelarre – Relais & Châteaux"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Douro Valley, Portugal",
+          "description": "Rolling vineyards and river views create a haven of calm in Portugal’s wine country. Honeymooners can sip vintages, take slow river cruises, and reset with holistic spa treatments in a serene setting."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Six Senses Douro Valley",
+          "description": "A wellness-focused resort blending wine culture with transformative spa experiences."
+        }
+      ]
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Ubud, Bali",
+          "description": "Nestled in lush jungle, Ubud is the spiritual heart of Bali. Couples can practice yoga at sunrise, visit sacred temples, and reconnect with nature in a place that feels designed for reflection and renewal."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Capella Ubud",
+          "description": "A luxury tented retreat offering jungle seclusion and immersive wellness experiences."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/wellness-seeker/1342d3df5e1b17b61c560d79f26e57b06887a5b7.png",
+      "alt": "Capella Ubud"
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/wellness-seeker/bbe1646e6399f587b6682547cc3d4db37cec4c2a.png",
+      "alt": "Bürgenstock Resort Lake Lucerne"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Swiss Alps (Lake Lucerne)",
+          "description": "Crisp alpine air and panoramic lake views set the stage for relaxation and rejuvenation. Here, wellness is woven into every moment, from thermal spa rituals to mountain walks."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Bürgenstock Resort Lake Lucerne",
+          "description": "A legendary mountaintop resort with one of the world’s most iconic infinity pools."
+        }
+      ]
+    }
+  }
+]

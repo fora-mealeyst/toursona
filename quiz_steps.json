@@ -1,0 +1,626 @@
+[
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 1,
+    "inputs": [
+      {
+        "label": "1. It's more meaningful to us when…",
+        "type": "single_choice",
+        "name": "q1",
+        "required": true,
+        "options": [
+          {
+            "label": "We conquer a hike together to an epic view",
+            "value": "q1_a",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We check into a breathtaking luxury suite overlooking the ocean",
+            "value": "q1_b",
+            "tags": ["Luxe Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c0d24077952b23a5617",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We share a home-cooked meal with locals",
+            "value": "q1_c",
+            "tags": ["Immersive Local"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1524077952b23a561b",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 2,
+    "inputs": [
+      {
+        "label": "2. On our honeymoon, we'd rather start the day with…",
+        "type": "single_choice",
+        "name": "q2",
+        "required": true,
+        "options": [
+          {
+            "label": "Sunrise yoga overlooking the water",
+            "value": "q2_a",
+            "tags": ["Wellness Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c2624077952b23a5623",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Breakfast in bed at a five-star suite",
+            "value": "q2_b",
+            "tags": ["Luxe Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c0d24077952b23a5617",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A bustling cafe surrounded by locals",
+            "value": "q2_c",
+            "tags": ["Immersive Local"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1524077952b23a561b",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 3,
+    "inputs": [
+      {
+        "label": "3. We feel most alive when…",
+        "type": "single_choice",
+        "name": "q3",
+        "required": true,
+        "options": [
+          {
+            "label": "We're snorkeling or diving in clear waters",
+            "value": "q3_a",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Indulging in a couples' spa treatment",
+            "value": "q3_b",
+            "tags": ["Wellness Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c2624077952b23a5623",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Exploring hidden corners of a new city",
+            "value": "q3_c",
+            "tags": ["Immersive Local"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1524077952b23a561b",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 4,
+    "inputs": [
+      {
+        "label": "4. We'd be happiest spending an afternoon…",
+        "type": "single_choice",
+        "name": "q4",
+        "required": true,
+        "options": [
+          {
+            "label": "Learning to cook local specialties",
+            "value": "q4_a",
+            "tags": ["Gastronome"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1d24077952b23a561f",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Enjoying a private wine tasting at a vineyard",
+            "value": "q4_b",
+            "tags": ["Luxe Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c0d24077952b23a5617",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Floating in a natural hot spring together",
+            "value": "q4_c",
+            "tags": ["Wellness Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c2624077952b23a5623",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 5,
+    "inputs": [
+      {
+        "label": "5. We imagine our honeymoon photos being…",
+        "type": "single_choice",
+        "name": "q5",
+        "required": true,
+        "options": [
+          {
+            "label": "Us exploring new places and trying new things",
+            "value": "q5_a",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Capturing romantic sunsets and stunning hotel views",
+            "value": "q5_b",
+            "tags": ["Luxe Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c0d24077952b23a5617",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Showing the amazing meals, markets, and drinks we've enjoyed",
+            "value": "q5_c",
+            "tags": ["Gastronome"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1d24077952b23a561f",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 6,
+    "inputs": [
+      {
+        "label": "6. My dream honeymoon upgrade would be…",
+        "type": "single_choice",
+        "name": "q6",
+        "required": true,
+        "options": [
+          {
+            "label": "A spa retreat with personalized treatments",
+            "value": "q6_a",
+            "tags": ["Wellness Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c2624077952b23a5623",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A luxury suite or villa",
+            "value": "q6_b",
+            "tags": ["Luxe Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c0d24077952b23a5617",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A private guided hike to a hidden waterfall",
+            "value": "q6_c",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 7,
+    "inputs": [
+      {
+        "label": "7. If we could choose one honeymoon splurge, it would be…",
+        "type": "single_choice",
+        "name": "q7",
+        "required": true,
+        "options": [
+          {
+            "label": "A guided meditation session at a Balinese temple",
+            "value": "q7_a",
+            "tags": ["Wellness Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c2624077952b23a5623",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A hidden-alley food and culture tour in Kyoto",
+            "value": "q7_b",
+            "tags": ["Gastronome"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1d24077952b23a561f",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A private boat cruise at sunset",
+            "value": "q7_c",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 8,
+    "inputs": [
+      {
+        "label": "8. We feel most satisfied when…",
+        "type": "single_choice",
+        "name": "q8",
+        "required": true,
+        "options": [
+          {
+            "label": "We've learned to cook a regional dish together and can recreate it at home",
+            "value": "q8_a",
+            "tags": ["Gastronome"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1d24077952b23a561f",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've uncovered a charming neighborhood away from the tourist trail",
+            "value": "q8_b",
+            "tags": ["Immersive Local"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1524077952b23a561b",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We return feeling completely relaxed and recharged",
+            "value": "q8_c",
+            "tags": ["Wellness Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c2624077952b23a5623",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 9,
+    "inputs": [
+      {
+        "label": "9. We're most likely to say yes to…",
+        "type": "single_choice",
+        "name": "q9",
+        "required": true,
+        "options": [
+          {
+            "label": "Sailing through unpredictable waters",
+            "value": "q9_a",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Wandering off the main streets to explore a local neighborhood",
+            "value": "q9_b",
+            "tags": ["Immersive Local"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1524077952b23a561b",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Upgrading to an overwater bungalow",
+            "value": "q9_c",
+            "tags": ["Luxe Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c0d24077952b23a5617",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 10,
+    "inputs": [
+      {
+        "label": "10. We're happiest in…",
+        "type": "single_choice",
+        "name": "q10",
+        "required": true,
+        "options": [
+          {
+            "label": "A remote eco-lodge deep in nature",
+            "value": "q10_a",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A rooftop infinity pool overlooking the city skyline",
+            "value": "q10_b",
+            "tags": ["Luxe Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c0d24077952b23a5617",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A traditional ryokan with onsen baths",
+            "value": "q10_c",
+            "tags": ["Wellness Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c2624077952b23a5623",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 11,
+    "inputs": [
+      {
+        "label": "11. We feel most accomplished when…",
+        "type": "single_choice",
+        "name": "q11",
+        "required": true,
+        "options": [
+          {
+            "label": "We've discovered a meal, drink, or recipe we can recreate at home",
+            "value": "q11_a",
+            "tags": ["Gastronome"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1d24077952b23a561f",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've formed a genuine connection with locals who shared their traditions",
+            "value": "q11_b",
+            "tags": ["Immersive Local"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1524077952b23a561b",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've navigated a new city together without relying on a guidebook",
+            "value": "q11_c",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 12,
+    "inputs": [
+      {
+        "label": "12. We'll feel our honeymoon was a success when…",
+        "type": "single_choice",
+        "name": "q12",
+        "required": true,
+        "options": [
+          {
+            "label": "We've shared a meal so good we'll dream about it for years",
+            "value": "q12_a",
+            "tags": ["Gastronome"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1d24077952b23a561f",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've swapped stories with locals we met along the way",
+            "value": "q12_b",
+            "tags": ["Immersive Local"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1524077952b23a561b",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've returned with memories of a once-in-a-lifetime luxury experience",
+            "value": "q12_c",
+            "tags": ["Luxe Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c0d24077952b23a5617",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "order": 13,
+    "inputs": [
+      {
+        "label": "13. On our honeymoon, I'm most likely to regret…",
+        "type": "single_choice",
+        "name": "q13",
+        "required": true,
+        "options": [
+          {
+            "label": "Missing a chance to try an unforgettable adventure",
+            "value": "q13_a",
+            "tags": ["Adventurer"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47bde24077952b23a5613",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Missing a cultural celebration or local tradition",
+            "value": "q13_b",
+            "tags": ["Immersive Local"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c1524077952b23a561b",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Not making time for the wellness experience we were looking forward to",
+            "value": "q13_c",
+            "tags": ["Wellness Seeker"],
+            "personalityScores": [
+              {
+                "personalityId": "68c47c2624077952b23a5623",
+                "score": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

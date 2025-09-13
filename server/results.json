@@ -1,0 +1,146 @@
+[
+  {
+    "_id": "68c492253581078a4ba73dfa",
+    "id": "honeymoon-adventurer",
+    "name": "Adventure Honeymooners",
+    "description": "You and your partner are thrill-seekers who believe the best honeymoon memories come from conquering new challenges together. From hiking to hidden waterfalls to diving in crystal-clear waters, you want your honeymoon to be an adventure story you'll tell for years to come.",
+    "traits": [
+      "Adventure-seeking",
+      "Thrill-loving",
+      "Active",
+      "Bold"
+    ],
+    "travelStyle": "Adventure-packed experiences and adrenaline-filled activities",
+    "color": "#FF6B35",
+    "eyebrow": "Meet Your Honeymatch",
+    "cta": "Plan your adventure honeymoon",
+    "advisorDescription": "Find an advisor who specializes in creating unforgettable adventure honeymoons with the perfect mix of excitement and romance.",
+    "content": [
+      "68c4d3d97abf853f3897f905",
+      "68c4d3d97abf853f3897f907",
+      "68c4d3d97abf853f3897f909"
+    ],
+    "createdAt": "2025-09-12T21:35:33.892Z",
+    "updatedAt": "2025-09-13T02:15:53.935Z"
+  },
+  {
+    "_id": "68c492253581078a4ba73dfd",
+    "id": "honeymoon-luxe-seeker",
+    "name": "Luxe Seekers",
+    "description": "Your honeymoon is the ultimate indulgence. For you, it’s about private villas with plunge pools, champagne at sunset, and every detail taken care of before you even think to ask. Romance is found in flawless service, endless pampering, and once-in-a-lifetime upgrades that make your honeymoon shine.",
+    "traits": [
+      "Luxury-focused",
+      "Indulgent",
+      "Sophisticated",
+      "Premium"
+    ],
+    "travelStyle": "Ultra-luxury accommodations and exclusive experiences",
+    "color": "#8B5CF6",
+    "eyebrow": "Meet Your Honeymatch",
+    "cta": "Plan your luxury honeymoon",
+    "advisorDescription": "Find a Fora advisor who can unlock exclusive perks, insider access, and the kind of five-star experiences that will set your honeymoon apart.",
+    "content": [
+      "68c4da9198ab3c3514b3c3f2",
+      "68c4da9198ab3c3514b3c3f4",
+      "68c4da9198ab3c3514b3c3f6"
+    ],
+    "createdAt": "2025-09-12T21:35:33.909Z",
+    "updatedAt": "2025-09-13T02:44:33.906Z"
+  },
+  {
+    "_id": "68c492253581078a4ba73e00",
+    "id": "honeymoon-immersive-local",
+    "name": "Immersive Locals\n",
+    "description": "Your honeymoon is about more than just being there — it’s about belonging. You crave neighborhood cafés where no one speaks English, local festivals where you’re swept into the crowd, and conversations that last late into the night with new friends. For you, romance is found in connection and cultural discovery.",
+    "traits": [
+      "Cultural",
+      "Authentic",
+      "Curious",
+      "Community-focused"
+    ],
+    "travelStyle": "Authentic local experiences and cultural immersion",
+    "color": "#10B981",
+    "eyebrow": "Meet Your Honeymatch",
+    "cta": "Plan your cultural honeymoon",
+    "advisorDescription": "Find a Fora advisor who can take you beyond the guidebook and into the heart of your honeymoon destination.",
+    "content": [
+      "68c4df12d1adea50f8495692",
+      "68c4df12d1adea50f8495695",
+      "68c4df12d1adea50f8495697"
+    ],
+    "createdAt": "2025-09-12T21:35:33.913Z",
+    "updatedAt": "2025-09-13T03:03:46.290Z"
+  },
+  {
+    "_id": "68c492253581078a4ba73e03",
+    "id": "honeymoon-gastronome",
+    "name": "Gastronomes",
+    "description": "For you, love is best celebrated at the table. Your honeymoon memories will live in flavor: the first bite of street food that blows you away, a cooking class where you laugh your way through learning, or a Michelin-star dinner that becomes a story you’ll retell forever. Every meal is part of your love story.",
+    "traits": [
+      "Food-focused",
+      "Culinary",
+      "Experiential",
+      "Curious"
+    ],
+    "travelStyle": "Culinary adventures and food-focused experiences",
+    "color": "#F59E0B",
+    "eyebrow": "Meet Your Honeymatch",
+    "cta": "Plan your foodie honeymoon",
+    "advisorDescription": "Find a Fora advisor who can secure the tables, tastings, and culinary experiences that will make your honeymoon deliciously unforgettable.",
+    "content": [
+      "68c4e0fdd042daed6d79b50c",
+      "68c4e0fdd042daed6d79b50e",
+      "68c4e0fdd042daed6d79b510"
+    ],
+    "createdAt": "2025-09-12T21:35:33.917Z",
+    "updatedAt": "2025-09-13T03:11:57.041Z"
+  },
+  {
+    "_id": "68c492253581078a4ba73e06",
+    "id": "honeymoon-wellness-seeker",
+    "name": "Wellness Seekers",
+    "description": "Your dream honeymoon is about slowing down, recharging, and reconnecting with each other. Whether it’s couples’ yoga at sunrise, soaking in hot springs surrounded by nature, or indulging in spa rituals that melt away the stress of wedding planning, you travel to restore as much as to explore.",
+    "traits": [
+      "Mindful",
+      "Relaxed",
+      "Renewing",
+      "Holistic"
+    ],
+    "travelStyle": "Wellness-focused experiences and relaxation",
+    "color": "#06B6D4",
+    "eyebrow": "Meet Your Honeymatch",
+    "cta": "Plan your wellness honeymoon",
+    "advisorDescription": "Find a Fora advisor who can guide you to the most transformative retreats and serene escapes — the perfect setting for your new chapter together.",
+    "content": [
+      "68c4e3097276263687c0aba3",
+      "68c4e3097276263687c0aba5",
+      "68c4e3097276263687c0aba7"
+    ],
+    "createdAt": "2025-09-12T21:35:33.920Z",
+    "updatedAt": "2025-09-13T03:20:41.779Z"
+  },
+  {
+    "_id": "68c4c55437296aa2e0928e81",
+    "id": "chameleon",
+    "name": "Chameleons",
+    "description": "You're a rare mix. On your honeymoon, you can flow effortlessly from poolside champagne to a bustling market to a hidden trattoria — all in the same day. You're versatile, curious, and open to celebrating your love in every way possible.",
+    "traits": [
+      "Versatile",
+      "Curious",
+      "Adaptable",
+      "Multifaceted"
+    ],
+    "travelStyle": "Dynamic experiences that blend luxury, culture, adventure, and wellness",
+    "color": "#8B5A2B",
+    "eyebrow": "Your Honeymoon Match",
+    "cta": "Plan your chameleon honeymoon",
+    "advisorDescription": "Find a Fora advisor who can design a honeymoon as dynamic and multifaceted as the two of you.",
+    "content": [
+      "68c4e54359de77935a489775",
+      "68c4e54359de77935a489777",
+      "68c4e54359de77935a489779"
+    ],
+    "createdAt": "2025-09-13T01:13:56.440Z",
+    "updatedAt": "2025-09-13T03:30:11.359Z"
+  }
+]

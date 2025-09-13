@@ -1,0 +1,821 @@
+[
+  {
+    "_id": "68c4bf3d1e4b8ed2c6391692",
+    "title": "Discover your Honeymoon Match",
+    "type": "info",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 0,
+    "createdAt": "2025-09-13T00:47:57.807Z",
+    "updatedAt": "2025-09-13T00:47:57.807Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a38",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 2,
+    "inputs": [
+      {
+        "label": "1. It's more meaningful to us when…",
+        "type": "single_choice",
+        "name": "q1",
+        "required": true,
+        "options": [
+          {
+            "label": "We conquer a hike together to an epic view",
+            "value": "q1_a",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We check into a breathtaking luxury suite overlooking the ocean",
+            "value": "q1_b",
+            "tags": [
+              "Luxe Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfd",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We share a home-cooked meal with locals",
+            "value": "q1_c",
+            "tags": [
+              "Immersive Local"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e00",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a39"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.099Z",
+    "updatedAt": "2025-09-13T00:47:57.815Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a3b",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 3,
+    "inputs": [
+      {
+        "label": "2. On our honeymoon, we'd rather start the day with…",
+        "type": "single_choice",
+        "name": "q2",
+        "required": true,
+        "options": [
+          {
+            "label": "Sunrise yoga overlooking the water",
+            "value": "q2_a",
+            "tags": [
+              "Wellness Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e06",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Breakfast in bed at a five-star suite",
+            "value": "q2_b",
+            "tags": [
+              "Luxe Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfd",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A bustling cafe surrounded by locals",
+            "value": "q2_c",
+            "tags": [
+              "Immersive Local"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e00",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a3c"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.102Z",
+    "updatedAt": "2025-09-13T00:47:57.817Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a3e",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 4,
+    "inputs": [
+      {
+        "label": "3. We feel most alive when…",
+        "type": "single_choice",
+        "name": "q3",
+        "required": true,
+        "options": [
+          {
+            "label": "We're snorkeling or diving in clear waters",
+            "value": "q3_a",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Indulging in a couples' spa treatment",
+            "value": "q3_b",
+            "tags": [
+              "Wellness Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e06",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Exploring hidden corners of a new city",
+            "value": "q3_c",
+            "tags": [
+              "Immersive Local"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e00",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a3f"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.104Z",
+    "updatedAt": "2025-09-13T00:47:57.818Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a41",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 5,
+    "inputs": [
+      {
+        "label": "4. We'd be happiest spending an afternoon…",
+        "type": "single_choice",
+        "name": "q4",
+        "required": true,
+        "options": [
+          {
+            "label": "Learning to cook local specialties",
+            "value": "q4_a",
+            "tags": [
+              "Gastronome"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e03",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Enjoying a private wine tasting at a vineyard",
+            "value": "q4_b",
+            "tags": [
+              "Luxe Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfd",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Floating in a natural hot spring together",
+            "value": "q4_c",
+            "tags": [
+              "Wellness Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e06",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a42"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.106Z",
+    "updatedAt": "2025-09-13T00:47:57.819Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a44",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 6,
+    "inputs": [
+      {
+        "label": "5. We imagine our honeymoon photos being…",
+        "type": "single_choice",
+        "name": "q5",
+        "required": true,
+        "options": [
+          {
+            "label": "Us exploring new places and trying new things",
+            "value": "q5_a",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Capturing romantic sunsets and stunning hotel views",
+            "value": "q5_b",
+            "tags": [
+              "Luxe Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfd",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Showing the amazing meals, markets, and drinks we've enjoyed",
+            "value": "q5_c",
+            "tags": [
+              "Gastronome"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e03",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a45"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.108Z",
+    "updatedAt": "2025-09-13T00:47:57.820Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a47",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 7,
+    "inputs": [
+      {
+        "label": "6. My dream honeymoon upgrade would be…",
+        "type": "single_choice",
+        "name": "q6",
+        "required": true,
+        "options": [
+          {
+            "label": "A spa retreat with personalized treatments",
+            "value": "q6_a",
+            "tags": [
+              "Wellness Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e06",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A luxury suite or villa",
+            "value": "q6_b",
+            "tags": [
+              "Luxe Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfd",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A private guided hike to a hidden waterfall",
+            "value": "q6_c",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a48"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.109Z",
+    "updatedAt": "2025-09-13T00:47:57.821Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a4a",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 8,
+    "inputs": [
+      {
+        "label": "7. If we could choose one honeymoon splurge, it would be…",
+        "type": "single_choice",
+        "name": "q7",
+        "required": true,
+        "options": [
+          {
+            "label": "A guided meditation session at a Balinese temple",
+            "value": "q7_a",
+            "tags": [
+              "Wellness Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e06",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A hidden-alley food and culture tour in Kyoto",
+            "value": "q7_b",
+            "tags": [
+              "Gastronome"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e03",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A private boat cruise at sunset",
+            "value": "q7_c",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a4b"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.110Z",
+    "updatedAt": "2025-09-13T00:47:57.822Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a4d",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 9,
+    "inputs": [
+      {
+        "label": "8. We feel most satisfied when…",
+        "type": "single_choice",
+        "name": "q8",
+        "required": true,
+        "options": [
+          {
+            "label": "We've learned to cook a regional dish together and can recreate it at home",
+            "value": "q8_a",
+            "tags": [
+              "Gastronome"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e03",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've uncovered a charming neighborhood away from the tourist trail",
+            "value": "q8_b",
+            "tags": [
+              "Immersive Local"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e00",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We return feeling completely relaxed and recharged",
+            "value": "q8_c",
+            "tags": [
+              "Wellness Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e06",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a4e"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.111Z",
+    "updatedAt": "2025-09-13T00:47:57.823Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a50",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 10,
+    "inputs": [
+      {
+        "label": "9. We're most likely to say yes to…",
+        "type": "single_choice",
+        "name": "q9",
+        "required": true,
+        "options": [
+          {
+            "label": "Sailing through unpredictable waters",
+            "value": "q9_a",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Wandering off the main streets to explore a local neighborhood",
+            "value": "q9_b",
+            "tags": [
+              "Immersive Local"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e00",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Upgrading to an overwater bungalow",
+            "value": "q9_c",
+            "tags": [
+              "Luxe Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfd",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a51"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.112Z",
+    "updatedAt": "2025-09-13T00:47:57.824Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a53",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 11,
+    "inputs": [
+      {
+        "label": "10. We're happiest in…",
+        "type": "single_choice",
+        "name": "q10",
+        "required": true,
+        "options": [
+          {
+            "label": "A remote eco-lodge deep in nature",
+            "value": "q10_a",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A rooftop infinity pool overlooking the city skyline",
+            "value": "q10_b",
+            "tags": [
+              "Luxe Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfd",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "A traditional ryokan with onsen baths",
+            "value": "q10_c",
+            "tags": [
+              "Wellness Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e06",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a54"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.113Z",
+    "updatedAt": "2025-09-13T00:47:57.825Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a56",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 12,
+    "inputs": [
+      {
+        "label": "11. We feel most accomplished when…",
+        "type": "single_choice",
+        "name": "q11",
+        "required": true,
+        "options": [
+          {
+            "label": "We've discovered a meal, drink, or recipe we can recreate at home",
+            "value": "q11_a",
+            "tags": [
+              "Gastronome"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e03",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've formed a genuine connection with locals who shared their traditions",
+            "value": "q11_b",
+            "tags": [
+              "Immersive Local"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e00",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've navigated a new city together without relying on a guidebook",
+            "value": "q11_c",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a57"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.114Z",
+    "updatedAt": "2025-09-13T00:47:57.826Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a59",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 13,
+    "inputs": [
+      {
+        "label": "12. We'll feel our honeymoon was a success when…",
+        "type": "single_choice",
+        "name": "q12",
+        "required": true,
+        "options": [
+          {
+            "label": "We've shared a meal so good we'll dream about it for years",
+            "value": "q12_a",
+            "tags": [
+              "Gastronome"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e03",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've swapped stories with locals we met along the way",
+            "value": "q12_b",
+            "tags": [
+              "Immersive Local"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e00",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "We've returned with memories of a once-in-a-lifetime luxury experience",
+            "value": "q12_c",
+            "tags": [
+              "Luxe Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfd",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a5a"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.115Z",
+    "updatedAt": "2025-09-13T00:47:57.826Z"
+  },
+  {
+    "_id": "68c491a2080d55ce6a2b9a5c",
+    "title": "Discover Your Honeymatch",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 14,
+    "inputs": [
+      {
+        "label": "13. On our honeymoon, I'm most likely to regret…",
+        "type": "single_choice",
+        "name": "q13",
+        "required": true,
+        "options": [
+          {
+            "label": "Missing a chance to try an unforgettable adventure",
+            "value": "q13_a",
+            "tags": [
+              "Adventurer"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73dfa",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Missing a cultural celebration or local tradition",
+            "value": "q13_b",
+            "tags": [
+              "Immersive Local"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e00",
+                "score": 1
+              }
+            ]
+          },
+          {
+            "label": "Not making time for the wellness experience we were looking forward to",
+            "value": "q13_c",
+            "tags": [
+              "Wellness Seeker"
+            ],
+            "resultScores": [
+              {
+                "resultId": "68c492253581078a4ba73e06",
+                "score": 1
+              }
+            ]
+          }
+        ],
+        "_id": "68c491a2080d55ce6a2b9a5d"
+      }
+    ],
+    "createdAt": "2025-09-12T21:33:22.116Z",
+    "updatedAt": "2025-09-13T00:47:57.827Z"
+  },
+  {
+    "_id": "68c4e6ebd8ead4bdb5061d69",
+    "title": "Contact Information",
+    "type": "question",
+    "quizId": "68c491a2080d55ce6a2b9a30",
+    "order": 14,
+    "inputs": [
+      {
+        "label": "First Name",
+        "type": "text",
+        "name": "firstName",
+        "required": true,
+        "_id": "68c4e701ef6d5887c7972819",
+        "options": []
+      },
+      {
+        "label": "Last Name",
+        "type": "text",
+        "name": "lastName",
+        "required": true,
+        "_id": "68c4e701ef6d5887c797281a",
+        "options": []
+      },
+      {
+        "label": "Phone Number",
+        "type": "text",
+        "name": "phone",
+        "required": true,
+        "_id": "68c4e701ef6d5887c797281b",
+        "options": []
+      },
+      {
+        "label": "Email Address",
+        "type": "text",
+        "name": "email",
+        "required": true,
+        "_id": "68c4e701ef6d5887c797281c",
+        "options": []
+      }
+    ],
+    "createdAt": "2025-09-13T03:37:15.013Z",
+    "updatedAt": "2025-09-13T03:37:37.083Z"
+  }
+]

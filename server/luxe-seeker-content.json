@@ -1,0 +1,68 @@
+[
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/adventurer/eb96662cda60977a2c65f7fef1931cc178f6c56b.png",
+      "alt": "Grand Hotel Tremezzo"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Lake Como, Italy",
+          "description": "Timeless glamour meets lakeside romance on the shores of Como. Private boat rides, candlelit dinners overlooking the water, and storied villas make this one of the most iconic honeymoon destinations in the world. It’s where elegance feels effortless, and every view is postcard-perfect."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Grand Hotel Tremezzo",
+          "description": "An art nouveau palace with floating pools, lush gardens, and suites designed for indulgent romance."
+        }
+      ]
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "South Africa, Safari ",
+          "description": "A honeymoon safari means waking to birdsong, setting out on thrilling game drives, and watching elephants roam as the sun sets. It’s wild luxury at its finest, blending awe-inspiring adventure with the comforts of private lodges and world-class service."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Royal Malewane",
+          "description": "An intimate safari lodge offering unmatched game-viewing, sumptuous suites, and the kind of personalized service that makes every moment feel special."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/adventurer/437e1e3660f874e5423337fe8850a83270fd6e6b.png",
+      "alt": "Fogo Island Inn"
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/adventurer/1238da4d3da375537174c19e3525f326ff4c6188.png",
+      "alt": "Rosewood Matakauri"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "New Zealand (South Island)",
+          "description": "From fjords and glaciers to rolling vineyards, New Zealand’s South Island is a natural playground. Honeymooners can mix thrill-seeking—think bungee jumps and heli-hikes—with slow moments of serenity, surrounded by landscapes that are cinematic in scale."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Rosewood Matakauri",
+          "description": "akeside retreat near Queenstown where every suite offers sweeping alpine views and a sense of secluded luxury."
+        }
+      ]
+    }
+  }
+]

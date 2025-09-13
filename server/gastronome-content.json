@@ -1,0 +1,68 @@
+[
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "quiz-viewer/public/images/results/gastrome/cc2c056d89970f68e3b1c7902a9b1c535c5d2ca0.png",
+      "alt": "Akelarre – Relais & Châteaux"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "San Sebastián, Spain",
+          "description": "Few places in the world celebrate food quite like San Sebastián. Honeymooners can spend days hopping pintxo bars, indulging in Michelin-starred dining, and sipping wine by the sea. Here, every meal feels like a celebration."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Akelarre – Relais & Châteaux",
+          "description": "A destination hotel with a three-Michelin-starred restaurant, set against sweeping views of the Bay of Biscay."
+        }
+      ]
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Bangkok, Thailand",
+          "description": "From sizzling street food stalls to cutting-edge fine dining, Bangkok is a feast for all the senses. Couples can dive into bustling markets, cruise along the Chao Phraya River, and discover flavors that linger long after the honeymoon."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Capella Bangkok",
+          "description": "A riverside sanctuary where contemporary luxury meets authentic Thai hospitality."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/gastrome/e9ab74818105bfed8f3f74f8090b50438c55a62f.png",
+      "alt": "Capella Bangkok"
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/gastrome/8d89d1fa4b5eed26483b5331632d00de201ee0eb.png",
+      "alt": "Casa Polanco"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Mexico City, Mexico",
+          "description": "A capital alive with energy, Mexico City blends vibrant street tacos with award-winning restaurants. A honeymoon here means exploring colorful neighborhoods, sipping mezcal, and tasting your way through one of the world’s most exciting culinary scenes."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Casa Polanco",
+          "description": "A chic boutique hotel in leafy Polanco, offering stylish comfort just steps from the city’s best dining."
+        }
+      ]
+    }
+  }
+]

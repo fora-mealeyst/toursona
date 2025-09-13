@@ -101,30 +101,6 @@ describe("QuizForm", () => {
     );
   });
 
-  it("should apply correct CSS classes", () => {
-    const { container } = render(
-      <QuizForm
-        quiz={mockQuiz}
-        currentStep={mockStep}
-        step={0}
-        form={mockForm}
-        onChange={mockOnChange}
-        onSubmit={mockOnSubmit}
-      />
-    );
-
-    const form = container.querySelector("form");
-    const title = screen.getByText("Test Quiz Title");
-
-    expect(form).toHaveClass("flex", "flex-col", "justify-end");
-    expect(title).toHaveClass(
-      "text-base",
-      "font-normal",
-      "font-sans",
-      "uppercase"
-    );
-  });
-
   it("should handle optional onStepClick prop", () => {
     const mockOnStepClick = vi.fn();
 

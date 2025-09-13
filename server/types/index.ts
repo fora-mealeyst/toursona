@@ -1,11 +1,25 @@
-import { Document, Types } from 'mongoose';
-import { IResult } from '../models/Result.js';
+import { Document, Types } from "mongoose";
+import { IResult } from "../models/Result.js";
+import { IContent } from "../models/Content.js";
+
+export interface IResultScore {
+  resultId: Types.ObjectId;
+  score: number;
+}
+
+export interface IContentSection {
+  type: "image" | "text" | "video";
+  content: string; // URL for images/videos, text content for text
+  alt?: string; // Alt text for images
+  caption?: string; // Caption for images/videos
+  alignment?: "left" | "right"; // Which side this section appears on
+}
 
 export interface IOption {
   label: string;
   value: string;
   tags?: string[];
-  scores?: Map<string, number>;
+  resultScores?: IResultScore[];
 }
 
 export interface IInput {
@@ -33,9 +47,25 @@ export interface IInfoStep {
   description: ITextBlock[];
 }
 
+export interface IStep extends Document {
+  title: string;
+  type: string;
+  quizId: Types.ObjectId;
+  order: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export type StepWithInputs = IStep & IQuestionStep;
+export type StepWithDescription = IStep & IInfoStep;
+
 export interface IQuiz extends Document {
   title: string;
-  steps: IQuestionStep[] | IInfoStep[];
+  slug: string;
+  description?: string;
+  steps: Types.ObjectId[];
+  resultTypes: Types.ObjectId[];
+  isActive: boolean;
   createdAt: Date;
 }
 
@@ -53,7 +83,19 @@ export interface IQuizAnswer extends Document {
 
 export interface CreateQuizRequest {
   title: string;
-  steps: IQuestionStep[] | IInfoStep[];
+  description?: string;
+  steps?: Types.ObjectId[];
+  resultTypes?: Types.ObjectId[];
+  isActive?: boolean;
+}
+
+export interface CreateStepRequest {
+  title: string;
+  type: string;
+  quizId: string;
+  order: number;
+  inputs?: IInput[];
+  description?: ITextBlock[];
 }
 
 export interface SubmitAnswerRequest {

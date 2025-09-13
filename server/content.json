@@ -1,0 +1,524 @@
+[
+  {
+    "_id": "68c4d3d97abf853f3897f905",
+    "id": "honeymoon-adventurer-patagonia",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/adventurer/eb96662cda60977a2c65f7fef1931cc178f6c56b.png",
+      "alt": "Tierra Patagonia",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Patagonia",
+          "description": "Remote glaciers, turquoise lakes, and wide-open skies make Patagonia feel like the edge of the world. For honeymooners, it's a place of epic hikes, glacier treks, and nights spent under star-studded skies. This is adventure at its most awe-inspiring, where nature feels infinite and untamed."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Tierra Patagonia",
+          "description": "An immersive lodge with panoramic views of Torres del Paine, perfect for combining adventure-filled days with spa relaxation and cozy nights by the fire."
+        }
+      ]
+    },
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-13T02:15:53.923Z",
+    "updatedAt": "2025-09-13T02:15:53.923Z"
+  },
+  {
+    "_id": "68c4d3d97abf853f3897f907",
+    "id": "honeymoon-adventurer-newfoundland",
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Newfoundland, Canada",
+          "description": "Rugged North Atlantic coastlines, quiet fishing villages, and windswept beauty set the scene for a honeymoon that feels both adventurous and deeply peaceful. Couples can kayak along iceberg-studded waters, hike dramatic coastal trails, and immerse themselves in the island's rich culture."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Fogo Island Inn",
+          "description": "A striking design hotel perched on the rocks, offering floor-to-ceiling ocean views and a strong connection to the local community"
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/adventurer/437e1e3660f874e5423337fe8850a83270fd6e6b.png",
+      "alt": "Fogo Island Inn",
+      "content": []
+    },
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-09-13T02:15:53.927Z",
+    "updatedAt": "2025-09-13T02:15:53.927Z"
+  },
+  {
+    "_id": "68c4d3d97abf853f3897f909",
+    "id": "honeymoon-adventurer-newzealand",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/adventurer/1238da4d3da375537174c19e3525f326ff4c6188.png",
+      "alt": "Rosewood Matakauri",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "New Zealand (South Island)",
+          "description": "From fjords and glaciers to rolling vineyards, New Zealand's South Island is a natural playground. Honeymooners can mix thrill-seeking—think bungee jumps and heli-hikes—with slow moments of serenity, surrounded by landscapes that are cinematic in scale."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Rosewood Matakauri",
+          "description": "A lakeside retreat near Queenstown where every suite offers sweeping alpine views and a sense of secluded luxury."
+        }
+      ]
+    },
+    "order": 3,
+    "isActive": true,
+    "createdAt": "2025-09-13T02:15:53.931Z",
+    "updatedAt": "2025-09-13T02:15:53.931Z"
+  },
+  {
+    "_id": "68c4da9198ab3c3514b3c3f2",
+    "id": "honeymoon-luxe-seeker-lake-como",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/luxe-seeker/8ed9cbaa021b653a4424f2b3f673f4c465c6a797.png",
+      "alt": "Grand Hotel Tremezzo",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Lake Como, Italy",
+          "description": "Timeless glamour meets lakeside romance on the shores of Como. Private boat rides, candlelit dinners overlooking the water, and storied villas make this one of the most iconic honeymoon destinations in the world. It's where elegance feels effortless, and every view is postcard-perfect."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Grand Hotel Tremezzo",
+          "description": "An art nouveau palace with floating pools, lush gardens, and suites designed for indulgent romance."
+        }
+      ]
+    },
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-13T02:44:33.893Z",
+    "updatedAt": "2025-09-13T02:44:33.893Z"
+  },
+  {
+    "_id": "68c4da9198ab3c3514b3c3f4",
+    "id": "honeymoon-luxe-seeker-safari",
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "South Africa, Safari",
+          "description": "A honeymoon safari means waking to birdsong, setting out on thrilling game drives, and watching elephants roam as the sun sets. It's wild luxury at its finest, blending awe-inspiring adventure with the comforts of private lodges and world-class service."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Royal Malewane",
+          "description": "An intimate safari lodge offering unmatched game-viewing, sumptuous suites, and the kind of personalized service that makes every moment feel special."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/luxe-seeker/64669b820b87137306056241f9af8d0aeed2bef4.png",
+      "alt": "Royal Malewane",
+      "content": []
+    },
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-09-13T02:44:33.897Z",
+    "updatedAt": "2025-09-13T02:44:33.897Z"
+  },
+  {
+    "_id": "68c4da9198ab3c3514b3c3f6",
+    "id": "honeymoon-luxe-seeker-st-barths",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/luxe-seeker/d602c32e98bd79c5471406386717d5740ff54d93.png",
+      "alt": "Cheval Blanc St-Barth",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "St. Barths, Caribbean",
+          "description": "Chic and playful, St. Barths combines French sophistication with Caribbean ease. Days are spent between glamorous beach clubs, boutique shopping, and secluded coves, while evenings bring fine dining under the stars. For honeymooners, it's pure island indulgence."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Cheval Blanc St-Barth",
+          "description": "A beachfront boutique property offering understated elegance, exceptional dining, and true barefoot luxury."
+        }
+      ]
+    },
+    "order": 3,
+    "isActive": true,
+    "createdAt": "2025-09-13T02:44:33.900Z",
+    "updatedAt": "2025-09-13T02:44:33.900Z"
+  },
+  {
+    "_id": "68c4df12d1adea50f8495692",
+    "id": "honeymoon-immersive-local-1",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/immersive-local/a2e9efc3d6a318be3dd1a9c50c6fcc079b2092e1.png",
+      "alt": "HOTEL THE MITSUI KYOTO",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Kyoto, Japan",
+          "description": "Kyoto’s lantern-lit alleys, serene temples, and quiet tea ceremonies invite couples to slow down and savor each moment. Here, your honeymoon becomes a journey into Japanese tradition, with every meal, shrine visit, and garden walk layered in history and beauty."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "HOTEL THE MITSUI KYOTO",
+          "description": "A refined property built around an original 300-year-old gate, offering onsen baths and an atmosphere of timeless elegance."
+        }
+      ]
+    },
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:03:46.280Z",
+    "updatedAt": "2025-09-13T03:03:46.280Z"
+  },
+  {
+    "_id": "68c4df12d1adea50f8495695",
+    "id": "honeymoon-immersive-local-2",
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Marrakech, Morocco ",
+          "description": "Vibrant souks, hidden riads, and the hum of daily life fill Marrakech with color and energy. For honeymooners, the city is intoxicating — a blend of romance, culture, and sensory adventure. By day, wander spice-scented markets; by night, retreat to serene courtyards."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Royal Mansour",
+          "description": "A palatial property built by Moroccan artisans, with private riads and world-class service that redefines luxury."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/immersive-local/2f2e5d8b580c7db2ee93cd5ba112cd99737b7cb6.png",
+      "alt": "Royal Mansour",
+      "content": []
+    },
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:03:46.283Z",
+    "updatedAt": "2025-09-13T03:03:46.283Z"
+  },
+  {
+    "_id": "68c4df12d1adea50f8495697",
+    "id": "honeymoon-immersive-local-3",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/immersive-local/8f11f5170534874d0277849dba5488c422f799e0.png",
+      "alt": "Cheval Blanc St-Barth",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Cusco & Sacred Valley, Peru",
+          "description": "A honeymoon here means wandering cobblestone streets, exploring vibrant markets, and standing in awe of ancient Incan sites. The Sacred Valley invites couples to connect with Andean traditions while surrounded by breathtaking mountain landscapes."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Monasterio, A Belmond Hotel",
+          "description": "A former 16th-century monastery transformed into a romantic retreat filled with history, art, and charm."
+        }
+      ]
+    },
+    "order": 3,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:03:46.287Z",
+    "updatedAt": "2025-09-13T03:03:46.287Z"
+  },
+  {
+    "_id": "68c4e0fdd042daed6d79b50c",
+    "id": "honeymoon-gastronome-1",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/gastrome/cc2c056d89970f68e3b1c7902a9b1c535c5d2ca0.png",
+      "alt": "Akelarre – Relais & Châteaux",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "San Sebastián, Spain",
+          "description": "Few places in the world celebrate food quite like San Sebastián. Honeymooners can spend days hopping pintxo bars, indulging in Michelin-starred dining, and sipping wine by the sea. Here, every meal feels like a celebration."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Akelarre – Relais & Châteaux",
+          "description": "A destination hotel with a three-Michelin-starred restaurant, set against sweeping views of the Bay of Biscay."
+        }
+      ]
+    },
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:11:57.033Z",
+    "updatedAt": "2025-09-13T03:11:57.033Z"
+  },
+  {
+    "_id": "68c4e0fdd042daed6d79b50e",
+    "id": "honeymoon-gastronome-2",
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Bangkok, Thailand",
+          "description": "From sizzling street food stalls to cutting-edge fine dining, Bangkok is a feast for all the senses. Couples can dive into bustling markets, cruise along the Chao Phraya River, and discover flavors that linger long after the honeymoon."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Capella Bangkok",
+          "description": "A riverside sanctuary where contemporary luxury meets authentic Thai hospitality."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/gastrome/e9ab74818105bfed8f3f74f8090b50438c55a62f.png",
+      "alt": "Capella Bangkok",
+      "content": []
+    },
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:11:57.036Z",
+    "updatedAt": "2025-09-13T03:11:57.036Z"
+  },
+  {
+    "_id": "68c4e0fdd042daed6d79b510",
+    "id": "honeymoon-gastronome-3",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/gastrome/8d89d1fa4b5eed26483b5331632d00de201ee0eb.png",
+      "alt": "Casa Polanco",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Mexico City, Mexico",
+          "description": "A capital alive with energy, Mexico City blends vibrant street tacos with award-winning restaurants. A honeymoon here means exploring colorful neighborhoods, sipping mezcal, and tasting your way through one of the world’s most exciting culinary scenes."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Casa Polanco",
+          "description": "A chic boutique hotel in leafy Polanco, offering stylish comfort just steps from the city’s best dining."
+        }
+      ]
+    },
+    "order": 3,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:11:57.039Z",
+    "updatedAt": "2025-09-13T03:11:57.039Z"
+  },
+  {
+    "_id": "68c4e3097276263687c0aba3",
+    "id": "honeymoon-wellness-seeker-1",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/wellness-seeker/7a369bb68bce83af4f9c3da666d5b55e0246e27c.png",
+      "alt": "Akelarre – Relais & Châteaux",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Douro Valley, Portugal",
+          "description": "Rolling vineyards and river views create a haven of calm in Portugal’s wine country. Honeymooners can sip vintages, take slow river cruises, and reset with holistic spa treatments in a serene setting."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Six Senses Douro Valley",
+          "description": "A wellness-focused resort blending wine culture with transformative spa experiences."
+        }
+      ]
+    },
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:20:41.771Z",
+    "updatedAt": "2025-09-13T03:20:41.771Z"
+  },
+  {
+    "_id": "68c4e3097276263687c0aba5",
+    "id": "honeymoon-wellness-seeker-2",
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Ubud, Bali",
+          "description": "Nestled in lush jungle, Ubud is the spiritual heart of Bali. Couples can practice yoga at sunrise, visit sacred temples, and reconnect with nature in a place that feels designed for reflection and renewal."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Capella Ubud",
+          "description": "A luxury tented retreat offering jungle seclusion and immersive wellness experiences."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/wellness-seeker/1342d3df5e1b17b61c560d79f26e57b06887a5b7.png",
+      "alt": "Capella Ubud",
+      "content": []
+    },
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:20:41.775Z",
+    "updatedAt": "2025-09-13T03:20:41.775Z"
+  },
+  {
+    "_id": "68c4e3097276263687c0aba7",
+    "id": "honeymoon-wellness-seeker-3",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/wellness-seeker/bbe1646e6399f587b6682547cc3d4db37cec4c2a.png",
+      "alt": "Bürgenstock Resort Lake Lucerne",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Swiss Alps (Lake Lucerne)",
+          "description": "Crisp alpine air and panoramic lake views set the stage for relaxation and rejuvenation. Here, wellness is woven into every moment, from thermal spa rituals to mountain walks."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Bürgenstock Resort Lake Lucerne",
+          "description": "A legendary mountaintop resort with one of the world’s most iconic infinity pools."
+        }
+      ]
+    },
+    "order": 3,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:20:41.777Z",
+    "updatedAt": "2025-09-13T03:20:41.777Z"
+  },
+  {
+    "_id": "68c4e54359de77935a489775",
+    "id": "chameleon-1",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/chameleon/ca56bdf8df05b5889fbb2b94b2305e9af9973095.png",
+      "alt": "Forestis",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "The Dolomites, Italy",
+          "description": "Jagged peaks, alpine meadows, and crisp mountain air make the Dolomites a dream for couples who want it all. Here, adventure blends seamlessly with relaxation, offering breathtaking hikes by day and spa indulgence by night."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Forestis",
+          "description": "A serene hideaway high in the mountains, with holistic wellness and uninterrupted views."
+        }
+      ]
+    },
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:30:11.352Z",
+    "updatedAt": "2025-09-13T03:30:11.352Z"
+  },
+  {
+    "_id": "68c4e54359de77935a489777",
+    "id": "chameleon-2",
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Hawaii (Big Island)",
+          "description": "Volcanic landscapes, lush rainforests, and black-sand beaches make the Big Island endlessly diverse. A honeymoon here offers adventure, wellness, and romance all at once — from snorkeling with manta rays to stargazing atop Mauna Kea."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Mauna Lani, Auberge Resorts Collection",
+          "description": "A beachfront resort rooted in Hawaiian culture, with a focus on wellness and connection to nature."
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/chameleon/033f707d8bb58c8b5841bc9523a14c0b1dade477.png",
+      "alt": "Mauna Lani, Auberge Resorts Collection",
+      "content": []
+    },
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:30:11.355Z",
+    "updatedAt": "2025-09-13T03:30:11.355Z"
+  },
+  {
+    "_id": "68c4e54359de77935a489779",
+    "id": "chameleon-3",
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/chameleon/8eeb382d312b7c2c5d542841724eb483b5e39266.png",
+      "alt": "Palacio Duhau – Park Hyatt Buenos Aires",
+      "content": []
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Buenos Aires, Argentina",
+          "description": "A city alive with passion, Buenos Aires is perfect for couples who love variety. Days can be spent exploring European-style boulevards, indulging in world-class cuisine, and sipping Malbec, while nights are filled with tango and lively energy."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Palacio Duhau – Park Hyatt Buenos Aires",
+          "description": "A Belle Époque palace with modern touches, offering an elegant base in the heart of the city."
+        }
+      ]
+    },
+    "order": 3,
+    "isActive": true,
+    "createdAt": "2025-09-13T03:30:11.357Z",
+    "updatedAt": "2025-09-13T03:30:11.357Z"
+  }
+]

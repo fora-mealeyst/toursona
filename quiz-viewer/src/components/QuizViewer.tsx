@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "../App.module.css";
 import { useQuiz } from "../hooks";
 import { LoadingSpinner, ErrorMessage, QuizForm } from "./";
@@ -68,6 +68,7 @@ const getRandomImage = (currentImage?: string) => {
 
 export const QuizViewer = () => {
   const navigate = useNavigate();
+  const { quizSlug } = useParams<{ quizSlug: string }>();
   const {
     quiz,
     form,
@@ -105,10 +106,10 @@ export const QuizViewer = () => {
 
   // Navigate to results when quiz is submitted
   useEffect(() => {
-    if (submitted && sessionId) {
-      navigate("/results");
+    if (submitted && sessionId && quizSlug) {
+      navigate(`/${quizSlug}/results`);
     }
-  }, [submitted, sessionId, navigate]);
+  }, [submitted, sessionId, navigate, quizSlug]);
 
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorMessage message={error} />;
