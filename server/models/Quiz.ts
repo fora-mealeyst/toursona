@@ -13,7 +13,6 @@ const QuizSchema = new Schema<IQuiz>(
     slug: {
       type: String,
       required: true,
-      unique: true,
     }, // URL-friendly identifier (e.g., "honeymoon-match")
     description: {
       type: String,
@@ -45,8 +44,8 @@ const QuizSchema = new Schema<IQuiz>(
   }
 );
 
-// Add index for slug field for better performance
-QuizSchema.index({ slug: 1 });
+// Add unique index for slug field for better performance and uniqueness
+QuizSchema.index({ slug: 1 }, { unique: true });
 
 const Quiz = mongoose.model<IQuiz>("Quiz", QuizSchema);
 
