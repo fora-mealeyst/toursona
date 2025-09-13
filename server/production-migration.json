@@ -1,0 +1,1538 @@
+{
+  "metadata": {
+    "exportedAt": "2025-09-13T04:36:38.261Z",
+    "version": "1.0.0",
+    "description": "Complete honeymoon-match quiz data for production deployment"
+  },
+  "quiz": {
+    "_id": "68c491a2080d55ce6a2b9a30",
+    "title": "Honeymoon Match",
+    "slug": "honeymoon-match",
+    "description": "Great honeymoons start with knowing your style. Your Honeymoon Match reveals the way you and your partner love to travel - and the most magical ways to celebrate your new chapter together. Once we know your honeymoon style, we'll connect you with a Fora advisor who can design a trip made just for you.",
+    "steps": [
+      "68c4bf3d1e4b8ed2c6391692",
+      "68c491a2080d55ce6a2b9a38",
+      "68c491a2080d55ce6a2b9a3b",
+      "68c491a2080d55ce6a2b9a3e",
+      "68c491a2080d55ce6a2b9a41",
+      "68c491a2080d55ce6a2b9a44",
+      "68c491a2080d55ce6a2b9a47",
+      "68c491a2080d55ce6a2b9a4a",
+      "68c491a2080d55ce6a2b9a4d",
+      "68c491a2080d55ce6a2b9a50",
+      "68c491a2080d55ce6a2b9a53",
+      "68c491a2080d55ce6a2b9a56",
+      "68c491a2080d55ce6a2b9a59",
+      "68c491a2080d55ce6a2b9a5c",
+      "68c4e6ebd8ead4bdb5061d69"
+    ],
+    "resultTypes": [
+      "68c492253581078a4ba73dfa",
+      "68c492253581078a4ba73e03",
+      "68c492253581078a4ba73e00",
+      "68c492253581078a4ba73dfd",
+      "68c492253581078a4ba73e06",
+      "68c4c55437296aa2e0928e81"
+    ],
+    "isActive": true,
+    "createdAt": "2025-09-12T21:33:22.084Z",
+    "updatedAt": "2025-09-13T03:41:06.498Z"
+  },
+  "steps": [
+    {
+      "_id": "68c4bf3d1e4b8ed2c6391692",
+      "title": "Discover your Honeymoon Match",
+      "type": "info",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 0,
+      "createdAt": "2025-09-13T00:47:57.807Z",
+      "updatedAt": "2025-09-13T00:47:57.807Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a38",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 2,
+      "inputs": [
+        {
+          "label": "1. It's more meaningful to us when…",
+          "type": "single_choice",
+          "name": "q1",
+          "required": true,
+          "options": [
+            {
+              "label": "We conquer a hike together to an epic view",
+              "value": "q1_a",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "We check into a breathtaking luxury suite overlooking the ocean",
+              "value": "q1_b",
+              "tags": [
+                "Luxe Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfd",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "We share a home-cooked meal with locals",
+              "value": "q1_c",
+              "tags": [
+                "Immersive Local"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e00",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a39"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.099Z",
+      "updatedAt": "2025-09-13T00:47:57.815Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a3b",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 3,
+      "inputs": [
+        {
+          "label": "2. On our honeymoon, we'd rather start the day with…",
+          "type": "single_choice",
+          "name": "q2",
+          "required": true,
+          "options": [
+            {
+              "label": "Sunrise yoga overlooking the water",
+              "value": "q2_a",
+              "tags": [
+                "Wellness Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e06",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Breakfast in bed at a five-star suite",
+              "value": "q2_b",
+              "tags": [
+                "Luxe Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfd",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "A bustling cafe surrounded by locals",
+              "value": "q2_c",
+              "tags": [
+                "Immersive Local"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e00",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a3c"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.102Z",
+      "updatedAt": "2025-09-13T00:47:57.817Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a3e",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 4,
+      "inputs": [
+        {
+          "label": "3. We feel most alive when…",
+          "type": "single_choice",
+          "name": "q3",
+          "required": true,
+          "options": [
+            {
+              "label": "We're snorkeling or diving in clear waters",
+              "value": "q3_a",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Indulging in a couples' spa treatment",
+              "value": "q3_b",
+              "tags": [
+                "Wellness Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e06",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Exploring hidden corners of a new city",
+              "value": "q3_c",
+              "tags": [
+                "Immersive Local"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e00",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a3f"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.104Z",
+      "updatedAt": "2025-09-13T00:47:57.818Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a41",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 5,
+      "inputs": [
+        {
+          "label": "4. We'd be happiest spending an afternoon…",
+          "type": "single_choice",
+          "name": "q4",
+          "required": true,
+          "options": [
+            {
+              "label": "Learning to cook local specialties",
+              "value": "q4_a",
+              "tags": [
+                "Gastronome"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e03",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Enjoying a private wine tasting at a vineyard",
+              "value": "q4_b",
+              "tags": [
+                "Luxe Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfd",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Floating in a natural hot spring together",
+              "value": "q4_c",
+              "tags": [
+                "Wellness Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e06",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a42"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.106Z",
+      "updatedAt": "2025-09-13T00:47:57.819Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a44",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 6,
+      "inputs": [
+        {
+          "label": "5. We imagine our honeymoon photos being…",
+          "type": "single_choice",
+          "name": "q5",
+          "required": true,
+          "options": [
+            {
+              "label": "Us exploring new places and trying new things",
+              "value": "q5_a",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Capturing romantic sunsets and stunning hotel views",
+              "value": "q5_b",
+              "tags": [
+                "Luxe Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfd",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Showing the amazing meals, markets, and drinks we've enjoyed",
+              "value": "q5_c",
+              "tags": [
+                "Gastronome"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e03",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a45"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.108Z",
+      "updatedAt": "2025-09-13T00:47:57.820Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a47",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 7,
+      "inputs": [
+        {
+          "label": "6. My dream honeymoon upgrade would be…",
+          "type": "single_choice",
+          "name": "q6",
+          "required": true,
+          "options": [
+            {
+              "label": "A spa retreat with personalized treatments",
+              "value": "q6_a",
+              "tags": [
+                "Wellness Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e06",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "A luxury suite or villa",
+              "value": "q6_b",
+              "tags": [
+                "Luxe Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfd",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "A private guided hike to a hidden waterfall",
+              "value": "q6_c",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a48"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.109Z",
+      "updatedAt": "2025-09-13T00:47:57.821Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a4a",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 8,
+      "inputs": [
+        {
+          "label": "7. If we could choose one honeymoon splurge, it would be…",
+          "type": "single_choice",
+          "name": "q7",
+          "required": true,
+          "options": [
+            {
+              "label": "A guided meditation session at a Balinese temple",
+              "value": "q7_a",
+              "tags": [
+                "Wellness Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e06",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "A hidden-alley food and culture tour in Kyoto",
+              "value": "q7_b",
+              "tags": [
+                "Gastronome"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e03",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "A private boat cruise at sunset",
+              "value": "q7_c",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a4b"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.110Z",
+      "updatedAt": "2025-09-13T00:47:57.822Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a4d",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 9,
+      "inputs": [
+        {
+          "label": "8. We feel most satisfied when…",
+          "type": "single_choice",
+          "name": "q8",
+          "required": true,
+          "options": [
+            {
+              "label": "We've learned to cook a regional dish together and can recreate it at home",
+              "value": "q8_a",
+              "tags": [
+                "Gastronome"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e03",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "We've uncovered a charming neighborhood away from the tourist trail",
+              "value": "q8_b",
+              "tags": [
+                "Immersive Local"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e00",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "We return feeling completely relaxed and recharged",
+              "value": "q8_c",
+              "tags": [
+                "Wellness Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e06",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a4e"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.111Z",
+      "updatedAt": "2025-09-13T00:47:57.823Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a50",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 10,
+      "inputs": [
+        {
+          "label": "9. We're most likely to say yes to…",
+          "type": "single_choice",
+          "name": "q9",
+          "required": true,
+          "options": [
+            {
+              "label": "Sailing through unpredictable waters",
+              "value": "q9_a",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Wandering off the main streets to explore a local neighborhood",
+              "value": "q9_b",
+              "tags": [
+                "Immersive Local"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e00",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Upgrading to an overwater bungalow",
+              "value": "q9_c",
+              "tags": [
+                "Luxe Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfd",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a51"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.112Z",
+      "updatedAt": "2025-09-13T00:47:57.824Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a53",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 11,
+      "inputs": [
+        {
+          "label": "10. We're happiest in…",
+          "type": "single_choice",
+          "name": "q10",
+          "required": true,
+          "options": [
+            {
+              "label": "A remote eco-lodge deep in nature",
+              "value": "q10_a",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "A rooftop infinity pool overlooking the city skyline",
+              "value": "q10_b",
+              "tags": [
+                "Luxe Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfd",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "A traditional ryokan with onsen baths",
+              "value": "q10_c",
+              "tags": [
+                "Wellness Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e06",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a54"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.113Z",
+      "updatedAt": "2025-09-13T00:47:57.825Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a56",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 12,
+      "inputs": [
+        {
+          "label": "11. We feel most accomplished when…",
+          "type": "single_choice",
+          "name": "q11",
+          "required": true,
+          "options": [
+            {
+              "label": "We've discovered a meal, drink, or recipe we can recreate at home",
+              "value": "q11_a",
+              "tags": [
+                "Gastronome"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e03",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "We've formed a genuine connection with locals who shared their traditions",
+              "value": "q11_b",
+              "tags": [
+                "Immersive Local"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e00",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "We've navigated a new city together without relying on a guidebook",
+              "value": "q11_c",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a57"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.114Z",
+      "updatedAt": "2025-09-13T00:47:57.826Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a59",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 13,
+      "inputs": [
+        {
+          "label": "12. We'll feel our honeymoon was a success when…",
+          "type": "single_choice",
+          "name": "q12",
+          "required": true,
+          "options": [
+            {
+              "label": "We've shared a meal so good we'll dream about it for years",
+              "value": "q12_a",
+              "tags": [
+                "Gastronome"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e03",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "We've swapped stories with locals we met along the way",
+              "value": "q12_b",
+              "tags": [
+                "Immersive Local"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e00",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "We've returned with memories of a once-in-a-lifetime luxury experience",
+              "value": "q12_c",
+              "tags": [
+                "Luxe Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfd",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a5a"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.115Z",
+      "updatedAt": "2025-09-13T00:47:57.826Z"
+    },
+    {
+      "_id": "68c491a2080d55ce6a2b9a5c",
+      "title": "Discover Your Honeymatch",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 14,
+      "inputs": [
+        {
+          "label": "13. On our honeymoon, I'm most likely to regret…",
+          "type": "single_choice",
+          "name": "q13",
+          "required": true,
+          "options": [
+            {
+              "label": "Missing a chance to try an unforgettable adventure",
+              "value": "q13_a",
+              "tags": [
+                "Adventurer"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73dfa",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Missing a cultural celebration or local tradition",
+              "value": "q13_b",
+              "tags": [
+                "Immersive Local"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e00",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "label": "Not making time for the wellness experience we were looking forward to",
+              "value": "q13_c",
+              "tags": [
+                "Wellness Seeker"
+              ],
+              "resultScores": [
+                {
+                  "resultId": "68c492253581078a4ba73e06",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "_id": "68c491a2080d55ce6a2b9a5d"
+        }
+      ],
+      "createdAt": "2025-09-12T21:33:22.116Z",
+      "updatedAt": "2025-09-13T00:47:57.827Z"
+    },
+    {
+      "_id": "68c4e6ebd8ead4bdb5061d69",
+      "title": "Contact Information",
+      "type": "question",
+      "quizId": "68c491a2080d55ce6a2b9a30",
+      "order": 14,
+      "inputs": [
+        {
+          "label": "First Name",
+          "type": "text",
+          "name": "firstName",
+          "required": true,
+          "_id": "68c4e701ef6d5887c7972819",
+          "options": []
+        },
+        {
+          "label": "Last Name",
+          "type": "text",
+          "name": "lastName",
+          "required": true,
+          "_id": "68c4e701ef6d5887c797281a",
+          "options": []
+        },
+        {
+          "label": "Phone Number",
+          "type": "text",
+          "name": "phone",
+          "required": true,
+          "_id": "68c4e701ef6d5887c797281b",
+          "options": []
+        },
+        {
+          "label": "Email Address",
+          "type": "text",
+          "name": "email",
+          "required": true,
+          "_id": "68c4e701ef6d5887c797281c",
+          "options": []
+        }
+      ],
+      "createdAt": "2025-09-13T03:37:15.013Z",
+      "updatedAt": "2025-09-13T03:37:37.083Z"
+    }
+  ],
+  "results": [
+    {
+      "_id": "68c492253581078a4ba73dfa",
+      "id": "honeymoon-adventurer",
+      "name": "Adventure Honeymooners",
+      "description": "You and your partner are thrill-seekers who believe the best honeymoon memories come from conquering new challenges together. From hiking to hidden waterfalls to diving in crystal-clear waters, you want your honeymoon to be an adventure story you'll tell for years to come.",
+      "traits": [
+        "Adventure-seeking",
+        "Thrill-loving",
+        "Active",
+        "Bold"
+      ],
+      "travelStyle": "Adventure-packed experiences and adrenaline-filled activities",
+      "color": "#FF6B35",
+      "eyebrow": "Meet Your Honeymatch",
+      "cta": "Plan your adventure honeymoon",
+      "advisorDescription": "Find an advisor who specializes in creating unforgettable adventure honeymoons with the perfect mix of excitement and romance.",
+      "content": [
+        "68c4d3d97abf853f3897f905",
+        "68c4d3d97abf853f3897f907",
+        "68c4d3d97abf853f3897f909"
+      ],
+      "createdAt": "2025-09-12T21:35:33.892Z",
+      "updatedAt": "2025-09-13T02:15:53.935Z"
+    },
+    {
+      "_id": "68c492253581078a4ba73dfd",
+      "id": "honeymoon-luxe-seeker",
+      "name": "Luxe Seekers",
+      "description": "Your honeymoon is the ultimate indulgence. For you, it’s about private villas with plunge pools, champagne at sunset, and every detail taken care of before you even think to ask. Romance is found in flawless service, endless pampering, and once-in-a-lifetime upgrades that make your honeymoon shine.",
+      "traits": [
+        "Luxury-focused",
+        "Indulgent",
+        "Sophisticated",
+        "Premium"
+      ],
+      "travelStyle": "Ultra-luxury accommodations and exclusive experiences",
+      "color": "#8B5CF6",
+      "eyebrow": "Meet Your Honeymatch",
+      "cta": "Plan your luxury honeymoon",
+      "advisorDescription": "Find a Fora advisor who can unlock exclusive perks, insider access, and the kind of five-star experiences that will set your honeymoon apart.",
+      "content": [
+        "68c4da9198ab3c3514b3c3f2",
+        "68c4da9198ab3c3514b3c3f4",
+        "68c4da9198ab3c3514b3c3f6"
+      ],
+      "createdAt": "2025-09-12T21:35:33.909Z",
+      "updatedAt": "2025-09-13T02:44:33.906Z"
+    },
+    {
+      "_id": "68c492253581078a4ba73e00",
+      "id": "honeymoon-immersive-local",
+      "name": "Immersive Locals\n",
+      "description": "Your honeymoon is about more than just being there — it’s about belonging. You crave neighborhood cafés where no one speaks English, local festivals where you’re swept into the crowd, and conversations that last late into the night with new friends. For you, romance is found in connection and cultural discovery.",
+      "traits": [
+        "Cultural",
+        "Authentic",
+        "Curious",
+        "Community-focused"
+      ],
+      "travelStyle": "Authentic local experiences and cultural immersion",
+      "color": "#10B981",
+      "eyebrow": "Meet Your Honeymatch",
+      "cta": "Plan your cultural honeymoon",
+      "advisorDescription": "Find a Fora advisor who can take you beyond the guidebook and into the heart of your honeymoon destination.",
+      "content": [
+        "68c4df12d1adea50f8495692",
+        "68c4df12d1adea50f8495695",
+        "68c4df12d1adea50f8495697"
+      ],
+      "createdAt": "2025-09-12T21:35:33.913Z",
+      "updatedAt": "2025-09-13T03:03:46.290Z"
+    },
+    {
+      "_id": "68c492253581078a4ba73e03",
+      "id": "honeymoon-gastronome",
+      "name": "Gastronomes",
+      "description": "For you, love is best celebrated at the table. Your honeymoon memories will live in flavor: the first bite of street food that blows you away, a cooking class where you laugh your way through learning, or a Michelin-star dinner that becomes a story you’ll retell forever. Every meal is part of your love story.",
+      "traits": [
+        "Food-focused",
+        "Culinary",
+        "Experiential",
+        "Curious"
+      ],
+      "travelStyle": "Culinary adventures and food-focused experiences",
+      "color": "#F59E0B",
+      "eyebrow": "Meet Your Honeymatch",
+      "cta": "Plan your foodie honeymoon",
+      "advisorDescription": "Find a Fora advisor who can secure the tables, tastings, and culinary experiences that will make your honeymoon deliciously unforgettable.",
+      "content": [
+        "68c4e0fdd042daed6d79b50c",
+        "68c4e0fdd042daed6d79b50e",
+        "68c4e0fdd042daed6d79b510"
+      ],
+      "createdAt": "2025-09-12T21:35:33.917Z",
+      "updatedAt": "2025-09-13T03:11:57.041Z"
+    },
+    {
+      "_id": "68c492253581078a4ba73e06",
+      "id": "honeymoon-wellness-seeker",
+      "name": "Wellness Seekers",
+      "description": "Your dream honeymoon is about slowing down, recharging, and reconnecting with each other. Whether it’s couples’ yoga at sunrise, soaking in hot springs surrounded by nature, or indulging in spa rituals that melt away the stress of wedding planning, you travel to restore as much as to explore.",
+      "traits": [
+        "Mindful",
+        "Relaxed",
+        "Renewing",
+        "Holistic"
+      ],
+      "travelStyle": "Wellness-focused experiences and relaxation",
+      "color": "#06B6D4",
+      "eyebrow": "Meet Your Honeymatch",
+      "cta": "Plan your wellness honeymoon",
+      "advisorDescription": "Find a Fora advisor who can guide you to the most transformative retreats and serene escapes — the perfect setting for your new chapter together.",
+      "content": [
+        "68c4e3097276263687c0aba3",
+        "68c4e3097276263687c0aba5",
+        "68c4e3097276263687c0aba7"
+      ],
+      "createdAt": "2025-09-12T21:35:33.920Z",
+      "updatedAt": "2025-09-13T03:20:41.779Z"
+    },
+    {
+      "_id": "68c4c55437296aa2e0928e81",
+      "id": "chameleon",
+      "name": "Chameleons",
+      "description": "You're a rare mix. On your honeymoon, you can flow effortlessly from poolside champagne to a bustling market to a hidden trattoria — all in the same day. You're versatile, curious, and open to celebrating your love in every way possible.",
+      "traits": [
+        "Versatile",
+        "Curious",
+        "Adaptable",
+        "Multifaceted"
+      ],
+      "travelStyle": "Dynamic experiences that blend luxury, culture, adventure, and wellness",
+      "color": "#8B5A2B",
+      "eyebrow": "Your Honeymoon Match",
+      "cta": "Plan your chameleon honeymoon",
+      "advisorDescription": "Find a Fora advisor who can design a honeymoon as dynamic and multifaceted as the two of you.",
+      "content": [
+        "68c4e54359de77935a489775",
+        "68c4e54359de77935a489777",
+        "68c4e54359de77935a489779"
+      ],
+      "createdAt": "2025-09-13T01:13:56.440Z",
+      "updatedAt": "2025-09-13T03:30:11.359Z"
+    }
+  ],
+  "content": [
+    {
+      "_id": "68c4d3d97abf853f3897f905",
+      "id": "honeymoon-adventurer-patagonia",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/adventurer/eb96662cda60977a2c65f7fef1931cc178f6c56b.png",
+        "alt": "Tierra Patagonia",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Patagonia",
+            "description": "Remote glaciers, turquoise lakes, and wide-open skies make Patagonia feel like the edge of the world. For honeymooners, it's a place of epic hikes, glacier treks, and nights spent under star-studded skies. This is adventure at its most awe-inspiring, where nature feels infinite and untamed."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Tierra Patagonia",
+            "description": "An immersive lodge with panoramic views of Torres del Paine, perfect for combining adventure-filled days with spa relaxation and cozy nights by the fire."
+          }
+        ]
+      },
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2025-09-13T02:15:53.923Z",
+      "updatedAt": "2025-09-13T02:15:53.923Z"
+    },
+    {
+      "_id": "68c4d3d97abf853f3897f907",
+      "id": "honeymoon-adventurer-newfoundland",
+      "type": "side-by-side",
+      "left": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Newfoundland, Canada",
+            "description": "Rugged North Atlantic coastlines, quiet fishing villages, and windswept beauty set the scene for a honeymoon that feels both adventurous and deeply peaceful. Couples can kayak along iceberg-studded waters, hike dramatic coastal trails, and immerse themselves in the island's rich culture."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Fogo Island Inn",
+            "description": "A striking design hotel perched on the rocks, offering floor-to-ceiling ocean views and a strong connection to the local community"
+          }
+        ]
+      },
+      "right": {
+        "type": "image",
+        "src": "/images/results/adventurer/437e1e3660f874e5423337fe8850a83270fd6e6b.png",
+        "alt": "Fogo Island Inn",
+        "content": []
+      },
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2025-09-13T02:15:53.927Z",
+      "updatedAt": "2025-09-13T02:15:53.927Z"
+    },
+    {
+      "_id": "68c4d3d97abf853f3897f909",
+      "id": "honeymoon-adventurer-newzealand",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/adventurer/1238da4d3da375537174c19e3525f326ff4c6188.png",
+        "alt": "Rosewood Matakauri",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "New Zealand (South Island)",
+            "description": "From fjords and glaciers to rolling vineyards, New Zealand's South Island is a natural playground. Honeymooners can mix thrill-seeking—think bungee jumps and heli-hikes—with slow moments of serenity, surrounded by landscapes that are cinematic in scale."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Rosewood Matakauri",
+            "description": "A lakeside retreat near Queenstown where every suite offers sweeping alpine views and a sense of secluded luxury."
+          }
+        ]
+      },
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2025-09-13T02:15:53.931Z",
+      "updatedAt": "2025-09-13T02:15:53.931Z"
+    },
+    {
+      "_id": "68c4da9198ab3c3514b3c3f2",
+      "id": "honeymoon-luxe-seeker-lake-como",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/luxe-seeker/8ed9cbaa021b653a4424f2b3f673f4c465c6a797.png",
+        "alt": "Grand Hotel Tremezzo",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Lake Como, Italy",
+            "description": "Timeless glamour meets lakeside romance on the shores of Como. Private boat rides, candlelit dinners overlooking the water, and storied villas make this one of the most iconic honeymoon destinations in the world. It's where elegance feels effortless, and every view is postcard-perfect."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Grand Hotel Tremezzo",
+            "description": "An art nouveau palace with floating pools, lush gardens, and suites designed for indulgent romance."
+          }
+        ]
+      },
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2025-09-13T02:44:33.893Z",
+      "updatedAt": "2025-09-13T02:44:33.893Z"
+    },
+    {
+      "_id": "68c4da9198ab3c3514b3c3f4",
+      "id": "honeymoon-luxe-seeker-safari",
+      "type": "side-by-side",
+      "left": {
+        "content": [
+          {
+            "type": "location",
+            "title": "South Africa, Safari",
+            "description": "A honeymoon safari means waking to birdsong, setting out on thrilling game drives, and watching elephants roam as the sun sets. It's wild luxury at its finest, blending awe-inspiring adventure with the comforts of private lodges and world-class service."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Royal Malewane",
+            "description": "An intimate safari lodge offering unmatched game-viewing, sumptuous suites, and the kind of personalized service that makes every moment feel special."
+          }
+        ]
+      },
+      "right": {
+        "type": "image",
+        "src": "/images/results/luxe-seeker/64669b820b87137306056241f9af8d0aeed2bef4.png",
+        "alt": "Royal Malewane",
+        "content": []
+      },
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2025-09-13T02:44:33.897Z",
+      "updatedAt": "2025-09-13T02:44:33.897Z"
+    },
+    {
+      "_id": "68c4da9198ab3c3514b3c3f6",
+      "id": "honeymoon-luxe-seeker-st-barths",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/luxe-seeker/d602c32e98bd79c5471406386717d5740ff54d93.png",
+        "alt": "Cheval Blanc St-Barth",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "St. Barths, Caribbean",
+            "description": "Chic and playful, St. Barths combines French sophistication with Caribbean ease. Days are spent between glamorous beach clubs, boutique shopping, and secluded coves, while evenings bring fine dining under the stars. For honeymooners, it's pure island indulgence."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Cheval Blanc St-Barth",
+            "description": "A beachfront boutique property offering understated elegance, exceptional dining, and true barefoot luxury."
+          }
+        ]
+      },
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2025-09-13T02:44:33.900Z",
+      "updatedAt": "2025-09-13T02:44:33.900Z"
+    },
+    {
+      "_id": "68c4df12d1adea50f8495692",
+      "id": "honeymoon-immersive-local-1",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/immersive-local/a2e9efc3d6a318be3dd1a9c50c6fcc079b2092e1.png",
+        "alt": "HOTEL THE MITSUI KYOTO",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Kyoto, Japan",
+            "description": "Kyoto’s lantern-lit alleys, serene temples, and quiet tea ceremonies invite couples to slow down and savor each moment. Here, your honeymoon becomes a journey into Japanese tradition, with every meal, shrine visit, and garden walk layered in history and beauty."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "HOTEL THE MITSUI KYOTO",
+            "description": "A refined property built around an original 300-year-old gate, offering onsen baths and an atmosphere of timeless elegance."
+          }
+        ]
+      },
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:03:46.280Z",
+      "updatedAt": "2025-09-13T03:03:46.280Z"
+    },
+    {
+      "_id": "68c4df12d1adea50f8495695",
+      "id": "honeymoon-immersive-local-2",
+      "type": "side-by-side",
+      "left": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Marrakech, Morocco ",
+            "description": "Vibrant souks, hidden riads, and the hum of daily life fill Marrakech with color and energy. For honeymooners, the city is intoxicating — a blend of romance, culture, and sensory adventure. By day, wander spice-scented markets; by night, retreat to serene courtyards."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Royal Mansour",
+            "description": "A palatial property built by Moroccan artisans, with private riads and world-class service that redefines luxury."
+          }
+        ]
+      },
+      "right": {
+        "type": "image",
+        "src": "/images/results/immersive-local/2f2e5d8b580c7db2ee93cd5ba112cd99737b7cb6.png",
+        "alt": "Royal Mansour",
+        "content": []
+      },
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:03:46.283Z",
+      "updatedAt": "2025-09-13T03:03:46.283Z"
+    },
+    {
+      "_id": "68c4df12d1adea50f8495697",
+      "id": "honeymoon-immersive-local-3",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/immersive-local/8f11f5170534874d0277849dba5488c422f799e0.png",
+        "alt": "Cheval Blanc St-Barth",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Cusco & Sacred Valley, Peru",
+            "description": "A honeymoon here means wandering cobblestone streets, exploring vibrant markets, and standing in awe of ancient Incan sites. The Sacred Valley invites couples to connect with Andean traditions while surrounded by breathtaking mountain landscapes."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Monasterio, A Belmond Hotel",
+            "description": "A former 16th-century monastery transformed into a romantic retreat filled with history, art, and charm."
+          }
+        ]
+      },
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:03:46.287Z",
+      "updatedAt": "2025-09-13T03:03:46.287Z"
+    },
+    {
+      "_id": "68c4e0fdd042daed6d79b50c",
+      "id": "honeymoon-gastronome-1",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/gastrome/cc2c056d89970f68e3b1c7902a9b1c535c5d2ca0.png",
+        "alt": "Akelarre – Relais & Châteaux",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "San Sebastián, Spain",
+            "description": "Few places in the world celebrate food quite like San Sebastián. Honeymooners can spend days hopping pintxo bars, indulging in Michelin-starred dining, and sipping wine by the sea. Here, every meal feels like a celebration."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Akelarre – Relais & Châteaux",
+            "description": "A destination hotel with a three-Michelin-starred restaurant, set against sweeping views of the Bay of Biscay."
+          }
+        ]
+      },
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:11:57.033Z",
+      "updatedAt": "2025-09-13T03:11:57.033Z"
+    },
+    {
+      "_id": "68c4e0fdd042daed6d79b50e",
+      "id": "honeymoon-gastronome-2",
+      "type": "side-by-side",
+      "left": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Bangkok, Thailand",
+            "description": "From sizzling street food stalls to cutting-edge fine dining, Bangkok is a feast for all the senses. Couples can dive into bustling markets, cruise along the Chao Phraya River, and discover flavors that linger long after the honeymoon."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Capella Bangkok",
+            "description": "A riverside sanctuary where contemporary luxury meets authentic Thai hospitality."
+          }
+        ]
+      },
+      "right": {
+        "type": "image",
+        "src": "/images/results/gastrome/e9ab74818105bfed8f3f74f8090b50438c55a62f.png",
+        "alt": "Capella Bangkok",
+        "content": []
+      },
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:11:57.036Z",
+      "updatedAt": "2025-09-13T03:11:57.036Z"
+    },
+    {
+      "_id": "68c4e0fdd042daed6d79b510",
+      "id": "honeymoon-gastronome-3",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/gastrome/8d89d1fa4b5eed26483b5331632d00de201ee0eb.png",
+        "alt": "Casa Polanco",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Mexico City, Mexico",
+            "description": "A capital alive with energy, Mexico City blends vibrant street tacos with award-winning restaurants. A honeymoon here means exploring colorful neighborhoods, sipping mezcal, and tasting your way through one of the world’s most exciting culinary scenes."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Casa Polanco",
+            "description": "A chic boutique hotel in leafy Polanco, offering stylish comfort just steps from the city’s best dining."
+          }
+        ]
+      },
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:11:57.039Z",
+      "updatedAt": "2025-09-13T03:11:57.039Z"
+    },
+    {
+      "_id": "68c4e3097276263687c0aba3",
+      "id": "honeymoon-wellness-seeker-1",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/wellness-seeker/7a369bb68bce83af4f9c3da666d5b55e0246e27c.png",
+        "alt": "Akelarre – Relais & Châteaux",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Douro Valley, Portugal",
+            "description": "Rolling vineyards and river views create a haven of calm in Portugal’s wine country. Honeymooners can sip vintages, take slow river cruises, and reset with holistic spa treatments in a serene setting."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Six Senses Douro Valley",
+            "description": "A wellness-focused resort blending wine culture with transformative spa experiences."
+          }
+        ]
+      },
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:20:41.771Z",
+      "updatedAt": "2025-09-13T03:20:41.771Z"
+    },
+    {
+      "_id": "68c4e3097276263687c0aba5",
+      "id": "honeymoon-wellness-seeker-2",
+      "type": "side-by-side",
+      "left": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Ubud, Bali",
+            "description": "Nestled in lush jungle, Ubud is the spiritual heart of Bali. Couples can practice yoga at sunrise, visit sacred temples, and reconnect with nature in a place that feels designed for reflection and renewal."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Capella Ubud",
+            "description": "A luxury tented retreat offering jungle seclusion and immersive wellness experiences."
+          }
+        ]
+      },
+      "right": {
+        "type": "image",
+        "src": "/images/results/wellness-seeker/1342d3df5e1b17b61c560d79f26e57b06887a5b7.png",
+        "alt": "Capella Ubud",
+        "content": []
+      },
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:20:41.775Z",
+      "updatedAt": "2025-09-13T03:20:41.775Z"
+    },
+    {
+      "_id": "68c4e3097276263687c0aba7",
+      "id": "honeymoon-wellness-seeker-3",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/wellness-seeker/bbe1646e6399f587b6682547cc3d4db37cec4c2a.png",
+        "alt": "Bürgenstock Resort Lake Lucerne",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Swiss Alps (Lake Lucerne)",
+            "description": "Crisp alpine air and panoramic lake views set the stage for relaxation and rejuvenation. Here, wellness is woven into every moment, from thermal spa rituals to mountain walks."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Bürgenstock Resort Lake Lucerne",
+            "description": "A legendary mountaintop resort with one of the world’s most iconic infinity pools."
+          }
+        ]
+      },
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:20:41.777Z",
+      "updatedAt": "2025-09-13T03:20:41.777Z"
+    },
+    {
+      "_id": "68c4e54359de77935a489775",
+      "id": "chameleon-1",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/chameleon/ca56bdf8df05b5889fbb2b94b2305e9af9973095.png",
+        "alt": "Forestis",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "The Dolomites, Italy",
+            "description": "Jagged peaks, alpine meadows, and crisp mountain air make the Dolomites a dream for couples who want it all. Here, adventure blends seamlessly with relaxation, offering breathtaking hikes by day and spa indulgence by night."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Forestis",
+            "description": "A serene hideaway high in the mountains, with holistic wellness and uninterrupted views."
+          }
+        ]
+      },
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:30:11.352Z",
+      "updatedAt": "2025-09-13T03:30:11.352Z"
+    },
+    {
+      "_id": "68c4e54359de77935a489777",
+      "id": "chameleon-2",
+      "type": "side-by-side",
+      "left": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Hawaii (Big Island)",
+            "description": "Volcanic landscapes, lush rainforests, and black-sand beaches make the Big Island endlessly diverse. A honeymoon here offers adventure, wellness, and romance all at once — from snorkeling with manta rays to stargazing atop Mauna Kea."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Mauna Lani, Auberge Resorts Collection",
+            "description": "A beachfront resort rooted in Hawaiian culture, with a focus on wellness and connection to nature."
+          }
+        ]
+      },
+      "right": {
+        "type": "image",
+        "src": "/images/results/chameleon/033f707d8bb58c8b5841bc9523a14c0b1dade477.png",
+        "alt": "Mauna Lani, Auberge Resorts Collection",
+        "content": []
+      },
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:30:11.355Z",
+      "updatedAt": "2025-09-13T03:30:11.355Z"
+    },
+    {
+      "_id": "68c4e54359de77935a489779",
+      "id": "chameleon-3",
+      "type": "side-by-side",
+      "left": {
+        "type": "image",
+        "src": "/images/results/chameleon/8eeb382d312b7c2c5d542841724eb483b5e39266.png",
+        "alt": "Palacio Duhau – Park Hyatt Buenos Aires",
+        "content": []
+      },
+      "right": {
+        "content": [
+          {
+            "type": "location",
+            "title": "Buenos Aires, Argentina",
+            "description": "A city alive with passion, Buenos Aires is perfect for couples who love variety. Days can be spent exploring European-style boulevards, indulging in world-class cuisine, and sipping Malbec, while nights are filled with tango and lively energy."
+          },
+          {
+            "type": "where-to-stay",
+            "title": "Palacio Duhau – Park Hyatt Buenos Aires",
+            "description": "A Belle Époque palace with modern touches, offering an elegant base in the heart of the city."
+          }
+        ]
+      },
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2025-09-13T03:30:11.357Z",
+      "updatedAt": "2025-09-13T03:30:11.357Z"
+    }
+  ],
+  "summary": {
+    "quizCount": 1,
+    "stepsCount": 15,
+    "resultsCount": 6,
+    "contentCount": 18
+  }
+}

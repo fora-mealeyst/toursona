@@ -80,8 +80,6 @@ export const QuizViewer = () => {
     handleChange,
     handleNext,
     handlePrevious,
-    handleRetake,
-    startFreshQuiz,
     isCurrentStepValid,
   } = useQuiz();
 

@@ -137,26 +137,6 @@ export function useQuiz() {
     }
   };
 
-  const handleRetake = () => {
-    setForm({});
-    setStep(0);
-    setSubmitted(false);
-    setSessionId(null);
-    // Clear sessionId and quizSlug from localStorage when retaking
-    localStorage.removeItem("quiz_session_id");
-    localStorage.removeItem("quiz_slug");
-  };
-
-  const startFreshQuiz = () => {
-    setForm({});
-    setStep(0);
-    setSubmitted(false);
-    setSessionId(null);
-    // Clear sessionId and quizSlug from localStorage when starting fresh
-    localStorage.removeItem("quiz_session_id");
-    localStorage.removeItem("quiz_slug");
-  };
-
   // Check if current step has all required fields filled
   const isCurrentStepValid = (): boolean => {
     if (!quiz) return false;
@@ -195,8 +175,6 @@ export function useQuiz() {
     handleChange,
     handleNext,
     handlePrevious,
-    handleRetake,
-    startFreshQuiz,
     isCurrentStepValid,
   };
 }
