@@ -1,0 +1,68 @@
+[
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/adventurer/eb96662cda60977a2c65f7fef1931cc178f6c56b.png",
+      "alt": "Tierra Patagonia"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Patagonia",
+          "description": "Remote glaciers, turquoise lakes, and wide-open skies make Patagonia feel like the edge of the world. For honeymooners, it’s a place of epic hikes, glacier treks, and nights spent under star-studded skies. This is adventure at its most awe-inspiring, where nature feels infinite and untamed."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Tierra Patagonia",
+          "description": "An immersive lodge with panoramic views of Torres del Paine, perfect for combining adventure-filled days with spa relaxation and cozy nights by the fire."
+        }
+      ]
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "content": [
+        {
+          "type": "location",
+          "title": "Newfoundland, Canada",
+          "description": "Rugged North Atlantic coastlines, quiet fishing villages, and windswept beauty set the scene for a honeymoon that feels both adventurous and deeply peaceful. Couples can kayak along iceberg-studded waters, hike dramatic coastal trails, and immerse themselves in the island’s rich culture."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Fogo Island Inn",
+          "description": " striking design hotel perched on the rocks, offering floor-to-ceiling ocean views and a strong connection to the local community"
+        }
+      ]
+    },
+    "right": {
+      "type": "image",
+      "src": "/images/results/adventurer/437e1e3660f874e5423337fe8850a83270fd6e6b.png",
+      "alt": "Fogo Island Inn"
+    }
+  },
+  {
+    "type": "side-by-side",
+    "left": {
+      "type": "image",
+      "src": "/images/results/adventurer/1238da4d3da375537174c19e3525f326ff4c6188.png",
+      "alt": "Rosewood Matakauri"
+    },
+    "right": {
+      "content": [
+        {
+          "type": "location",
+          "title": "New Zealand (South Island)",
+          "description": "From fjords and glaciers to rolling vineyards, New Zealand’s South Island is a natural playground. Honeymooners can mix thrill-seeking—think bungee jumps and heli-hikes—with slow moments of serenity, surrounded by landscapes that are cinematic in scale."
+        },
+        {
+          "type": "where-to-stay",
+          "title": "Rosewood Matakauri",
+          "description": "akeside retreat near Queenstown where every suite offers sweeping alpine views and a sense of secluded luxury."
+        }
+      ]
+    }
+  }
+]

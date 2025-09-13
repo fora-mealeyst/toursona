@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test New Quiz Results</title>
+  </head>
+  <body>
+    <h1>Testing New Quiz Results</h1>
+    <p>
+      This page will test the new quiz results with the embedded personality
+      structure.
+    </p>
+
+    <div id="results"></div>
+
+    <script>
+      // Set the test session ID and quiz ID for the new quiz
+      localStorage.setItem("quiz_session_id", "68c48635db15670e03de5b90");
+      localStorage.setItem("quiz_id", "68c48628db15670e03de5b86");
+
+      // Test the calculation endpoint directly
+      async function testResults() {
+        const quizId = localStorage.getItem("quiz_id");
+        const sessionId = localStorage.getItem("quiz_session_id");
+
+        console.log("Quiz ID:", quizId);
+        console.log("Session ID:", sessionId);
+
+        if (!quizId || !sessionId) {
+          document.getElementById("results").innerHTML =
+            "<p>Missing quiz ID or session ID</p>";
+          return;
+        }
+
+        try {
+          const response = await fetch(
+            `http://localhost:4000/api/quizzes/${quizId}/calculate/${sessionId}`
+          );
+          const data = await response.json();
+
+          console.log("API Response:", data);
+
+          if (data.primaryType) {
+            document.getElementById("results").innerHTML = `
+                        <h2>Results Found!</h2>
+                        <p><strong>Primary Type:</strong> ${data.primaryType.name}</p>
+                        <p><strong>Description:</strong> ${data.primaryType.description}</p>
+                        <p><strong>Percentage:</strong> ${data.breakdown[0].percentage}%</p>
+                        <p><strong>Travel Style:</strong> ${data.primaryType.travelStyle}</p>
+                    `;
+          } else {
+            document.getElementById("results").innerHTML =
+              "<p>No results found in API response</p>";
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          document.getElementById(
+            "results"
+          ).innerHTML = `<p>Error: ${error.message}</p>`;
+        }
+      }
+
+      // Run the test
+      testResults();
+    </script>
+  </body>
+</html>

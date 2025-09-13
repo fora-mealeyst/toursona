@@ -1,7 +1,10 @@
+import { Content } from "../types/content";
+
 /**
  * Personality type interface (matches backend structure)
  */
 export interface PersonalityType {
+  content?: Content[];
   id: string;
   name: string;
   description: string;

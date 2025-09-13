@@ -1,4 +1,4 @@
-import { QuizField } from '../types';
+import { QuizField } from "../types";
 
 interface TextFieldProps {
   field: QuizField;
@@ -8,19 +8,22 @@ interface TextFieldProps {
 
 export const TextField = ({ field, value, onChange }: TextFieldProps) => {
   return (
-    <div className="space-y-2">
-      <label htmlFor={field.name} className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+    <div className="space-y-2 mb-4">
+      <label
+        htmlFor={field.name}
+        className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+      >
         {field.label}
       </label>
       <input
         id={field.name}
         type="text"
         name={field.name}
-        value={value || ''}
+        value={value || ""}
         onChange={(e) => onChange(field.name, e.target.value)}
         required={field.required}
-        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white dark:bg-gray-700 text-[#241E1B] placeholder-[##352D27]]"
       />
     </div>
   );
-}
+};

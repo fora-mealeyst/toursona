@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Quiz Results</title>
+  </head>
+  <body>
+    <h1>Setting up test data...</h1>
+    <p>
+      This page will set the localStorage values and redirect you to the results
+      page.
+    </p>
+
+    <script>
+      // Set the test session ID and quiz ID
+      localStorage.setItem("quiz_session_id", "68c4841a306859d71abb1418");
+      localStorage.setItem("quiz_id", "68c47bce24077952b23a5610");
+
+      // Redirect to results page
+      window.location.href = "/results";
+    </script>
+  </body>
+</html>

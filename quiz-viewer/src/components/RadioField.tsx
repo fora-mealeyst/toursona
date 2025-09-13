@@ -1,4 +1,4 @@
-import { QuizField } from '../types';
+import { QuizField } from "../types";
 
 interface RadioFieldProps {
   field: QuizField;
@@ -7,29 +7,32 @@ interface RadioFieldProps {
 }
 
 export const RadioField = ({ field, value, onChange }: RadioFieldProps) => {
-  
   return (
-    <div className="flex flex-col justify-between basis-full">
-      <span className="blanco-text-italic block text-[32px] font-medium text-gray-700 dark:text-gray-300 text-left mb-[40px]">
+    <div className="flex flex-col justify-between w-full">
+      <span className="blanco-text-italic block text-[32px] font-medium text-gray-700 dark:text-gray-300 text-center md:text-left mb-[40px]">
         {field.label}
       </span>
       <div className="grid justify-center">
         {field.options?.map((option, index) => {
           // Ensure we have a valid option
           if (!option) return null;
-          
-          const optionLabel = typeof option === 'string' ? option : option.label;
-          const optionValue = typeof option === 'string' ? option : option.value || option.label;
+
+          const optionLabel =
+            typeof option === "string" ? option : option.label;
+          const optionValue =
+            typeof option === "string" ? option : option.value || option.label;
           const isSelected = value === optionValue;
-          
-          const baseClasses = "py-[15px] px-[24px] text-center border-2 transition-all duration-200 h-full w-full flex items-center justify-center";
+
+          const baseClasses =
+            "py-[15px] px-[24px] text-center border-2 transition-all duration-200 h-full w-full flex items-center justify-center";
           const selectedClasses = "bg-gray-700 border-gray-100 text-gray-100";
           const unselectedClasses = "bg-gray-800 border-transparent";
-          
+
           return (
-            <label 
-              key={typeof option === 'string' ? option : `option-${index}`}
-              className="relative cursor-pointer min-w-full lg:min-w-[480px] min-h-[56px] mb-[8px]"
+            <label
+              key={typeof option === "string" ? option : `option-${index}`}
+              className="relative cursor-pointer min-h-[56px] mb-[8px]"
+              style={{ width: "min(100%, 480px)" }}
             >
               <input
                 type="radio"
@@ -40,7 +43,11 @@ export const RadioField = ({ field, value, onChange }: RadioFieldProps) => {
                 required={field.required}
                 className="sr-only"
               />
-              <div className={`${baseClasses} ${isSelected ? selectedClasses : unselectedClasses}`}>
+              <div
+                className={`${baseClasses} ${
+                  isSelected ? selectedClasses : unselectedClasses
+                }`}
+              >
                 {optionLabel}
               </div>
             </label>
@@ -49,4 +56,4 @@ export const RadioField = ({ field, value, onChange }: RadioFieldProps) => {
       </div>
     </div>
   );
-}
+};
