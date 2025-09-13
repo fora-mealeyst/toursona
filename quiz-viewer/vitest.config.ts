@@ -1,33 +1,38 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./src/setupTests.ts'],
-    css: true,
+    environment: "jsdom",
+    setupFiles: ["./src/setupTests.ts"],
+    css: false, // Disable CSS processing in tests to avoid Tailwind parsing issues
+    environmentOptions: {
+      jsdom: {
+        resources: "usable",
+      },
+    },
     coverage: {
-      provider: 'v8',
-      reporter: ['text', 'json', 'html', 'lcov'],
-      reportsDirectory: './coverage',
+      provider: "v8",
+      reporter: ["text", "json", "html", "lcov"],
+      reportsDirectory: "./coverage",
       exclude: [
-        'node_modules/',
-        'dist/',
-        'coverage/',
-        '**/*.d.ts',
-        '**/*.config.*',
-        '**/setupTests.ts',
-        '**/vite-env.d.ts',
-        '**/index.css',
-        '**/*.module.css',
-        '**/App.module.css',
-        '**/GlassElement.module.css',
-        '**/BreakdownChart.module.css',
-        '**/CollapsiblePanel.module.css',
-        '**/QuizResults.module.css',
+        "node_modules/",
+        "dist/",
+        "coverage/",
+        "**/*.d.ts",
+        "**/*.config.*",
+        "**/setupTests.ts",
+        "**/vite-env.d.ts",
+        "**/index.css",
+        "**/*.module.css",
+        "**/App.module.css",
+        "**/GlassElement.module.css",
+        "**/BreakdownChart.module.css",
+        "**/CollapsiblePanel.module.css",
+        "**/QuizResults.module.css",
       ],
       thresholds: {
         global: {
@@ -37,7 +42,7 @@ export default defineConfig({
           statements: 80,
         },
         // Specific thresholds for critical files
-        'src/main.tsx': {
+        "src/main.tsx": {
           branches: 100,
           functions: 100,
           lines: 100,
@@ -46,4 +51,4 @@ export default defineConfig({
       },
     },
   },
-})
+});
